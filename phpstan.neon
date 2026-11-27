@@ -26,7 +26,7 @@ parameters:
   bootstrapFiles:
     - tests/phpstan-bootstrap.php
   stubFiles:
-    - tests/phpstan-stubs.php
+    - tests/phpstan-stubs.stub
   excludePaths:
     analyseAndScan:
       - %env.CACTI_PATH%/include/vendor/*
