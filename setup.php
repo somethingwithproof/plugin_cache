@@ -604,42 +604,47 @@ function cache_casc_register_providers(mixed $registrar): void {
 /**
  * plugin_doctor doctor_register_checks hook: register cache and queue diagnostic checks.
  *
- * @param mixed $checks Existing checks array from plugin_doctor.
- * @return mixed
+ * @param mixed $context Hook context array containing mode ('run'|'list') and plugin slug.
+ * @return list<array<string, mixed>>
  */
-function cache_doctor_register_checks(mixed $checks): mixed {
+function cache_doctor_register_checks(mixed $context = array()): array {
 	if (!cache_boot()) {
-		return $checks;
+		return array();
 	}
 
-	$built = \Somethingwithproof\Cache\Integration\DoctorChecks::buildChecks(
+	$normalized = array();
+
+	if (is_array($context)) {
+		foreach ($context as $key => $value) {
+			$normalized[(string) $key] = $value;
+		}
+	}
+
+	return \Somethingwithproof\Cache\Integration\DoctorChecks::buildChecks(
 		static function (): \Somethingwithproof\Cache\Cache\CacheService {
 			return cache_service();
 		},
 		static function (): \Somethingwithproof\Cache\Queue\QueueService {
 			return cache_queue_service();
-		}
+		},
+		$normalized
 	);
-
-	if (is_array($checks)) {
-		return array_merge($checks, $built);
-	}
-
-	return $built;
 }
 
 /**
  * plugin_doctor doctor_register_debug_info hook: contribute non-secret cache debug info.
  *
- * @param mixed $info Existing debug info map from plugin_doctor.
- * @return mixed
+ * @param mixed $context Optional hook context passed by plugin_doctor.
+ * @return list<array<string, mixed>>
  */
-function cache_doctor_register_debug_info(mixed $info): mixed {
+function cache_doctor_register_debug_info(mixed $context = array()): array {
 	if (!cache_boot()) {
-		return $info;
+		return array();
 	}
 
-	$section = \Somethingwithproof\Cache\Integration\DoctorChecks::buildDebugInfo(
+	$info = plugin_cache_version();
+
+	return \Somethingwithproof\Cache\Integration\DoctorChecks::buildDebugInfo(
 		static function (): \Somethingwithproof\Cache\Cache\CacheService {
 			return cache_service();
 		},
@@ -648,16 +653,9 @@ function cache_doctor_register_debug_info(mixed $info): mixed {
 		},
 		static function (): \Somethingwithproof\Cache\Settings {
 			return cache_settings();
-		}
+		},
+		$info['version'] ?? '0.1.0'
 	);
-
-	if (is_array($info)) {
-		$info['cache'] = $section;
-
-		return $info;
-	}
-
-	return array('cache' => $section);
 }
 
 /**
@@ -689,11 +687,27 @@ function cache_abilities_register(mixed $registrar): void {
  * plugin_api api_register_resources hook: return plain-array descriptors for cacheGroups and cacheQueues.
  *
  * @param mixed $resources Existing resource list from plugin_api.
- * @return mixed
+ * @return list<array<string, mixed>>
  */
-function cache_api_register_resources(mixed $resources): mixed {
+function cache_api_register_resources(mixed $resources = array()): array {
 	if (!cache_boot()) {
-		return $resources;
+		return array();
+	}
+
+	$out = array();
+
+	if (is_array($resources)) {
+		foreach ($resources as $existing) {
+			if (is_array($existing) && is_string($existing['collection'] ?? null) && $existing['collection'] !== '') {
+				$normalized = array();
+
+				foreach ($existing as $k => $v) {
+					$normalized[(string) $k] = $v;
+				}
+
+				$out[] = $normalized;
+			}
+		}
 	}
 
 	$built = \Somethingwithproof\Cache\Integration\ApiResources::build(
@@ -705,9 +719,9 @@ function cache_api_register_resources(mixed $resources): mixed {
 		}
 	);
 
-	if (is_array($resources)) {
-		return array_merge($resources, $built);
+	foreach ($built as $descriptor) {
+		$out[] = $descriptor;
 	}
 
-	return $built;
+	return $out;
 }

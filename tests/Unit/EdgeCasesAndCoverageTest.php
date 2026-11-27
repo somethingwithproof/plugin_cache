@@ -125,11 +125,11 @@ final class EdgeCasesAndCoverageTest extends TestCase {
 		$queue->fail($item->id, $item->leaseToken, 'boom');
 
 		$checks = DoctorChecks::buildChecks(static fn (): CacheService => $cache, static fn (): QueueService => $queue);
-		$this->assertSame('critical', ($checks[0]['run'])()['status']);
-		$this->assertSame('warning', ($checks[1]['run'])()['status']);
-		$this->assertSame('warning', ($checks[2]['run'])()['status']);
+		$this->assertSame('fail', $checks[0]['status']);
+		$this->assertSame('warn', $checks[1]['status']);
+		$this->assertSame('warn', $checks[2]['status']);
 
-		// 50+ dead-letter items escalate queue health to critical.
+		// 50+ dead-letter items escalate queue health to fail.
 		for ($i = 0; $i < 50; $i++) {
 			$queue->enqueue('q1', ['i' => $i], null, 1);
 			$next = $queue->claim('q1', 10);
@@ -137,16 +137,21 @@ final class EdgeCasesAndCoverageTest extends TestCase {
 			$queue->fail($next->id, $next->leaseToken, 'fail');
 		}
 
-		$this->assertSame('critical', ($checks[2]['run'])()['status']);
+		$escalatedChecks = DoctorChecks::buildChecks(static fn (): CacheService => $cache, static fn (): QueueService => $queue);
+		$this->assertSame('fail', $escalatedChecks[2]['status']);
 
-		// Exception during driver ping is caught and reported as critical.
+		// Exception during driver ping or queue status is caught and reported as fail.
 		$throwingChecks = DoctorChecks::buildChecks(
 			static function (): CacheService {
 				throw new \RuntimeException('connection refused');
 			},
-			static fn (): QueueService => $queue
+			static function (): QueueService {
+				throw new \RuntimeException('queue table unavailable');
+			}
 		);
-		$this->assertSame('critical', ($throwingChecks[0]['run'])()['status']);
+		$this->assertSame('fail', $throwingChecks[0]['status']);
+		$this->assertSame('fail', $throwingChecks[1]['status']);
+		$this->assertSame('fail', $throwingChecks[2]['status']);
 	}
 
 	public function testCascProviderErrorPathsAndSetupDriverFactories(): void {

@@ -199,21 +199,64 @@ final class SetupCliConfigAndIntegrationsTest extends TestCase {
 		$this->assertInstanceOf(Settings::class, $saved);
 		$this->assertSame(600, $saved->defaultTtl);
 
-		// 2. Doctor checks & debug info.
-		$checks = DoctorChecks::buildChecks(static fn (): CacheService => $cache, static fn (): QueueService => $queue);
+		// 2. Doctor checks (mode=list and mode=run) & debug info.
+		$factoryCalls = 0;
+		$listChecks   = DoctorChecks::buildChecks(
+			static function () use ($cache, &$factoryCalls): CacheService {
+				$factoryCalls++;
+
+				return $cache;
+			},
+			static function () use ($queue, &$factoryCalls): QueueService {
+				$factoryCalls++;
+
+				return $queue;
+			},
+			['mode' => 'list', 'plugin' => 'cache']
+		);
+		$this->assertSame(0, $factoryCalls);
+		$this->assertCount(3, $listChecks);
+
+		foreach ($listChecks as $check) {
+			$this->assertStringStartsWith('cache.', $check['id']);
+			$this->assertSame('cache', $check['plugin']);
+			$this->assertSame('info', $check['status']);
+		}
+
+		$checks = DoctorChecks::buildChecks(
+			static fn (): CacheService => $cache,
+			static fn (): QueueService => $queue,
+			['mode' => 'run', 'plugin' => 'cache']
+		);
 		$this->assertCount(3, $checks);
 
 		foreach ($checks as $check) {
-			$res = ($check['run'])();
-			$this->assertSame('ok', $res['status'], $check['id']);
+			$this->assertStringStartsWith('cache.', $check['id']);
+			$this->assertSame('cache', $check['plugin']);
+			$this->assertSame('Cache', $check['category']);
+			$this->assertNotSame('', $check['title']);
+			$this->assertSame('ok', $check['status'], $check['id']);
+			$this->assertNotSame('', $check['message']);
+			$this->assertIsArray($check['details']);
+			$this->assertIsString($check['remediation']);
 		}
 
 		$debug = DoctorChecks::buildDebugInfo(
 			static fn (): CacheService => $cache,
 			static fn (): QueueService => $queue,
-			static fn (): Settings => $settings
+			static fn (): Settings => $settings,
+			'0.1.0'
 		);
-		$this->assertSame('configured', $debug['fields']['redis_secret_ref']);
+		$this->assertCount(1, $debug);
+		$this->assertSame('cache.overview', $debug[0]['id']);
+		$this->assertSame('cache', $debug[0]['plugin']);
+		$this->assertSame('configured', $debug[0]['fields']['redis_secret_ref']['value']);
+
+		foreach ($debug[0]['fields'] as $fieldKey => $field) {
+			$this->assertIsString($field['label'], 'Field label must be string: ' . $fieldKey);
+			$this->assertTrue(is_scalar($field['value']), 'Field value must be scalar: ' . $fieldKey);
+		}
+
 		$this->assertStringNotContainsString('never-export-this', json_encode($debug, JSON_THROW_ON_ERROR));
 		$this->assertStringNotContainsString('never-leak', json_encode($debug, JSON_THROW_ON_ERROR));
 
@@ -244,6 +287,25 @@ final class SetupCliConfigAndIntegrationsTest extends TestCase {
 		$this->assertArrayHasKey('cache-list-groups', $abilities);
 		$this->assertArrayHasKey('cache-queue-status', $abilities);
 
+		// Every type: array in input_schema/output_schema must define both items and maxItems.
+		foreach ($abilities as $abilityId => $spec) {
+			foreach (['input_schema', 'output_schema'] as $schemaKey) {
+				$schema = $spec[$schemaKey] ?? [];
+
+				if (is_array($schema) && is_array($schema['properties'] ?? null)) {
+					foreach ($schema['properties'] as $propName => $propSchema) {
+						if (is_array($propSchema) && ($propSchema['type'] ?? null) === 'array') {
+							$this->assertArrayHasKey('items', $propSchema, sprintf('%s.%s.%s missing items', $abilityId, $schemaKey, $propName));
+							$this->assertIsInt($propSchema['maxItems'] ?? null, sprintf('%s.%s.%s missing integer maxItems', $abilityId, $schemaKey, $propName));
+						}
+					}
+				}
+			}
+		}
+
+		$this->assertSame(256, $abilities['cache-list-groups']['output_schema']['properties']['groups']['maxItems']);
+		$this->assertSame(256, $abilities['cache-queue-status']['output_schema']['properties']['queues']['maxItems']);
+
 		$mcpStats  = ($abilities['cache-get-stats']['execute'])(1, new \stdClass());
 		$mcpGroups = ($abilities['cache-list-groups']['execute'])(1, new \stdClass());
 		$mcpQueues = ($abilities['cache-queue-status']['execute'])(1, new \stdClass());
@@ -252,17 +314,22 @@ final class SetupCliConfigAndIntegrationsTest extends TestCase {
 		$this->assertSame('sync_jobs', $mcpQueues['queues'][0]['queue']);
 		$this->assertFalse(McpAbilities::userHasViewRealm(0));
 
-		// 4. API resources (plain-array descriptors).
+		// 4. API resources (canonical plugin_api descriptors).
 		$resources = ApiResources::build(static fn (): CacheService => $cache, static fn (): QueueService => $queue);
 		$this->assertCount(2, $resources);
-		$this->assertSame('cacheGroups', $resources[0]['name']);
-		$this->assertSame('cacheQueues', $resources[1]['name']);
-		$this->assertCount(1, ($resources[0]['list'])());
-		$this->assertSame('devices', ($resources[0]['get'])('devices')['group']);
-		$this->assertNull(($resources[0]['get'])('missing'));
-		$this->assertCount(1, ($resources[1]['list'])());
-		$this->assertSame('sync_jobs', ($resources[1]['get'])('sync_jobs')['queue']);
-		$this->assertNull(($resources[1]['get'])('missing'));
+		$this->assertSame('cache', $resources[0]['plugin']);
+		$this->assertSame('cacheGroups', $resources[0]['collection']);
+		$this->assertSame('cache_view.php', $resources[0]['realm_read']);
+		$this->assertCount(1, ($resources[0]['handlers']['list'])(['user_id' => 1]));
+		$this->assertSame('devices', ($resources[0]['handlers']['get'])('devices', ['user_id' => 1])['group']);
+		$this->assertNull(($resources[0]['handlers']['get'])('missing', ['user_id' => 1]));
+
+		$this->assertSame('cache', $resources[1]['plugin']);
+		$this->assertSame('cacheQueues', $resources[1]['collection']);
+		$this->assertSame('cache_view.php', $resources[1]['realm_read']);
+		$this->assertCount(1, ($resources[1]['handlers']['list'])(['user_id' => 1]));
+		$this->assertSame('sync_jobs', ($resources[1]['handlers']['get'])('sync_jobs', ['user_id' => 1])['queue']);
+		$this->assertNull(($resources[1]['handlers']['get'])('missing', ['user_id' => 1]));
 	}
 
 	public function testProceduralSetupHelpersHooksAndUiRenderers(): void {
@@ -272,6 +339,7 @@ final class SetupCliConfigAndIntegrationsTest extends TestCase {
 
 		$info = plugin_cache_version();
 		$this->assertSame('cache', $info['name']);
+		$this->assertSame('Object Cache & Batch Queue', $info['longname']);
 		$this->assertSame('1.2.31', $info['compat']);
 
 		$cache = new CacheService(new MemoryDriver(50), 300, 65536, 15, 1.0, 0, 1);
@@ -296,17 +364,22 @@ final class SetupCliConfigAndIntegrationsTest extends TestCase {
 		$this->assertArrayHasKey('cache_view.php:', $nav);
 		cache_poller_bottom();
 
-		$checks = cache_doctor_register_checks([]);
-		$this->assertIsArray($checks);
+		$checks = cache_doctor_register_checks(['mode' => 'run', 'plugin' => 'cache']);
 		$this->assertCount(3, $checks);
+		$this->assertArrayNotHasKey('mode', $checks);
+		$this->assertSame('cache.driver_connectivity', $checks[0]['id']);
 
-		$debug = cache_doctor_register_debug_info([]);
-		$this->assertIsArray($debug);
-		$this->assertArrayHasKey('cache', $debug);
+		$debug = cache_doctor_register_debug_info(['plugin' => 'cache']);
+		$this->assertCount(1, $debug);
+		$this->assertArrayNotHasKey('plugin', $debug);
+		$this->assertSame('cache.overview', $debug[0]['id']);
+		$this->assertSame('cache', $debug[0]['plugin']);
 
 		$resources = cache_api_register_resources([]);
-		$this->assertIsArray($resources);
 		$this->assertCount(2, $resources);
+		$this->assertSame('cacheGroups', $resources[0]['collection']);
+		$this->assertSame('cacheQueues', $resources[1]['collection']);
+		$this->assertSame('cache_view.php', $resources[0]['realm_read']);
 
 		// Exercise PagesRenderer for all 3 console views.
 		$session = [];

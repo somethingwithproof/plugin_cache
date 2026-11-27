@@ -136,8 +136,9 @@ final class McpAbilities {
 				'properties' => [
 					'driver' => ['type' => 'string', 'maxLength' => 32],
 					'groups' => [
-						'type'  => 'array',
-						'items' => [
+						'type'     => 'array',
+						'maxItems' => 256,
+						'items'    => [
 							'type'       => 'object',
 							'properties' => [
 								'group'   => ['type' => 'string', 'maxLength' => 64],
@@ -183,8 +184,9 @@ final class McpAbilities {
 				'type'       => 'object',
 				'properties' => [
 					'queues' => [
-						'type'  => 'array',
-						'items' => [
+						'type'     => 'array',
+						'maxItems' => 256,
+						'items'    => [
 							'type'       => 'object',
 							'properties' => [
 								'queue'         => ['type' => 'string', 'maxLength' => 64],

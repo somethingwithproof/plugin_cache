@@ -76,22 +76,26 @@ final class MariaDbIntegrationTest extends TestCase {
 		$this->assertSame(600, cache_settings()->defaultTtl);
 		$this->assertSame(1.5, cache_settings()->xfetchBeta);
 
-		$checks = cache_doctor_register_checks([]);
-		$this->assertIsArray($checks);
+		$checks = cache_doctor_register_checks(['mode' => 'run', 'plugin' => 'cache']);
 		$this->assertCount(3, $checks);
 
 		foreach ($checks as $check) {
-			$result = ($check['run'])();
-			$this->assertSame('ok', $result['status']);
+			$this->assertStringStartsWith('cache.', (string) ($check['id'] ?? ''));
+			$this->assertSame('cache', $check['plugin'] ?? null);
+			$this->assertSame('ok', $check['status'] ?? null);
 		}
 
-		$debug = cache_doctor_register_debug_info([]);
-		$this->assertIsArray($debug);
-		$this->assertArrayHasKey('cache', $debug);
+		$debug = cache_doctor_register_debug_info(['plugin' => 'cache']);
+		$this->assertCount(1, $debug);
+		$this->assertSame('cache.overview', $debug[0]['id'] ?? null);
+		$this->assertSame('cache', $debug[0]['plugin'] ?? null);
 
 		$resources = cache_api_register_resources([]);
-		$this->assertIsArray($resources);
 		$this->assertCount(2, $resources);
+		$this->assertSame('cacheGroups', $resources[0]['collection'] ?? null);
+		$this->assertSame('cacheQueues', $resources[1]['collection'] ?? null);
+		$this->assertSame('cache_view.php', $resources[0]['realm_read'] ?? null);
+		$this->assertIsArray($resources[0]['handlers'] ?? null);
 
 		// Clean up CI test rows.
 		$cache->flushAll();
