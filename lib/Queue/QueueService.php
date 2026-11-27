@@ -59,9 +59,9 @@ final class QueueService {
 	private readonly int $baseBackoffSeconds;
 
 	/**
-	 * Clock callable returning current Unix timestamp in seconds.
+	 * Optional custom clock callable returning current Unix timestamp in seconds.
 	 *
-	 * @var callable(): int
+	 * @var (callable(): int)|null
 	 */
 	private readonly mixed $clock;
 
@@ -88,7 +88,7 @@ final class QueueService {
 		$this->defaultMaxAttempts  = max(1, $defaultMaxAttempts);
 		$this->maxPayloadBytes     = max(1024, $maxPayloadBytes);
 		$this->baseBackoffSeconds  = max(1, $baseBackoffSeconds);
-		$this->clock               = $clock ?? static fn (): int => time();
+		$this->clock               = $clock;
 	}
 
 	/**
@@ -121,7 +121,7 @@ final class QueueService {
 		$attempts    = max(1, min(50, $maxAttempts ?? $this->defaultMaxAttempts));
 		$payloadJson = JsonCodec::encode($payload, $this->maxPayloadBytes);
 		$cursorJson  = $cursor !== null ? JsonCodec::encode($cursor, $this->maxPayloadBytes) : null;
-		$now         = ($this->clock)();
+		$now         = $this->now();
 
 		return $this->storage->enqueue(
 			$validQueue,
@@ -145,9 +145,8 @@ final class QueueService {
 	public function claim(string $queueName, ?int $leaseSeconds = null): ?QueueItem {
 		$validQueue = CacheKeyValidator::validateQueueName($queueName);
 		$lease      = max(1, $leaseSeconds ?? $this->defaultLeaseSeconds);
-		$token      = bin2hex(random_bytes(16));
 
-		return $this->storage->claim($validQueue, $token, $lease, ($this->clock)());
+		return $this->claimValidated($validQueue, $lease, $this->now());
 	}
 
 	/**
@@ -166,7 +165,7 @@ final class QueueService {
 		?int $extendSeconds = null,
 		?array $cursor = null,
 	): bool {
-		$now          = ($this->clock)();
+		$now          = $this->now();
 		$lease        = max(1, $extendSeconds ?? $this->defaultLeaseSeconds);
 		$updateCursor = $cursor !== null;
 		$cursorJson   = $updateCursor ? JsonCodec::encode($cursor, $this->maxPayloadBytes) : null;
@@ -194,7 +193,7 @@ final class QueueService {
 			throw new CacheException('Queue checkpoint delaySeconds cannot be negative.');
 		}
 
-		$now        = ($this->clock)();
+		$now        = $this->now();
 		$cursorJson = JsonCodec::encode($cursor, $this->maxPayloadBytes);
 
 		return $this->storage->checkpoint($itemId, $leaseToken, $cursorJson, $now + $delaySeconds, $now);
@@ -208,7 +207,7 @@ final class QueueService {
 	 * @return bool
 	 */
 	public function complete(int $itemId, string $leaseToken): bool {
-		return $this->storage->complete($itemId, $leaseToken, ($this->clock)());
+		return $this->storage->complete($itemId, $leaseToken, $this->now());
 	}
 
 	/**
@@ -229,7 +228,7 @@ final class QueueService {
 		$cleanError = preg_replace('/[\x00-\x1F\x7F]+/', ' ', $error) ?? $error;
 		$backoff    = max(1, $baseBackoffSeconds ?? $this->baseBackoffSeconds);
 
-		return $this->storage->fail($itemId, $leaseToken, trim($cleanError), $backoff, ($this->clock)());
+		return $this->storage->fail($itemId, $leaseToken, trim($cleanError), $backoff, $this->now());
 	}
 
 	/**
@@ -242,7 +241,7 @@ final class QueueService {
 	public function reclaimExpiredLeases(?string $queueName = null): int {
 		$validQueue = $queueName !== null ? CacheKeyValidator::validateQueueName($queueName) : null;
 
-		return $this->storage->reclaimExpiredLeases($validQueue, ($this->clock)());
+		return $this->storage->reclaimExpiredLeases($validQueue, $this->now());
 	}
 
 	/**
@@ -270,7 +269,7 @@ final class QueueService {
 			return false;
 		}
 
-		return $this->storage->retryDeadLetter($itemId, ($this->clock)());
+		return $this->storage->retryDeadLetter($itemId, $this->now());
 	}
 
 	/**
@@ -280,7 +279,7 @@ final class QueueService {
 	 * @return int Number of purged rows.
 	 */
 	public function purgeCompleted(int $olderThanSeconds = 86400): int {
-		$cutoff = ($this->clock)() - max(0, $olderThanSeconds);
+		$cutoff = $this->now() - max(0, $olderThanSeconds);
 
 		return $this->storage->purgeCompleted($cutoff);
 	}
@@ -318,7 +317,7 @@ final class QueueService {
 	public function status(?string $queueName = null): array {
 		$validQueue = $queueName !== null ? CacheKeyValidator::validateQueueName($queueName) : null;
 
-		return $this->storage->status($validQueue, ($this->clock)());
+		return $this->storage->status($validQueue, $this->now());
 	}
 
 	/**
@@ -347,15 +346,16 @@ final class QueueService {
 	): array {
 		$validQueue   = CacheKeyValidator::validateQueueName($queueName);
 		$limit        = max(1, $maxItems);
-		$deadline     = ($this->clock)() + max(1, $timeBudgetSeconds);
+		$lease        = max(1, $leaseSeconds ?? $this->defaultLeaseSeconds);
+		$deadline     = $this->now() + max(1, $timeBudgetSeconds);
 		$claimed      = 0;
 		$completed    = 0;
 		$checkpointed = 0;
 		$retried      = 0;
 		$deadLettered = 0;
 
-		while ($claimed < $limit && ($this->clock)() <= $deadline) {
-			$item = $this->claim($validQueue, $leaseSeconds);
+		while ($claimed < $limit && ($now = $this->now()) <= $deadline) {
+			$item = $this->claimValidated($validQueue, $lease, $now);
 
 			if ($item === null) {
 				break;
@@ -382,7 +382,7 @@ final class QueueService {
 					continue;
 				}
 
-				$this->complete($item->id, $item->leaseToken);
+				$this->storage->complete($item->id, $item->leaseToken, $this->now());
 				$completed++;
 			} catch (\Throwable $error) {
 				$outcome = $this->fail($item->id, $item->leaseToken, $error->getMessage());
@@ -403,5 +403,28 @@ final class QueueService {
 			'retried'      => $retried,
 			'deadLettered' => $deadLettered,
 		];
+	}
+
+	/**
+	 * Claim the next ready item for an already-validated queue name and lease duration.
+	 *
+	 * @param string $validQueue Validated queue name.
+	 * @param int $leaseSeconds Validated lease duration in seconds.
+	 * @param int $now Current Unix timestamp in seconds.
+	 * @return QueueItem|null
+	 */
+	private function claimValidated(string $validQueue, int $leaseSeconds, int $now): ?QueueItem {
+		$token = bin2hex(random_bytes(16));
+
+		return $this->storage->claim($validQueue, $token, $leaseSeconds, $now);
+	}
+
+	/**
+	 * Return the current Unix timestamp using the configured clock or native time().
+	 *
+	 * @return int
+	 */
+	private function now(): int {
+		return $this->clock !== null ? ($this->clock)() : time();
 	}
 }

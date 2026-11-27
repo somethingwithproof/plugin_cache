@@ -25,6 +25,10 @@ use Somethingwithproof\Cache\Cache\JsonCodec;
 
 /**
  * In-memory queue storage mirroring MariaDbQueueStorage semantics for standalone and unit tests.
+ *
+ * Uses O(1) idempotency indexing, O(L) active-lease tracking, and per-queue binary
+ * min-heaps ordered by (available_at, id) so claim() runs in O(log N) amortized
+ * instead of scanning all rows quadratically during large batch runs.
  */
 final class MemoryQueueStorage implements QueueStorage {
 	/**
@@ -60,7 +64,30 @@ final class MemoryQueueStorage implements QueueStorage {
 	private array $rows = [];
 
 	/**
-	 * Enqueue a new item or return the existing ID on idempotency collision.
+	 * Secondary O(1) index mapping "$queueName\0$idempotencyKey" to row ID.
+	 *
+	 * @var array<string, int>
+	 */
+	private array $idempotencyIndex = [];
+
+	/**
+	 * Secondary index of currently leased row IDs grouped by queue name.
+	 *
+	 * @var array<string, array<int, true>>
+	 */
+	private array $leasedByQueue = [];
+
+	/**
+	 * Per-queue binary min-heaps of [available_at, id] pairs for O(log N) claim().
+	 *
+	 * Stale entries whose status or available_at changed are discarded lazily on pop.
+	 *
+	 * @var array<string, list<array{0: int, 1: int}>>
+	 */
+	private array $pendingHeaps = [];
+
+	/**
+	 * Enqueue a new item or return the existing ID on idempotency collision in O(log N).
 	 *
 	 * @param string $queueName Validated queue name.
 	 * @param string $payloadJson Validated JSON payload string.
@@ -81,10 +108,16 @@ final class MemoryQueueStorage implements QueueStorage {
 		int $now,
 	): int {
 		if ($idempotencyKey !== null) {
-			foreach ($this->rows as $row) {
-				if ($row['queue_name'] === $queueName && $row['idempotency_key'] === $idempotencyKey) {
-					return $row['id'];
+			$idemSlot = $queueName . "\0" . $idempotencyKey;
+
+			if (isset($this->idempotencyIndex[$idemSlot])) {
+				$existingId = $this->idempotencyIndex[$idemSlot];
+
+				if (isset($this->rows[$existingId])) {
+					return $existingId;
 				}
+
+				unset($this->idempotencyIndex[$idemSlot]);
 			}
 		}
 
@@ -106,11 +139,17 @@ final class MemoryQueueStorage implements QueueStorage {
 			'updated_at'      => $now,
 		];
 
+		if ($idempotencyKey !== null) {
+			$this->idempotencyIndex[$queueName . "\0" . $idempotencyKey] = $id;
+		}
+
+		$this->pushPending($queueName, $availableAt, $id);
+
 		return $id;
 	}
 
 	/**
-	 * Reclaim expired leases and claim the earliest ready pending item.
+	 * Reclaim expired leases and claim the earliest ready pending item in O(L + log N).
 	 *
 	 * @param string $queueName Validated queue name.
 	 * @param string $leaseToken Newly generated lease token.
@@ -123,18 +162,26 @@ final class MemoryQueueStorage implements QueueStorage {
 
 		$selectedId = null;
 
-		foreach ($this->rows as $id => $row) {
-			if ($row['queue_name'] !== $queueName || $row['status'] !== QueueItem::STATUS_PENDING || $row['available_at'] > $now) {
+		while (isset($this->pendingHeaps[$queueName]) && $this->pendingHeaps[$queueName] !== []) {
+			$top        = $this->pendingHeaps[$queueName][0];
+			$topAvail   = $top[0];
+			$topId      = $top[1];
+			$row        = $this->rows[$topId] ?? null;
+
+			if ($row === null || $row['status'] !== QueueItem::STATUS_PENDING || $row['available_at'] !== $topAvail) {
+				$this->popPending($queueName);
+
 				continue;
 			}
 
-			if (
-				$selectedId === null
-				|| $row['available_at'] < $this->rows[$selectedId]['available_at']
-				|| ($row['available_at'] === $this->rows[$selectedId]['available_at'] && $id < $selectedId)
-			) {
-				$selectedId = $id;
+			if ($topAvail > $now) {
+				break;
 			}
+
+			$this->popPending($queueName);
+			$selectedId = $topId;
+
+			break;
 		}
 
 		if ($selectedId === null || !isset($this->rows[$selectedId])) {
@@ -148,6 +195,8 @@ final class MemoryQueueStorage implements QueueStorage {
 		$selected['attempts']++;
 		$selected['updated_at']  = $now;
 		$this->rows[$selectedId] = $selected;
+
+		$this->leasedByQueue[$queueName][$selectedId] = true;
 
 		return $this->hydrate($selected);
 	}
@@ -226,6 +275,9 @@ final class MemoryQueueStorage implements QueueStorage {
 		$this->rows[$itemId]['attempts']     = max(0, $row['attempts'] - 1);
 		$this->rows[$itemId]['updated_at']   = $now;
 
+		unset($this->leasedByQueue[$row['queue_name']][$itemId]);
+		$this->pushPending($row['queue_name'], $availableAt, $itemId);
+
 		return true;
 	}
 
@@ -253,6 +305,8 @@ final class MemoryQueueStorage implements QueueStorage {
 		$this->rows[$itemId]['lease_token'] = '';
 		$this->rows[$itemId]['last_error']  = '';
 		$this->rows[$itemId]['updated_at']  = $now;
+
+		unset($this->leasedByQueue[$row['queue_name']][$itemId]);
 
 		return true;
 	}
@@ -284,6 +338,7 @@ final class MemoryQueueStorage implements QueueStorage {
 			return '';
 		}
 
+		unset($this->leasedByQueue[$row['queue_name']][$itemId]);
 		$truncated = substr($error, 0, 512);
 
 		if ($row['attempts'] >= $row['max_attempts']) {
@@ -296,51 +351,38 @@ final class MemoryQueueStorage implements QueueStorage {
 			return QueueItem::STATUS_DEAD;
 		}
 
-		$exponent = max(0, min(16, $row['attempts'] - 1));
-		$delay    = min(self::MAX_BACKOFF_SECONDS, max(1, $baseBackoffSeconds) * (1 << $exponent));
+		$exponent    = max(0, min(16, $row['attempts'] - 1));
+		$delay       = min(self::MAX_BACKOFF_SECONDS, max(1, $baseBackoffSeconds) * (1 << $exponent));
+		$availableAt = $now + $delay;
 
 		$this->rows[$itemId]['status']       = QueueItem::STATUS_PENDING;
 		$this->rows[$itemId]['lease_until']  = 0;
 		$this->rows[$itemId]['lease_token']  = '';
-		$this->rows[$itemId]['available_at'] = $now + $delay;
+		$this->rows[$itemId]['available_at'] = $availableAt;
 		$this->rows[$itemId]['last_error']   = $truncated;
 		$this->rows[$itemId]['updated_at']   = $now;
+
+		$this->pushPending($row['queue_name'], $availableAt, $itemId);
 
 		return QueueItem::STATUS_PENDING;
 	}
 
 	/**
-	 * Reclaim leased items whose lease_until <= $now.
+	 * Reclaim leased items whose lease_until <= $now by scanning only active leases.
 	 *
 	 * @param string|null $queueName Optional queue filter.
 	 * @param int $now Current Unix timestamp.
 	 * @return int
 	 */
 	public function reclaimExpiredLeases(?string $queueName, int $now): int {
+		if ($queueName !== null) {
+			return $this->reclaimQueueLeases($queueName, $now);
+		}
+
 		$reclaimed = 0;
 
-		foreach ($this->rows as $id => $row) {
-			if ($queueName !== null && $row['queue_name'] !== $queueName) {
-				continue;
-			}
-
-			if ($row['status'] !== QueueItem::STATUS_LEASED || $row['lease_until'] <= 0 || $row['lease_until'] > $now) {
-				continue;
-			}
-
-			$this->rows[$id]['lease_until'] = 0;
-			$this->rows[$id]['lease_token'] = '';
-			$this->rows[$id]['updated_at']  = $now;
-
-			if ($row['attempts'] >= $row['max_attempts']) {
-				$this->rows[$id]['status']     = QueueItem::STATUS_DEAD;
-				$this->rows[$id]['last_error'] = 'Lease expired after reaching max attempts';
-			} else {
-				$this->rows[$id]['status']       = QueueItem::STATUS_PENDING;
-				$this->rows[$id]['available_at'] = $now;
-			}
-
-			$reclaimed++;
+		foreach (array_keys($this->leasedByQueue) as $queue) {
+			$reclaimed += $this->reclaimQueueLeases($queue, $now);
 		}
 
 		return $reclaimed;
@@ -386,6 +428,7 @@ final class MemoryQueueStorage implements QueueStorage {
 			return false;
 		}
 
+		$queueName                           = $this->rows[$itemId]['queue_name'];
 		$this->rows[$itemId]['status']       = QueueItem::STATUS_PENDING;
 		$this->rows[$itemId]['attempts']     = 0;
 		$this->rows[$itemId]['available_at'] = $now;
@@ -393,6 +436,8 @@ final class MemoryQueueStorage implements QueueStorage {
 		$this->rows[$itemId]['lease_token']  = '';
 		$this->rows[$itemId]['last_error']   = '';
 		$this->rows[$itemId]['updated_at']   = $now;
+
+		$this->pushPending($queueName, $now, $itemId);
 
 		return true;
 	}
@@ -408,6 +453,10 @@ final class MemoryQueueStorage implements QueueStorage {
 
 		foreach ($this->rows as $id => $row) {
 			if ($row['status'] === QueueItem::STATUS_COMPLETED && $row['updated_at'] <= $cutoffTimestamp) {
+				if ($row['idempotency_key'] !== null) {
+					unset($this->idempotencyIndex[$row['queue_name'] . "\0" . $row['idempotency_key']]);
+				}
+
 				unset($this->rows[$id]);
 				$removed++;
 			}
@@ -432,6 +481,10 @@ final class MemoryQueueStorage implements QueueStorage {
 
 			if ($queueName !== null && $row['queue_name'] !== $queueName) {
 				continue;
+			}
+
+			if ($row['idempotency_key'] !== null) {
+				unset($this->idempotencyIndex[$row['queue_name'] . "\0" . $row['idempotency_key']]);
 			}
 
 			unset($this->rows[$id]);
@@ -499,6 +552,143 @@ final class MemoryQueueStorage implements QueueStorage {
 		ksort($summary, SORT_STRING);
 
 		return $summary;
+	}
+
+	/**
+	 * Reclaim expired leases within a single queue's active-lease index in O(L).
+	 *
+	 * @param string $queueName Queue name.
+	 * @param int $now Current Unix timestamp.
+	 * @return int Number of reclaimed leases.
+	 */
+	private function reclaimQueueLeases(string $queueName, int $now): int {
+		if (!isset($this->leasedByQueue[$queueName]) || $this->leasedByQueue[$queueName] === []) {
+			return 0;
+		}
+
+		$reclaimed = 0;
+
+		foreach (array_keys($this->leasedByQueue[$queueName]) as $id) {
+			if (!isset($this->rows[$id])) {
+				unset($this->leasedByQueue[$queueName][$id]);
+
+				continue;
+			}
+
+			$row = $this->rows[$id];
+
+			if ($row['status'] !== QueueItem::STATUS_LEASED || $row['lease_until'] <= 0 || $row['lease_until'] > $now) {
+				continue;
+			}
+
+			unset($this->leasedByQueue[$queueName][$id]);
+			$this->rows[$id]['lease_until'] = 0;
+			$this->rows[$id]['lease_token'] = '';
+			$this->rows[$id]['updated_at']  = $now;
+
+			if ($row['attempts'] >= $row['max_attempts']) {
+				$this->rows[$id]['status']     = QueueItem::STATUS_DEAD;
+				$this->rows[$id]['last_error'] = 'Lease expired after reaching max attempts';
+			} else {
+				$this->rows[$id]['status']       = QueueItem::STATUS_PENDING;
+				$this->rows[$id]['available_at'] = $now;
+				$this->pushPending($queueName, $now, $id);
+			}
+
+			$reclaimed++;
+		}
+
+		return $reclaimed;
+	}
+
+	/**
+	 * Push an (available_at, id) entry into a queue's binary min-heap in O(log N).
+	 *
+	 * @param string $queueName Queue name.
+	 * @param int $availableAt Earliest claim timestamp.
+	 * @param int $id Queue row ID.
+	 * @return void
+	 */
+	private function pushPending(string $queueName, int $availableAt, int $id): void {
+		if (!isset($this->pendingHeaps[$queueName])) {
+			$this->pendingHeaps[$queueName] = [[$availableAt, $id]];
+
+			return;
+		}
+
+		$heap   = &$this->pendingHeaps[$queueName];
+		$idx    = count($heap);
+		$entry  = [$availableAt, $id];
+		$heap[] = $entry;
+
+		while ($idx > 0) {
+			$parent = ($idx - 1) >> 1;
+			$pEntry = $heap[$parent];
+
+			if ($pEntry[0] < $entry[0] || ($pEntry[0] === $entry[0] && $pEntry[1] <= $entry[1])) {
+				break;
+			}
+
+			$heap[$idx] = $pEntry;
+			$idx        = $parent;
+		}
+
+		$heap[$idx] = $entry;
+	}
+
+	/**
+	 * Pop the minimum (available_at, id) entry from a queue's binary min-heap in O(log N).
+	 *
+	 * @param string $queueName Queue name.
+	 * @return void
+	 */
+	private function popPending(string $queueName): void {
+		if (!isset($this->pendingHeaps[$queueName]) || $this->pendingHeaps[$queueName] === []) {
+			return;
+		}
+
+		$heap = &$this->pendingHeaps[$queueName];
+		$last = array_pop($heap);
+
+		if ($last === null || $heap === []) {
+			return;
+		}
+
+		$count = count($heap);
+		$idx   = 0;
+
+		while (true) {
+			$left     = ($idx << 1) + 1;
+			$smallest = $idx;
+
+			if ($left < $count) {
+				$lEntry = $heap[$left];
+
+				if ($lEntry[0] < $last[0] || ($lEntry[0] === $last[0] && $lEntry[1] < $last[1])) {
+					$smallest = $left;
+				}
+			}
+
+			$right = $left + 1;
+
+			if ($right < $count) {
+				$rEntry = $heap[$right];
+				$sEntry = $smallest === $idx ? $last : $heap[$smallest];
+
+				if ($rEntry[0] < $sEntry[0] || ($rEntry[0] === $sEntry[0] && $rEntry[1] < $sEntry[1])) {
+					$smallest = $right;
+				}
+			}
+
+			if ($smallest === $idx) {
+				break;
+			}
+
+			$heap[$idx] = $heap[$smallest];
+			$idx        = $smallest;
+		}
+
+		$heap[$idx] = $last;
 	}
 
 	/**

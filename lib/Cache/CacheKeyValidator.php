@@ -59,6 +59,16 @@ final class CacheKeyValidator {
 	public const MAX_TAGS = 64;
 
 	/**
+	 * Allowed byte set for cache keys, cache tags, and idempotency keys.
+	 */
+	private const KEY_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.:/-';
+
+	/**
+	 * Allowed byte set for cache groups and queue names.
+	 */
+	private const GROUP_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.-';
+
+	/**
 	 * Validate a cache key and return it unchanged.
 	 *
 	 * @param string $key Candidate cache key.
@@ -66,7 +76,9 @@ final class CacheKeyValidator {
 	 * @throws CacheException When the key is empty, overlong, or contains unsafe characters.
 	 */
 	public static function validateKey(string $key): string {
-		if (preg_match(self::KEY_PATTERN, $key) !== 1) {
+		$len = strlen($key);
+
+		if ($len < 1 || $len > 191 || strspn($key, self::KEY_CHARS) !== $len) {
 			throw new CacheException('Invalid cache key: must match [A-Za-z0-9_.:/-]{1,191}.');
 		}
 
@@ -82,7 +94,9 @@ final class CacheKeyValidator {
 	 * @throws CacheException When the group name is invalid or reserved.
 	 */
 	public static function validateGroup(string $group, bool $allowReserved = false): string {
-		if (preg_match(self::GROUP_PATTERN, $group) !== 1) {
+		$len = strlen($group);
+
+		if ($len < 1 || $len > 64 || strspn($group, self::GROUP_CHARS) !== $len) {
 			throw new CacheException('Invalid cache group: must match [A-Za-z0-9_.-]{1,64}.');
 		}
 
@@ -101,10 +115,16 @@ final class CacheKeyValidator {
 	 * @throws CacheException When any tag is invalid or the tag count exceeds MAX_TAGS.
 	 */
 	public static function validateTags(array $tags): array {
+		if ($tags === []) {
+			return [];
+		}
+
 		$unique = [];
 
 		foreach ($tags as $tag) {
-			if (preg_match(self::TAG_PATTERN, $tag) !== 1) {
+			$len = strlen($tag);
+
+			if ($len < 1 || $len > 128 || strspn($tag, self::KEY_CHARS) !== $len) {
 				throw new CacheException('Invalid cache tag: must match [A-Za-z0-9_.:/-]{1,128}.');
 			}
 
@@ -129,7 +149,9 @@ final class CacheKeyValidator {
 	 * @throws CacheException When the queue name is invalid.
 	 */
 	public static function validateQueueName(string $queueName): string {
-		if (preg_match(self::GROUP_PATTERN, $queueName) !== 1) {
+		$len = strlen($queueName);
+
+		if ($len < 1 || $len > 64 || strspn($queueName, self::GROUP_CHARS) !== $len) {
 			throw new CacheException('Invalid queue name: must match [A-Za-z0-9_.-]{1,64}.');
 		}
 
@@ -148,7 +170,9 @@ final class CacheKeyValidator {
 			return null;
 		}
 
-		if (preg_match(self::IDEMPOTENCY_PATTERN, $key) !== 1) {
+		$len = strlen($key);
+
+		if ($len > 128 || strspn($key, self::KEY_CHARS) !== $len) {
 			throw new CacheException('Invalid idempotency key: must match [A-Za-z0-9_.:/-]{1,128}.');
 		}
 

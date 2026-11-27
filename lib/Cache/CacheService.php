@@ -66,16 +66,16 @@ final class CacheService {
 	private readonly int $lockWaitRetries;
 
 	/**
-	 * High-resolution clock callable returning current Unix time in float seconds.
+	 * Optional custom high-resolution clock callable returning current Unix time in float seconds.
 	 *
-	 * @var callable(): float
+	 * @var (callable(): float)|null
 	 */
 	private readonly mixed $microClock;
 
 	/**
-	 * Uniform random generator returning float in (0.0, 1.0] for XFetch decisions.
+	 * Optional custom uniform random generator returning float in (0.0, 1.0] for XFetch decisions.
 	 *
-	 * @var callable(): float
+	 * @var (callable(): float)|null
 	 */
 	private readonly mixed $randomFloat;
 
@@ -150,8 +150,8 @@ final class CacheService {
 		$this->xfetchBeta      = max(0.0, $xfetchBeta);
 		$this->lockWaitMicros  = max(0, $lockWaitMicros);
 		$this->lockWaitRetries = max(0, $lockWaitRetries);
-		$this->microClock      = $microClock ?? static fn (): float => microtime(true);
-		$this->randomFloat     = $randomFloat ?? static fn (): float => random_int(1, 1000000) / 1000000.0;
+		$this->microClock      = $microClock;
+		$this->randomFloat     = $randomFloat;
 	}
 
 	/**
@@ -274,12 +274,11 @@ final class CacheService {
 		$validTtl   = CacheKeyValidator::validateTtl($ttl ?? $this->defaultTtl);
 		$activeBeta = $beta !== null ? max(0.0, $beta) : $this->xfetchBeta;
 
-		$envelope = $this->readEnvelope($validKey, $validGroup);
+		$nowFloat = $this->nowFloat();
+		$envelope = $this->readEnvelopeValidated($validKey, $validGroup, (int) floor($nowFloat));
 
 		if ($envelope !== null) {
-			$now = ($this->microClock)();
-
-			if ($this->shouldEarlyRecompute($envelope, $now, $activeBeta)) {
+			if ($this->shouldEarlyRecompute($envelope, $nowFloat, $activeBeta)) {
 				$lockKey = CacheKeyValidator::entryId($validGroup, $validKey);
 				$token   = bin2hex(random_bytes(16));
 
@@ -311,7 +310,7 @@ final class CacheService {
 			$this->lockAcquisitions++;
 
 			try {
-				$recheck = $this->readEnvelope($validKey, $validGroup);
+				$recheck = $this->readEnvelopeValidated($validKey, $validGroup, (int) floor($this->nowFloat()));
 
 				if ($recheck !== null) {
 					return $recheck['v'];
@@ -330,7 +329,7 @@ final class CacheService {
 				usleep($this->lockWaitMicros);
 			}
 
-			$waited = $this->readEnvelope($validKey, $validGroup);
+			$waited = $this->readEnvelopeValidated($validKey, $validGroup, (int) floor($this->nowFloat()));
 
 			if ($waited !== null) {
 				$this->hits++;
@@ -375,7 +374,7 @@ final class CacheService {
 	 * @return int Number of expired entries removed.
 	 */
 	public function pruneExpired(): int {
-		$removed = $this->driver->pruneExpired((int) floor(($this->microClock)()));
+		$removed = $this->driver->pruneExpired((int) floor($this->nowFloat()));
 		$this->evictions += $removed;
 
 		return $removed;
@@ -459,6 +458,15 @@ final class CacheService {
 	}
 
 	/**
+	 * Return current Unix time in float seconds using the configured clock or native microtime(true).
+	 *
+	 * @return float
+	 */
+	private function nowFloat(): float {
+		return $this->microClock !== null ? ($this->microClock)() : microtime(true);
+	}
+
+	/**
 	 * Evaluate the XFetch early-expiration inequality on a fresh cache envelope.
 	 *
 	 * @param array{v: mixed, t: array<string, int>, c: int, e: int, d: float} $envelope Decoded cache envelope.
@@ -471,7 +479,9 @@ final class CacheService {
 			return false;
 		}
 
-		$rand = max(1e-12, min(1.0, ($this->randomFloat)()));
+		// Probabilistic XFetch threshold does not require cryptographic entropy (lock tokens use random_bytes).
+		$rawRand = $this->randomFloat !== null ? ($this->randomFloat)() : (mt_rand(1, 1000000) / 1000000.0);
+		$rand    = max(1e-12, min(1.0, $rawRand));
 
 		return ($now - ($envelope['d'] * $beta * log($rand))) >= (float) $envelope['e'];
 	}
@@ -493,17 +503,18 @@ final class CacheService {
 		array $validTags,
 		callable $callback,
 	): mixed {
-		$started = ($this->microClock)();
+		$started = $this->nowFloat();
 		$value   = $callback();
-		$delta   = max(0.0, ($this->microClock)() - $started);
+		$ended   = $this->nowFloat();
+		$delta   = max(0.0, $ended - $started);
 
-		$this->writeEnvelope($validKey, $value, $validTtl, $validGroup, $validTags, $delta);
+		$this->writeEnvelopeValidated($validKey, $value, $validTtl, $validGroup, $validTags, $delta, (int) floor($ended));
 
 		return $value;
 	}
 
 	/**
-	 * Encode and persist a cache envelope with captured tag checksums and compute delta.
+	 * Validate inputs, then encode and persist a cache envelope.
 	 *
 	 * @param string $key Cache key.
 	 * @param mixed $value JSON-encodable value.
@@ -527,7 +538,39 @@ final class CacheService {
 		$validTags  = CacheKeyValidator::validateTags($tags);
 		$validTtl   = CacheKeyValidator::validateTtl($ttl ?? $this->defaultTtl);
 
-		$now          = (int) floor(($this->microClock)());
+		return $this->writeEnvelopeValidated(
+			$validKey,
+			$value,
+			$validTtl,
+			$validGroup,
+			$validTags,
+			$deltaSeconds,
+			(int) floor($this->nowFloat())
+		);
+	}
+
+	/**
+	 * Encode and persist a cache envelope whose key, group, tags, and TTL are already validated.
+	 *
+	 * @param string $validKey Validated cache key.
+	 * @param mixed $value JSON-encodable value.
+	 * @param int $validTtl Validated TTL in seconds.
+	 * @param string $validGroup Validated cache group name.
+	 * @param list<string> $validTags Validated cache tags.
+	 * @param float $deltaSeconds Measured computation duration in seconds.
+	 * @param int $now Current Unix timestamp in seconds.
+	 * @return bool
+	 * @throws CacheException When JSON encoding fails or exceeds payload bounds.
+	 */
+	private function writeEnvelopeValidated(
+		string $validKey,
+		mixed $value,
+		int $validTtl,
+		string $validGroup,
+		array $validTags,
+		float $deltaSeconds,
+		int $now,
+	): bool {
 		$expiresAt    = $validTtl > 0 ? $now + $validTtl : 0;
 		$tagChecksums = $validTags !== [] ? $this->driver->getTagChecksums($validTags) : [];
 
@@ -550,7 +593,7 @@ final class CacheService {
 	}
 
 	/**
-	 * Read, decode, expiry-check, and tag-verify a cache envelope from the driver.
+	 * Validate key and group, then read, decode, expiry-check, and tag-verify a cache envelope.
 	 *
 	 * @param string $key Cache key.
 	 * @param string $group Cache group name.
@@ -560,7 +603,20 @@ final class CacheService {
 	private function readEnvelope(string $key, string $group): ?array {
 		$validKey   = CacheKeyValidator::validateKey($key);
 		$validGroup = CacheKeyValidator::validateGroup($group);
-		$raw        = $this->driver->getRaw($validGroup, $validKey);
+
+		return $this->readEnvelopeValidated($validKey, $validGroup, null);
+	}
+
+	/**
+	 * Read, decode, expiry-check, and tag-verify an envelope for pre-validated key and group.
+	 *
+	 * @param string $validKey Validated cache key.
+	 * @param string $validGroup Validated cache group name.
+	 * @param int|null $nowSeconds Optional pre-sampled Unix timestamp in seconds.
+	 * @return array{v: mixed, t: array<string, int>, c: int, e: int, d: float}|null
+	 */
+	private function readEnvelopeValidated(string $validKey, string $validGroup, ?int $nowSeconds): ?array {
+		$raw = $this->driver->getRaw($validGroup, $validKey);
 
 		if ($raw === null) {
 			return null;
@@ -575,13 +631,15 @@ final class CacheService {
 			return null;
 		}
 
-		$now = (int) floor(($this->microClock)());
+		if ($envelope['e'] > 0) {
+			$now = $nowSeconds ?? (int) floor($this->nowFloat());
 
-		if ($envelope['e'] > 0 && $envelope['e'] <= $now) {
-			$this->driver->delete($validGroup, $validKey);
-			$this->evictions++;
+			if ($envelope['e'] <= $now) {
+				$this->driver->delete($validGroup, $validKey);
+				$this->evictions++;
 
-			return null;
+				return null;
+			}
 		}
 
 		if ($envelope['t'] !== []) {

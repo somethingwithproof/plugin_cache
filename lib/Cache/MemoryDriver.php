@@ -55,9 +55,9 @@ final class MemoryDriver implements CacheDriver {
 	private readonly int $mainCapacity;
 
 	/**
-	 * Clock callable returning current Unix timestamp in seconds.
+	 * Optional custom clock callable returning current Unix timestamp in seconds.
 	 *
-	 * @var callable(): int
+	 * @var (callable(): int)|null
 	 */
 	private readonly mixed $clock;
 
@@ -128,7 +128,7 @@ final class MemoryDriver implements CacheDriver {
 		$this->capacity      = max(2, $capacity);
 		$this->smallCapacity = max(1, (int) floor($this->capacity * 0.1));
 		$this->mainCapacity  = max(1, $this->capacity - $this->smallCapacity);
-		$this->clock         = $clock ?? static fn (): int => time();
+		$this->clock         = $clock;
 	}
 
 	/**
@@ -148,22 +148,27 @@ final class MemoryDriver implements CacheDriver {
 	 * @return string|null
 	 */
 	public function getRaw(string $group, string $key): ?string {
-		$id = CacheKeyValidator::entryId($group, $key);
+		$id = $group . "\0" . $key;
 
 		if (!isset($this->entries[$id])) {
 			return null;
 		}
 
-		$now   = ($this->clock)();
 		$entry = $this->entries[$id];
 
-		if ($entry['expiresAt'] > 0 && $entry['expiresAt'] <= $now) {
-			$this->removeResident($id);
+		if ($entry['expiresAt'] > 0) {
+			$now = $this->clock !== null ? ($this->clock)() : time();
 
-			return null;
+			if ($entry['expiresAt'] <= $now) {
+				$this->removeResident($id);
+
+				return null;
+			}
 		}
 
-		$this->entries[$id]['freq'] = min(self::MAX_FREQ, $entry['freq'] + 1);
+		if ($entry['freq'] < self::MAX_FREQ) {
+			$this->entries[$id]['freq'] = $entry['freq'] + 1;
+		}
 
 		return $entry['payload'];
 	}
@@ -179,9 +184,8 @@ final class MemoryDriver implements CacheDriver {
 	 * @return bool
 	 */
 	public function setRaw(string $group, string $key, string $payload, int $ttlSeconds, array $tags = []): bool {
-		$id        = CacheKeyValidator::entryId($group, $key);
-		$now       = ($this->clock)();
-		$expiresAt = $ttlSeconds > 0 ? $now + $ttlSeconds : 0;
+		$id        = $group . "\0" . $key;
+		$expiresAt = $ttlSeconds > 0 ? (($this->clock !== null ? ($this->clock)() : time()) + $ttlSeconds) : 0;
 
 		if (isset($this->entries[$id])) {
 			$this->entries[$id]['payload']   = $payload;
@@ -226,7 +230,7 @@ final class MemoryDriver implements CacheDriver {
 	 * @return bool
 	 */
 	public function delete(string $group, string $key): bool {
-		$id = CacheKeyValidator::entryId($group, $key);
+		$id = $group . "\0" . $key;
 
 		if (!isset($this->entries[$id])) {
 			return false;
@@ -278,7 +282,7 @@ final class MemoryDriver implements CacheDriver {
 	 * @return int
 	 */
 	public function pruneExpired(?int $now = null): int {
-		$cutoff  = $now ?? ($this->clock)();
+		$cutoff  = $now ?? ($this->clock !== null ? ($this->clock)() : time());
 		$removed = 0;
 
 		foreach ($this->entries as $id => $entry) {
@@ -340,7 +344,7 @@ final class MemoryDriver implements CacheDriver {
 	 * @return bool
 	 */
 	public function acquireLock(string $lockKey, string $token, int $ttlSeconds): bool {
-		$now = ($this->clock)();
+		$now = $this->clock !== null ? ($this->clock)() : time();
 
 		if (isset($this->locks[$lockKey]) && $this->locks[$lockKey]['expiresAt'] > $now) {
 			return false;
@@ -381,7 +385,7 @@ final class MemoryDriver implements CacheDriver {
 	 * @return array<string, int>
 	 */
 	public function groupCounts(): array {
-		$now    = ($this->clock)();
+		$now    = $this->clock !== null ? ($this->clock)() : time();
 		$counts = [];
 
 		foreach ($this->entries as $entry) {
@@ -403,7 +407,7 @@ final class MemoryDriver implements CacheDriver {
 	 * @return array{driver: string, healthy: bool, entries: int, expired: int, bytes: int, details: array<string, mixed>}
 	 */
 	public function metrics(): array {
-		$now     = ($this->clock)();
+		$now     = $this->clock !== null ? ($this->clock)() : time();
 		$active  = 0;
 		$expired = 0;
 		$bytes   = 0;
@@ -514,11 +518,16 @@ final class MemoryDriver implements CacheDriver {
 					$this->evictMain();
 				}
 
-				$promoted['freq']      = 0;
-				$promoted['queue']     = 'M';
-				$this->entries[$id]    = $promoted;
-				$this->mainQueue[$id]  = true;
+				$promoted['freq']     = 0;
+				$promoted['queue']    = 'M';
+				$this->entries[$id]   = $promoted;
+				$this->mainQueue[$id] = true;
 				$this->promotions++;
+
+				// Stop once both total capacity and small-queue budget have room for the pending insert.
+				if (count($this->entries) < $this->capacity && count($this->smallQueue) < $this->smallCapacity) {
+					return;
+				}
 
 				continue;
 			}

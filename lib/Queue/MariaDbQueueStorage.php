@@ -323,52 +323,64 @@ final class MariaDbQueueStorage implements QueueStorage {
 	}
 
 	/**
-	 * Reclaim expired leases, dead-lettering exhausted rows and releasing remaining rows to pending.
+	 * Reclaim expired leases in a single atomic UPDATE, dead-lettering exhausted rows
+	 * and releasing remaining rows back to pending.
 	 *
 	 * @param string|null $queueName Optional queue filter.
 	 * @param int $now Current Unix timestamp.
 	 * @return int
 	 */
 	public function reclaimExpiredLeases(?string $queueName, int $now): int {
-		$reclaimed = 0;
+		$expiredError = 'Lease expired after reaching max attempts';
 
 		if ($queueName !== null) {
 			$this->db->execute(
 				'UPDATE plugin_cache_queue
-				 SET status = ?, lease_until = 0, lease_token = ?, last_error = ?, updated_at = ?
-				 WHERE queue_name = ? AND status = ? AND lease_until > 0 AND lease_until <= ? AND attempts >= max_attempts',
-				[QueueItem::STATUS_DEAD, '', 'Lease expired after reaching max attempts', $now, $queueName, QueueItem::STATUS_LEASED, $now]
+				 SET status = CASE WHEN attempts >= max_attempts THEN ? ELSE ? END,
+				     lease_until = 0,
+				     lease_token = ?,
+				     available_at = CASE WHEN attempts >= max_attempts THEN available_at ELSE ? END,
+				     last_error = CASE WHEN attempts >= max_attempts THEN ? ELSE last_error END,
+				     updated_at = ?
+				 WHERE queue_name = ? AND status = ? AND lease_until > 0 AND lease_until <= ?',
+				[
+					QueueItem::STATUS_DEAD,
+					QueueItem::STATUS_PENDING,
+					'',
+					$now,
+					$expiredError,
+					$now,
+					$queueName,
+					QueueItem::STATUS_LEASED,
+					$now,
+				]
 			);
-			$reclaimed += $this->db->affectedRows();
 
-			$this->db->execute(
-				'UPDATE plugin_cache_queue
-				 SET status = ?, lease_until = 0, lease_token = ?, available_at = ?, updated_at = ?
-				 WHERE queue_name = ? AND status = ? AND lease_until > 0 AND lease_until <= ? AND attempts < max_attempts',
-				[QueueItem::STATUS_PENDING, '', $now, $now, $queueName, QueueItem::STATUS_LEASED, $now]
-			);
-			$reclaimed += $this->db->affectedRows();
-
-			return $reclaimed;
+			return $this->db->affectedRows();
 		}
 
 		$this->db->execute(
 			'UPDATE plugin_cache_queue
-			 SET status = ?, lease_until = 0, lease_token = ?, last_error = ?, updated_at = ?
-			 WHERE status = ? AND lease_until > 0 AND lease_until <= ? AND attempts >= max_attempts',
-			[QueueItem::STATUS_DEAD, '', 'Lease expired after reaching max attempts', $now, QueueItem::STATUS_LEASED, $now]
+			 SET status = CASE WHEN attempts >= max_attempts THEN ? ELSE ? END,
+			     lease_until = 0,
+			     lease_token = ?,
+			     available_at = CASE WHEN attempts >= max_attempts THEN available_at ELSE ? END,
+			     last_error = CASE WHEN attempts >= max_attempts THEN ? ELSE last_error END,
+			     updated_at = ?
+			 WHERE status = ? AND lease_until > 0 AND lease_until <= ?',
+			[
+				QueueItem::STATUS_DEAD,
+				QueueItem::STATUS_PENDING,
+				'',
+				$now,
+				$expiredError,
+				$now,
+				QueueItem::STATUS_LEASED,
+				$now,
+			]
 		);
-		$reclaimed += $this->db->affectedRows();
 
-		$this->db->execute(
-			'UPDATE plugin_cache_queue
-			 SET status = ?, lease_until = 0, lease_token = ?, available_at = ?, updated_at = ?
-			 WHERE status = ? AND lease_until > 0 AND lease_until <= ? AND attempts < max_attempts',
-			[QueueItem::STATUS_PENDING, '', $now, $now, QueueItem::STATUS_LEASED, $now]
-		);
-		$reclaimed += $this->db->affectedRows();
-
-		return $reclaimed;
+		return $this->db->affectedRows();
 	}
 
 	/**

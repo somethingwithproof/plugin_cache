@@ -30,11 +30,31 @@ namespace Somethingwithproof\Cache\Cache;
  */
 final class RedisDriver implements CacheDriver {
 	/**
+	 * Chunk size in bytes for buffered socket reads (64 KiB).
+	 */
+	private const READ_CHUNK_BYTES = 65536;
+
+	/**
 	 * Active stream socket resource or null when disconnected.
 	 *
 	 * @var resource|null
 	 */
 	private $socket = null;
+
+	/**
+	 * Buffered RESP2 bytes read from the active socket.
+	 */
+	private string $readBuffer = '';
+
+	/**
+	 * Current byte read offset inside $this->readBuffer for O(1) consumption.
+	 */
+	private int $readOffset = 0;
+
+	/**
+	 * Cached byte length of $this->readBuffer.
+	 */
+	private int $readLength = 0;
 
 	/**
 	 * Custom stream connector factory used for deterministic socket testing.
@@ -356,7 +376,10 @@ final class RedisDriver implements CacheDriver {
 			@fclose($this->socket);
 		}
 
-		$this->socket = null;
+		$this->socket     = null;
+		$this->readBuffer = '';
+		$this->readOffset = 0;
+		$this->readLength = 0;
 	}
 
 	/**
@@ -481,7 +504,8 @@ final class RedisDriver implements CacheDriver {
 		$written = 0;
 
 		while ($written < $total) {
-			$chunk = @fwrite($socket, substr($buffer, $written));
+			$slice = $written === 0 ? $buffer : substr($buffer, $written);
+			$chunk = @fwrite($socket, $slice);
 
 			if ($chunk === false || $chunk === 0) {
 				$this->disconnect();
@@ -494,7 +518,7 @@ final class RedisDriver implements CacheDriver {
 	}
 
 	/**
-	 * Parse a single RESP2 reply frame from the socket.
+	 * Parse a single RESP2 reply frame from the buffered socket stream.
 	 *
 	 * @param resource $socket Open stream socket.
 	 * @return mixed
@@ -529,9 +553,7 @@ final class RedisDriver implements CacheDriver {
 				return null;
 			}
 
-			$data = $this->readExact($socket, $length + 2);
-
-			return substr($data, 0, $length);
+			return $this->readBulkPayload($socket, $length);
 		}
 
 		if ($prefix === '*') {
@@ -554,54 +576,86 @@ final class RedisDriver implements CacheDriver {
 	}
 
 	/**
-	 * Read a CRLF-terminated RESP2 header line from the socket.
+	 * Read a CRLF-terminated RESP2 header line from the offset-tracked socket buffer.
 	 *
 	 * @param resource $socket Open stream socket.
 	 * @return string Line content without trailing CRLF.
 	 * @throws CacheException On EOF or timeout.
 	 */
 	private function readLine($socket): string {
-		$line = @fgets($socket);
+		while (true) {
+			$eol = strpos($this->readBuffer, "\n", $this->readOffset);
 
-		if ($line === false) {
-			$this->disconnect();
+			if ($eol !== false) {
+				$end = ($eol > $this->readOffset && $this->readBuffer[$eol - 1] === "\r")
+					? $eol - 1
+					: $eol;
+				$line             = substr($this->readBuffer, $this->readOffset, $end - $this->readOffset);
+				$this->readOffset = $eol + 1;
 
-			throw new CacheException('Unexpected EOF or timeout reading RESP2 line from Redis.');
+				return $line;
+			}
+
+			$this->fillReadBuffer($socket, 'Unexpected EOF or timeout reading RESP2 line from Redis.');
 		}
-
-		return rtrim($line, "\r\n");
 	}
 
 	/**
-	 * Read an exact byte count from the socket.
+	 * Read an exact RESP2 bulk payload followed by its trailing CRLF directly from the socket buffer.
 	 *
 	 * @param resource $socket Open stream socket.
-	 * @param int $length Number of bytes to read.
+	 * @param int $length Exact payload length in bytes excluding trailing CRLF.
 	 * @return string
 	 * @throws CacheException On premature EOF or timeout.
 	 */
-	private function readExact($socket, int $length): string {
-		$buffer = '';
+	private function readBulkPayload($socket, int $length): string {
+		$needed = $length + 2;
 
-		while (strlen($buffer) < $length) {
-			$remaining = $length - strlen($buffer);
-
-			if ($remaining < 1) {
-				break;
-			}
-
-			$chunk = @fread($socket, $remaining);
-
-			if ($chunk === false || $chunk === '') {
-				$this->disconnect();
-
-				throw new CacheException('Unexpected EOF or timeout reading RESP2 bulk payload from Redis.');
-			}
-
-			$buffer .= $chunk;
+		while (($this->readLength - $this->readOffset) < $needed) {
+			$this->fillReadBuffer($socket, 'Unexpected EOF or timeout reading RESP2 bulk payload from Redis.');
 		}
 
-		return $buffer;
+		$data             = $length === 0 ? '' : substr($this->readBuffer, $this->readOffset, $length);
+		$this->readOffset += $needed;
+
+		return $data;
+	}
+
+	/**
+	 * Compact consumed prefix bytes in amortized O(1) and append the next chunk from the socket.
+	 *
+	 * @param resource $socket Open stream socket.
+	 * @param string $eofMessage Error message when socket hits EOF or times out.
+	 * @return void
+	 * @throws CacheException On premature EOF or timeout.
+	 */
+	private function fillReadBuffer($socket, string $eofMessage): void {
+		$chunk = @fread($socket, self::READ_CHUNK_BYTES);
+
+		if ($chunk === false || $chunk === '') {
+			$this->disconnect();
+
+			throw new CacheException($eofMessage);
+		}
+
+		if ($this->readOffset >= $this->readLength) {
+			$this->readBuffer = $chunk;
+			$this->readOffset = 0;
+			$this->readLength = strlen($chunk);
+
+			return;
+		}
+
+		if ($this->readOffset >= 8192 && $this->readOffset >= ($this->readLength >> 1)) {
+			$this->readBuffer = substr($this->readBuffer, $this->readOffset) . $chunk;
+			$this->readOffset = 0;
+			$this->readLength = strlen($this->readBuffer);
+
+			return;
+		}
+
+		$this->readBuffer .= $chunk;
+		$this->readLength += strlen($chunk);
 	}
 
 	/**

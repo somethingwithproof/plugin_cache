@@ -152,12 +152,11 @@ final class JsonCodec {
 			throw new CacheException('Expected JSON object or array payload.');
 		}
 
-		$normalized = [];
-
-		foreach ($decoded as $k => $v) {
-			$normalized[(string) $k] = $v;
+		if ($decoded === []) {
+			return [];
 		}
 
-		return $normalized;
+		/** @var array<string, mixed> $decoded */
+		return $decoded;
 	}
 }
