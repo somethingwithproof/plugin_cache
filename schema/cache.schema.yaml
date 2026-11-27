@@ -1,0 +1,129 @@
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+# SPDX-License-Identifier: GPL-2.0-or-later
+#
+# This file is part of plugin_cache, a plugin for Cacti.
+# https://github.com/somethingwithproof/plugin_cache
+#
+# Static Drupal-style Config vs. State schema for plugin_cache.
+# Config keys are declarative, validated, and eligible for CasC export/apply.
+# State tables and runtime counters are transient operational data and are never exported.
+
+apiVersion: cacti.net/v1alpha1
+kind: PluginConfigSchema
+metadata:
+  plugin: cache
+  schemaVersion: '1.0'
+config:
+  export: true
+  fields:
+    cache_driver:
+      type: enum
+      values:
+        - mariadb
+        - apcu
+        - redis
+        - memory
+      default: mariadb
+      description: Active object cache backend driver.
+    cache_default_ttl:
+      type: integer
+      min: 1
+      max: 2592000
+      default: 300
+      description: Default entry TTL in seconds when callers omit an explicit TTL.
+    cache_max_payload_bytes:
+      type: integer
+      min: 1024
+      max: 16777216
+      default: 1048576
+      description: Maximum JSON-encoded payload size in bytes for cache entries and queue items.
+    cache_key_prefix:
+      type: string
+      pattern: '^[A-Za-z0-9_.:-]{0,32}$'
+      default: 'cacti:'
+      description: Prefix applied to backend keys in shared stores (APCu and Redis).
+    cache_lock_ttl:
+      type: integer
+      min: 1
+      max: 300
+      default: 15
+      description: Single-flight stampede lock lease TTL in seconds for CacheService::remember().
+    cache_xfetch_beta:
+      type: number
+      min: 0.0
+      max: 10.0
+      default: 1.0
+      description: XFetch probabilistic early-expiration scaling factor (0.0 disables early recompute).
+    cache_memory_capacity:
+      type: integer
+      min: 10
+      max: 100000
+      default: 1000
+      description: Bounded S3-FIFO entry capacity for the in-process MemoryDriver.
+    cache_redis_host:
+      type: string
+      pattern: '^[A-Za-z0-9._:-]{1,253}$'
+      default: '127.0.0.1'
+      description: Redis server hostname or IP address for pure-PHP RESP2 socket transport.
+    cache_redis_port:
+      type: integer
+      min: 1
+      max: 65535
+      default: 6379
+      description: Redis TCP or TLS port.
+    cache_redis_tls:
+      type: boolean
+      default: false
+      description: Enable TLS transport (tls:// with peer certificate verification) for Redis connections.
+    cache_redis_db:
+      type: integer
+      min: 0
+      max: 15
+      default: 0
+      description: Redis logical database index.
+    cache_redis_timeout:
+      type: number
+      min: 0.1
+      max: 30.0
+      default: 2.0
+      description: Redis socket connect and read/write timeout in seconds.
+    cache_redis_secret_ref:
+      type: string
+      pattern: '^$|^(env:[A-Za-z_][A-Za-z0-9_]{0,127}|vault:[a-z][a-z0-9_]{0,31}:[A-Za-z0-9_.-]{1,64})$'
+      default: ''
+      secretRef: true
+      description: Typed secret reference (env:VAR or vault:plugin:slot) for Redis AUTH; raw secrets are rejected.
+    cache_queue_default_lease:
+      type: integer
+      min: 5
+      max: 3600
+      default: 60
+      description: Default queue item lease duration in seconds.
+    cache_queue_default_max_attempts:
+      type: integer
+      min: 1
+      max: 50
+      default: 5
+      description: Default maximum delivery attempts before moving a queue item to dead-letter status.
+    cache_uninstall_keep_tables:
+      type: boolean
+      default: false
+      description: Preserve plugin_cache_* tables when uninstalling the plugin.
+state:
+  export: false
+  tables:
+    plugin_cache_entries:
+      description: Cached JSON payloads, tag checksums, and expiration timestamps.
+    plugin_cache_tags:
+      description: Monotonic cache tag invalidation counters.
+    plugin_cache_queue:
+      description: Active, leased, completed, and dead-letter resumable batch queue items.
+  ephemeralMetrics:
+    - hits
+    - misses
+    - writes
+    - evictions
+    - tagInvalidations
+    - earlyRecomputes
+    - lockAcquisitions
+    - lockContentions
