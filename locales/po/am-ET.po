@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Amharic <developers@cacti.net>\n"
+"Language: am_ET\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "የ CSRF ማረጋገጫ አልተሳካም። ገጹን እንደገና ይጫኑና ይሞክሩ።"
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "የንቁ መሸጎጫ ነጂ የግንኙነት ፍተሻ ተሳክቷል።"
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "የንቁ መሸጎጫ ነጂ የግንኙነት ፍተሻ አልተሳካም።"
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "የ plugin_cache ውቅር ተቀምጧል።"
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "የ plugin_cache ውቅር ማስቀመጥ አልተቻለም።"
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "የማይደገፍ የአስተዳዳሪ እርምጃ።"
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "የነገር መሸጎጫ ውቅር እና የነጂ ጤንነት (አስተዳዳሪ)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "የመሸጎጫ ቡድን \"%s\" ጸድቷል (%d ግቤቶች)።"
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "ሁሉንም የመሸጎጫ ግቤቶች ከማጽዳትዎ በፊት የማረጋገጫ ሳጥኑን ምልክት ያድርጉ።"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "ሁሉም የመሸጎጫ ግቤቶች ጸድተዋል (%d ግቤቶች)።"
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "ዋጋ ለማሳጣት ቢያንስ አንድ የመሸጎጫ መለያ ያቅርቡ።"
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "%d የመሸጎጫ መለያ(ዎች) ዋጋ ጠፍቷል።"
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "%d ጊዜያቸው ያለፈባቸው ግቤቶች ተወግደዋል እና %d ጊዜያቸው ያለፈባቸው የወረፋ ኪራዮች ተመልሰዋል።"
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "ያልተሳካ መልዕክት ንጥል #%d እንደገና ወደ ወረፋ ገብቷል።"
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "ያልተሳካ መልዕክት ንጥል #%d አልተገኘም።"
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "ያልተሳኩ መልዕክት ንጥሎችን ከማጥፋትዎ በፊት የማረጋገጫ ሳጥኑን ምልክት ያድርጉ።"
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "%d ያልተሳካ መልዕክት ወረፋ ንጥል(ሎች) ጠፍተዋል።"
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "የማይደገፍ የኦፕሬተር እርምጃ።"
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "የነገር መሸጎጫ ክዋኔዎች እና ያልተሳኩ መልዕክቶች ወረፋ (ኦፕሬተር)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "የነገር መሸጎጫ መለኪያዎች እና የቡድን ወረፋ ጥልቀት"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "የመሸጎጫ እይታ"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "የመሸጎጫ ኦፕሬተር"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "የመሸጎጫ አስተዳዳሪ"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "የመሸጎጫ መለኪያዎች እና ወረፋዎች"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "የመሸጎጫ ክዋኔዎች እና ያልተሳኩ መልዕክቶች ወረፋ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "የመሸጎጫ ውቅር እና ጤንነት"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "የነገር መሸጎጫ እና የቡድን ወረፋ"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "የመሸጎጫ ነጂ"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "ለነገር መሸጎጫ እና ለጊዜያዊ ማከማቻ የሚያገለግል የኋላ ነጂ።"
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (በማህደረ ትውስታ የተጋራ)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (ንጹህ-PHP RESP2 ሶኬት)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "የሂደት ማህደረ ትውስታ (በ S3-FIFO የተገደበ)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "ነባሪ TTL (ሰከንዶች)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "ምንም TTL ካልተሰጠ ነባሪ የመሸጎጫ ግቤት የማለቂያ ጊዜ በሰከንዶች።"
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "ከፍተኛ የጭነት መጠን (ባይቶች)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "በ JSON በተቀመጡ የመሸጎጫ እና የወረፋ ጭነቶች ላይ ከፍተኛ ገደብ በባይቶች (ከ1024 እስከ 16777216)።"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "የቁልፍ ቅድመ-ቅጥያ"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "በተጋሩ የኋላ ማከማቻዎች (APCu እና Redis) ውስጥ የሚተገበር የቁልፍ የስም ቦታ ቅድመ-ቅጥያ።"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "የመጨናነቅ መቆለፊያ TTL (ሰከንዶች)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "ለ CacheService::remember() ነጠላ-ሂደት መቆለፊያ ቆይታ በሰከንዶች።"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "የ XFetch ቤታ ምክንያት"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "ምናልባታዊ ቀድሞ የማለቂያ አባዥ (ነባሪ 1.0፤ ቀድሞ እንደገና ማስላትን ለማሰናከል 0 ያድርጉ)።"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "የማህደረ ትውስታ ነጂ S3-FIFO አቅም"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "S3-FIFO ማስወገድ ከመጀመሩ በፊት በ MemoryDriver ውስጥ የሚቀመጡ ከፍተኛ ግቤቶች።"
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "የ Redis ማጓጓዣ (ንጹህ-PHP RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "የ Redis አስተናጋጅ"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "ለ Redis አገልጋይ የአስተናጋጅ ስም ወይም IP አድራሻ።"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "የ Redis ወደብ"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "ለ Redis አገልጋይ የ TCP ወይም TLS ወደብ።"
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Redis TLS አንቃ"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "ከአቻ የምስክር ወረቀት ማረጋገጫ ጋር tls:// በመጠቀም ከ Redis ጋር ተገናኝ።"
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "የ Redis ዳታቤዝ ማውጫ"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "አመክንዮአዊ የ Redis ዳታቤዝ ቁጥር (ከ0 እስከ 15)።"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "የ Redis ጊዜ ማብቂያ (ሰከንዶች)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "የሶኬት ግንኙነት እና የንባብ/ጽሑፍ ጊዜ ማብቂያ በሰከንዶች።"
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "የ Redis ሚስጥር ማጣቀሻ"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "ዓይነት ያለው የሚስጥር ማጣቀሻ (env:VAR ወይም vault:plugin:slot)፤ ጥሬ የይለፍ ቃላት በጭራሽ አይቀመጡም።"
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "ሊቀጥል የሚችል የቡድን ወረፋ"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "ነባሪ የወረፋ ኪራይ (ሰከንዶች)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "ያልተረጋገጠ የወረፋ ንጥል እንደገና ሊወሰድ ከመቻሉ በፊት የኪራይ ቆይታ በሰከንዶች።"
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "ነባሪ ከፍተኛ ሙከራዎች"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "አንድ ንጥል ወደ ያልተሳካ መልዕክት ሁኔታ ከመዛወሩ በፊት ከፍተኛ የማድረስ ሙከራዎች።"
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "ሲራገፍ የተሰኪ ሰንጠረዦችን አቆይ"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "ሲራገፍ plugin_cache_entries፣ plugin_cache_tags እና plugin_cache_queue ሰንጠረዦችን አቆይ።"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "የነገር መሸጎጫ አጠቃላይ እይታ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "ነጂ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "ጤንነት"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "ንቁ ግቤቶች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "ጊዜያቸው ያለፈባቸው ረድፎች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "የተከማቹ ባይቶች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "የተገኙ / ያልተገኙ (ጥምርታ)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "የ XFetch ቀድሞ እንደገና ስሌቶች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "የመለያ ዋጋ ማሳጣቶች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "ጤናማ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "ጤናማ ያልሆነ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "የመሸጎጫ ቡድኖች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "ምንም ንቁ የመሸጎጫ ቡድኖች የሉም።"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "ቡድን"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "ሊቀጥሉ የሚችሉ የቡድን ወረፋዎች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "ምንም የቡድን ወረፋዎች አልተመዘገቡም።"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "ወረፋ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "በመጠባበቅ ላይ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "የተከራየ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "የተጠናቀቀበት"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "ያልተሳካ መልዕክት"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "ጊዜያቸው ያለፈባቸው ኪራዮች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "የመሸጎጫ ቡድን እና መለያ ክዋኔዎች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "የመሸጎጫ ቡድን አጽዳ:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "ቡድን አጽዳ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "የመሸጎጫ መለያዎችን ዋጋ አሳጣ (በኮማ የተለዩ):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "መለያዎችን ዋጋ አሳጣ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "ጊዜያቸው ያለፈባቸውን ግቤቶች አስወግድ እና ኪራዮችን መልስ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "ሙሉ የመሸጎጫ ማጽዳትን አረጋግጥ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "ሁሉንም አጽዳ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "ያልተሳኩ መልዕክቶች ወረፋ ፍተሻ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "ምንም ያልተሳኩ መልዕክቶች ወረፋ ንጥሎች የሉም።"
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "መታወቂያ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "ሙከራዎች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "የመጨረሻ ስህተት"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "እርምጃ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "እንደገና ሞክር"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "ያልተሳኩ መልዕክቶችን ማጥፋት አረጋግጥ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "ያልተሳኩ መልዕክቶችን አጥፋ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "የንቁ ነጂ ጤንነት"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "ነጂ: %s | ሁኔታ: %s | የውቅር መዋቅር: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "የነጂ ግንኙነት ፍተሻ አስኪድ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "የነጂ እና መመሪያ ውቅር (ውቅር ብቻ)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "ከፍተኛ የጭነት ባይቶች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "የ Redis ዳታቤዝ (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "የ Redis ሚስጥር ማጣቀሻ (env:VAR ወይም vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "የወረፋ ነባሪ ኪራይ (ሰከንዶች)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "የወረፋ ነባሪ ከፍተኛ ሙከራዎች"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "ውቅር አስቀምጥ"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "የመሸጎጫ ተሰኪው PHP %s ወይም ከዚያ በላይ ይፈልጋል። ይህ አገልጋይ PHP %s እያስኬደ ስለሆነ ተሰኪው አልተጫነም ወይም አልነቃም።"
+
+#: setup.php
+msgid "Utilities"
+msgstr "መገልገያዎች"
+
+#: setup.php
+msgid "Cache"
+msgstr "መሸጎጫ"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "የመሸጎጫ ተሰኪው አልነቃም።"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "የመሸጎጫ ተሰኪው PHP %s ወይም ከዚያ በላይ ይፈልጋል።"

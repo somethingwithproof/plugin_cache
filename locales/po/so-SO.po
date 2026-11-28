@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Somali <developers@cacti.net>\n"
+"Language: so_SO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Xaqiijinta CSRF way fashilantay. Dib u rar bogga oo mar kale isku day."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Tijaabada isku-xirnaanta wadaha kaydka firfircoon way guulaysatay."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Tijaabada isku-xirnaanta wadaha kaydka firfircoon way fashilantay."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Waa la kaydiyay habaynta plugin_cache."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Lama kaydin karin habaynta plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Tallaabo maamule oo aan la taageerin."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Habaynta Kaydka Shayga iyo Fayoobida Wadaha (Maamule)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Waxaa la nadiifiyay kooxda kaydka \"%s\" (%d xog-gelinno)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Calaamadee sanduuqa xaqiijinta ka hor inta aanad nadiifin dhammaan xog-gelinnada kaydka."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Waxaa la nadiifiyay dhammaan xog-gelinnada kaydka (%d xog-gelinno)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Bixi ugu yaraan hal sumad kayd oo la buriyo."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Waxaa la buriyay %d sumad(o) kayd."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Waxaa la saaray %d xog-gelinno dhacay waxaana dib loo helay %d hayn saf oo dhacay."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Shayga fashilmay #%d dib ayaa safka loogu celiyay."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Shayga fashilmay #%d lama helin."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Calaamadee sanduuqa xaqiijinta ka hor inta aanad tirtirin waxyaabaha fashilmay."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Waxaa la tirtiray %d shay oo safka fashilmay ah."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Tallaabo hawl-wadeen oo aan la taageerin."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Hawlgallada Kaydka Shayga iyo Safka Fashilmay (Hawl-wadeen)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Halbeegyada Kaydka Shayga iyo Qoto-dheerida Safka Kooxaysan"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Eegista Kaydka"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Hawl-wadeenka Kaydka"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Maamulka Kaydka"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Halbeegyada Kaydka iyo Safafka"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Hawlgallada Kaydka iyo Safka Fashilmay (DLQ)"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Habaynta Kaydka iyo Fayoobida"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Kaydka Shayga iyo Safka Kooxaysan"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Wadaha Kaydka"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Wadaha dambe ee loo isticmaalo kaydka shayga iyo kaydinta ku-meel-gaarka ah."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (xusuusta la wadaago)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (godka isku-xirka RESP2 ee PHP saafi ah)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Xusuusta Habka (S3-FIFO xaddidan)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "TTL-ka Caadiga ah (ilbiriqsiyo)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Dhicitaanka caadiga ah ee xog-gelinta kaydka ilbiriqsiyo ahaan marka aan la bixin TTL."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Cabbirka Ugu Badan ee Xamuulka (baytyo)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Xadka ugu sarreeya baytyo ahaan ee xamuulka kaydka iyo safka ee ku qoran JSON (1024 ilaa 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Horgalaha Furaha"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Horgalaha magac-goobta furaha ee lagu dabaqo nidaamyada dambe ee la wadaago (APCu iyo Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL-ka Qufulka Culeyska Degdegga ah (ilbiriqsiyo)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Muddada qufulka hal-mar fulinta ilbiriqsiyo ahaan ee loogu talagalay CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "Qaybta Beta ee XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Isku-dhufashada dhicitaanka hore ee suurtogalka ah (caadiga ah 1.0; ka dhig 0 si aad u damiso dib-u-xisaabinta hore)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Awoodda S3-FIFO ee Wadaha Xusuusta"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Tirada ugu badan ee xog-gelinnada lagu hayo MemoryDriver ka hor inta aan la bilaabin ka-saaridda S3-FIFO."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Gaadiidka Xogta Redis (PHP saafi ah RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Martigaliyaha Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Magaca martigaliyaha ama cinwaanka IP ee adeegaha Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Dekadda Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Dekadda TCP ama TLS ee adeegaha Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Hawl-geli Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Ku xir Redis adigoo isticmaalaya tls:// oo leh xaqiijinta shahaadada dhinaca kale."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Tusaha Xog-kaydiyaha Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Lambarka macquulka ah ee xog-kaydiyaha Redis (0 ilaa 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Waqtiga Dhammaadka Redis (ilbiriqsiyo)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Waqtiga dhammaadka isku-xirka godka iyo akhrinta/qorista ilbiriqsiyo ahaan."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Tixraaca Sirta Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Tixraac sir oo nooc leh (env:VAR ama vault:plugin:slot); furayaasha sirta ah ee aan qarsoonayn marnaba lama kaydiyo."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Safka Kooxaysan ee Dib loo Sii Wadi Karo"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Muddada Haynta Caadiga ah ee Safka (ilbiriqsiyo)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Muddada haynta ilbiriqsiyo ahaan ka hor inta shay saf oo aan la qirin uusan noqon mid dib loo heli karo."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Isku-dayada Ugu Badan ee Caadiga ah"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Isku-dayada ugu badan ee gaarsiinta ka hor inta aan shayga loo wareejin xaaladda fashilmay."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Hay Jadwallada Kordhinta Marka la Tirtiro"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Xafid jadwallada plugin_cache_entries, plugin_cache_tags, iyo plugin_cache_queue marka la tirtiro."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Guudmarka Kaydka Shayga"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Wade"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Fayoobida"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Xog-gelinnada Firfircoon"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Sadarrada Dhacay"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Baytyada Kaydsan"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Helidda / Waayidda (Saamiga)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Dib-u-xisaabinta Hore ee XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Burinta Sumadaha"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Fayow"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Aan fayoobayn"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Kooxaha Kaydka"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Ma jiraan kooxo kayd oo firfircoon."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Koox"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Safafka Kooxaysan ee Dib loo Sii Wadi Karo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Ma jiraan safaf kooxaysan oo la diiwaangeliyay."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Saf"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Sugaya"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "La hayo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "La dhammeeyay"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Fashilmay"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Haynta Dhacday"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Hawlgallada Kooxda iyo Sumadaha Kaydka"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Nadiifi Kooxda Kaydka:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Nadiifi Kooxda"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Buri Sumadaha Kaydka (hakad u dhexeeyo):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Buri Sumadaha"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Ka Saar Xog-gelinnada Dhacay oo Dib u Hel Haynta"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Xaqiiji nadiifinta buuxda ee kaydka"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Nadiifi Dhammaan"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Kormeerka Safka Fashilmay"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Ma jiraan waxyaabo ku jira safka fashilmay."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Isku-dayo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Khaladkii Ugu Dambeeyay"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Tallaabo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Isku day mar kale"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Xaqiiji tirtirista waxyaabaha fashilmay"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Tirtir Waxyaabaha Fashilmay"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Fayoobida Wadaha Firfircoon"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Wadaha: %s | Xaaladda: %s | Qaab-dhismeedka Habaynta: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Fuli Tijaabada Isku-xirnaanta Wadaha"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Habaynta Wadaha iyo Siyaasadda (Habayn Kaliya)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Baytyada Ugu Badan ee Xamuulka"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Xog-kaydiyaha Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Tixraaca Sirta Redis (env:VAR ama vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Haynta Caadiga ah ee Safka (ilbiriqsiyo)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Isku-dayada Ugu Badan ee Caadiga ah ee Safka"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Kaydi Habaynta"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Kordhinta Kaydka waxay u baahan tahay PHP %s ama ka dambeeya. Adeegahani wuxuu ku shaqeeyaa PHP %s, sidaas darteed kordhinta lama rakibin lamana hawl-gelin."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Qalabyada"
+
+#: setup.php
+msgid "Cache"
+msgstr "Kaydka"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Kordhinta Kaydka ma daarana."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Kordhinta Kaydka waxay u baahan tahay PHP %s ama ka dambeeya."

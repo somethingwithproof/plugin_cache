@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Malagasy <developers@cacti.net>\n"
+"Language: mg_MG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Tsy nahomby ny fanamarinana CSRF. Avereno sokafana ny pejy ary andramo indray."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Nahomby ny fitsapana fifandraisana ho an'ny mpamily tahiry vonjimaika miasa."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Tsy nahomby ny fitsapana fifandraisana ho an'ny mpamily tahiry vonjimaika miasa."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Voatahiry ny fikirakirana plugin_cache."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Tsy afaka nitahiry ny fikirakirana plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Hetsiky ny mpitantana tsy tohanana."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Fikirakirana Tahiry Vonjimaika Singa sy Fahasalaman'ny Mpamily (Mpitantana)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Nodiovina ny vondrona tahiry vonjimaika \"%s\" (singa %d)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Mariho ny boaty fanamafisana alohan'ny hanadiovana ny singa rehetra ao amin'ny tahiry vonjimaika."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Nodiovina ny singa rehetra ao amin'ny tahiry vonjimaika (singa %d)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Manomeza marika tahiry vonjimaika iray farafahakeliny hofoanana."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Nofoanana ny marika tahiry vonjimaika %d."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Nesorina ny singa lany daty %d ary naverina nalaina ny fitanana filaharana lany daty %d."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Naverina napetraka ao amin'ny filaharana ny singa tsy lasa #%d."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Tsy hita ny singa tsy lasa #%d."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Mariho ny boaty fanamafisana alohan'ny hamafana tanteraka ny singa tsy lasa."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Voaesotra tanteraka ny singa %d ao amin'ny filaharan'ny tsy lasa."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Hetsiky ny mpanatanteraka tsy tohanana."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Asa Tahiry Vonjimaika Singa sy Filaharan'ny Singa Tsy Lasa (Mpanatanteraka)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Fandrefesana Tahiry Vonjimaika Singa sy Halalin'ny Filaharana Andiany"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Fijerena Tahiry Vonjimaika"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Mpanatanteraka Tahiry Vonjimaika"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Mpitantana Tahiry Vonjimaika"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Fandrefesana Tahiry Vonjimaika sy Filaharana"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Asa Tahiry Vonjimaika sy DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Fikirakirana Tahiry Vonjimaika sy Fahasalamana"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Tahiry Vonjimaika Singa sy Filaharana Andiany"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Mpamily Tahiry Vonjimaika"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Mpamily rafitra ambadika ampiasaina amin'ny tahiry vonjimaika singa sy ny fitahirizana mandalo."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (fitadidiana iombonana)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (sokety RESP2 amin'ny PHP madio)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Fitadidian'ny Dingana (voafetran'ny S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "TTL Mahazatra (segondra)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Fahalaniana daty mahazatra amin'ny segondra ho an'ny singa ao amin'ny tahiry vonjimaika rehefa tsy misy TTL nomena."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Haben'ny Votoaty Ambony Indrindra (oktety)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Fetra ambony amin'ny oktety ho an'ny votoatin'ny tahiry vonjimaika sy filaharana voasoratra JSON (1024 hatramin'ny 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Tovon'ny Fanalahidy"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Tovon'ny sehatr'anarana fanalahidy ampiharina amin'ny rafitra ambadika iombonana (APCu sy Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL an'ny Hidy Fisorohana Firohotana (segondra)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Faharetan'ny hidy fangatahana tokana amin'ny segondra ho an'ny CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "Mpampitombo Beta XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Mpampitombo fahalaniana daty mialoha araka ny vinavina (mahazatra 1.0; ataovy 0 mba hanafoanana ny fikajiana mialoha)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Fahaiza-mitahiry S3-FIFO an'ny Mpamily Fitadidiana"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Isan'ny singa ambony indrindra tazonina ao amin'ny MemoryDriver alohan'ny handehanan'ny fanesorana S3-FIFO."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Fampitana Redis (RESP2 amin'ny PHP Madio)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Mpampiantrano Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Anaran'ny mpampiantrano na adiresy IP an'ny mpizara Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Seranana Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Seranana TCP na TLS ho an'ny mpizara Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Alefa ny Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Mifandray amin'ny Redis amin'ny alalan'ny tls:// miaraka amin'ny fanamarinana ny mari-pankatoavan'ny mpiara-mifandray."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Laharan'ny Angon-drakitra Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Laharan'ny angon-drakitra Redis lojika (0 hatramin'ny 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Fe-potoana Farany Redis (segondra)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Fe-potoana farany amin'ny segondra ho an'ny fifandraisana sy famakiana/fanoratana sokety."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Tondro Tsiambaratelo Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Tondro tsiambaratelo voafaritra karazana (env:VAR na vault:plugin:slot); tsy misy teny miafina manta tehirizina mihitsy."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Filaharana Andiany Azo Tohitohizana"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Fitanana Filaharana Mahazatra (segondra)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Faharetan'ny fitanana amin'ny segondra alohan'ny hahafahana maka indray ny singa filaharana tsy nohamarinina."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Isan'ny Andrana Ambony Indrindra Mahazatra"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Isan'ny andrana fandefasana ambony indrindra alohan'ny hamindrana singa ho amin'ny toetra tsy lasa."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Tahirizina ny Tabilao Fanampiny Rehefa Esorina"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Tahirizina ny tabilao plugin_cache_entries, plugin_cache_tags, ary plugin_cache_queue rehefa esorina."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Topi-maso Tahiry Vonjimaika Singa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Mpamily"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Fahasalamana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Singa Miasa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Andalana Lany Daty"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Oktety Voatahiry"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Hita / Tsy Hita (Taha)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Fikajiana Mialoha XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Fanafoanana Marika"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Salama"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Tsy salama"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Vondrona Tahiry Vonjimaika"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Tsy misy vondrona tahiry vonjimaika miasa."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Vondrona"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Filaharana Andiany Azo Tohitohizana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Tsy misy filaharana andiany voarakitra."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Filaharana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Miandry"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Tazonina"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Nahavitana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Tsy lasa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Fitanana Lany Daty"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Asa Vondrona Tahiry Vonjimaika sy Marika"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Diovy ny Vondrona Tahiry Vonjimaika:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Diovy ny Vondrona"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Foano ny Marika Tahiry Vonjimaika (sarahin'ny faingo):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Foano ny Marika"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Esory ny Singa Lany Daty ary Alao Indray ny Fitanana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Hamafiso ny fanadiovana tanteraka ny tahiry vonjimaika"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Diovy Rehetra"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Fanamarinana Filaharan'ny Singa Tsy Lasa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Tsy misy singa ao amin'ny filaharan'ny tsy lasa."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Andrana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Hadisoana Farany"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Hetsika"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Andramo indray"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Hamafiso ny famafana tanteraka ny singa tsy lasa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Fafao Tanteraka ny Tsy Lasa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Fahasalaman'ny Mpamily Miasa"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Mpamily: %s | Toetra: %s | Drafitra Fikirakirana: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Alefa ny Fitsapana Fifandraisan'ny Mpamily"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Fikirakirana Mpamily sy Fitsipika (Fikirakirana Ihany)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Oktety Votoaty Ambony Indrindra"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Angon-drakitra Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Tondro Tsiambaratelo Redis (env:VAR na vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Fitanana Mahazatra Filaharana (segondra)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Isan'ny Andrana Ambony Indrindra Mahazatra Filaharana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Tehirizo ny Fikirakirana"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Mitaky PHP %s na vaovao kokoa ny fanampiny Tahiry Vonjimaika. Mampiasa PHP %s ity mpizara ity, ka tsy napetraka na nalefa ny fanampiny."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Fitaovana"
+
+#: setup.php
+msgid "Cache"
+msgstr "Tahiry Vonjimaika"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Tsy alefa ny fanampiny Tahiry Vonjimaika."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Mitaky PHP %s na vaovao kokoa ny fanampiny Tahiry Vonjimaika."

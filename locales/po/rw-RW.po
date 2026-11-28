@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Kinyarwanda <developers@cacti.net>\n"
+"Language: rw_RW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Isuzuma rya CSRF ryananiwe. Ongera ufungure urupapuro hanyuma ugerageze nanone."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Isuzuma ry'ihuza rya porogaramu iyobora ububiko bw'agateganyo ikora ryagenze neza."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Isuzuma ry'ihuza rya porogaramu iyobora ububiko bw'agateganyo ikora ryananiwe."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Igenamiterere rya plugin_cache ryabitswe."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Ntibishoboye kubika igenamiterere rya plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Igikorwa cy'umuyobozi kitajyanye n'ibyemewe."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Igenamiterere ry'Ububiko bw'Agateganyo bw'Ibintu n'Ubuzima bwa Porogaramu Iyobora (Umuyobozi)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Itsinda ry'ububiko bw'agateganyo \"%s\" ryahanaguwe (ibibitswe %d)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Shyira akamenyetso mu gasanduku ko kwemeza mbere yo guhanagura ibibitswe byose mu bubiko bw'agateganyo."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Ibibitswe byose mu bubiko bw'agateganyo byahanaguwe (ibibitswe %d)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Tanga nibura akarango kamwe k'ububiko bw'agateganyo ko gutesha agaciro."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Uturango %d tw'ububiko bw'agateganyo twateshejwe agaciro."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Hakuweho ibibitswe %d byarangiye kandi hagarurwa ibihe byo gufata ibikorwa %d byarangiye ku murongo."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Igikorwa cyananiranye #%d cyasubijwe ku murongo."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Igikorwa cyananiranye #%d ntikibonetse."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Shyira akamenyetso mu gasanduku ko kwemeza mbere yo gusiba burundu ibikorwa byananiranye."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Ibikorwa byananiranye %d byasibwe burundu ku murongo."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Igikorwa cy'umukozi kitajyanye n'ibyemewe."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Ibikorwa by'Ububiko bw'Agateganyo bw'Ibintu n'Umurongo w'Ibyananiranye (Umukozi)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Ibipimo by'Ububiko bw'Agateganyo bw'Ibintu n'Uburebure bw'Umurongo w'Ibikorwa"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Kureba Ububiko bw'Agateganyo"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Umukozi w'Ububiko bw'Agateganyo"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Umuyobozi w'Ububiko bw'Agateganyo"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Ibipimo n'Imirongo by'Ububiko bw'Agateganyo"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Ibikorwa by'Ububiko bw'Agateganyo na DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Igenamiterere n'Ubuzima by'Ububiko bw'Agateganyo"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Ububiko bw'Agateganyo bw'Ibintu n'Umurongo w'Ibikorwa"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Porogaramu Iyobora Ububiko bw'Agateganyo"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Porogaramu iyobora y'inyuma ikoreshwa ku bubiko bw'agateganyo bw'ibintu n'ububiko bw'igihe gito."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (isangiwe muri memori)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (umuyoboro wa RESP2 wa PHP yonyine)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Memori y'Igikorwa (ifite igipimo cya S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "TTL Mbanziriza (amasegonda)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Igihe mbanziriza mu masegonda cyo kurangira kw'ikibitswe mu bubiko bw'agateganyo iyo nta TTL yatanzwe."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Ingano Ntarengwa y'Amakuru Yoherezwa (bayite)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Igipimo ntarengwa muri bayite ku makuru abitswe mu bubiko bw'agateganyo n'ay'umurongo yanditse muri JSON (1024 kugeza 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Imbanzirizajambo y'Urufunguzo"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Imbanzirizajambo y'umwanya w'amazina y'imfunguzo ikoreshwa mu bubiko busangiwe (APCu na Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL y'Ifungwa Ririnda Umubyigano (amasegonda)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Igihe mu masegonda cy'ifungwa ry'igikorwa kimwe kuri CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "Igipimo cya Beta cya XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Igikubisho cy'amahirwe cyo kurangira mbere y'igihe (mbanziriza ni 1.0; shyiraho 0 kugira ngo uhagarike kubarura bundi bushya mbere y'igihe)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Ubushobozi bwa S3-FIFO bwa Porogaramu Iyobora Memori"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Umubare ntarengwa w'ibibitswe biguma muri MemoryDriver mbere y'uko ikurwamo rya S3-FIFO rikora."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Ubwikorezi bwa Redis (RESP2 ya PHP Yonyine)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Seriveri ya Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Izina rya seriveri cyangwa aderesi IP ya seriveri ya Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Icyambu cya Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Icyambu cya TCP cyangwa TLS cya seriveri ya Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Gukoresha Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Guhuza na Redis ukoresheje tls:// hamwe n'isuzuma ry'icyemezo cy'uruhande rundi."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Inomero y'Ububikoshingiro bwa Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Inomero y'ububikoshingiro bwa Redis (0 kugeza 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Igihe Ntarengwa cyo Gutegereza Redis (amasegonda)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Igihe ntarengwa mu masegonda cyo guhuza umuyoboro no gusoma/kwandika."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Indangabanga ya Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Indangabanga ifite ubwoko (env:VAR cyangwa vault:plugin:slot); amagambo y'ibanga nyakuri ntabwo abikwa na rimwe."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Umurongo w'Ibikorwa by'Icyiciro Ushobora Gukomeza"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Igihe Mbanziriza cyo Gufata Igikorwa ku Murongo (amasegonda)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Igihe mu masegonda mbere y'uko igikorwa cyo ku murongo kitaremezwa gishobora kongera kugarurwa."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Umubare Ntarengwa Mbanziriza w'Igerageza"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Umubare ntarengwa w'inshuro zo kugerageza kohereza mbere yo kwimura igikorwa mu cyiciro cy'ibyananiranye."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Gukomeza Kubika Imbonerahamwe z'Umugereka mu gihe cyo Kuvanaho"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Gukomeza kubika imbonerahamwe za plugin_cache_entries, plugin_cache_tags, na plugin_cache_queue mu gihe cyo kuvanaho."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Incamake y'Ububiko bw'Agateganyo bw'Ibintu"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Porogaramu Iyobora"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Ubuzima"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Ibibitswe Bikora"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Imirongo Yarangiye"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Bayite Zibitswe"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Ibyabonetse / Ibyabuze (Ikigereranyo)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Ibarura Bundi Bushya rya Mbere y'Igihe rya XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Iteshagaciro ry'Uturango"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Bimeze neza"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Ntibimeze neza"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Amatsinda y'Ububiko bw'Agateganyo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Nta matsinda y'ububiko bw'agateganyo akora."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Itsinda"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Imirongo y'Ibikorwa by'Icyiciro Ishobora Gukomeza"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Nta mirongo y'ibikorwa by'icyiciro yanditswe."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Umurongo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Bitegereje"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Byafashwe"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Byasojwe"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Ibyananiranye"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Ibihe byo Gufata Byarangiye"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Ibikorwa by'Amatsinda n'Uturango by'Ububiko bw'Agateganyo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Hanagura Itsinda ry'Ububiko bw'Agateganyo:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Hanagura Itsinda"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Teshaho Agaciro Uturango tw'Ububiko bw'Agateganyo (tutandukanyijwe n'ikitso):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Teshaho Agaciro Uturango"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Kuraho Ibibitswe Byarangiye no Kugarura Ibihe byo Gufata"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Emeza ihanagurwa ryuzuye ry'ububiko bw'agateganyo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Hanagura Byose"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Igenzura ry'Umurongo w'Ibikorwa Byananiranye"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Nta bikorwa byananiranye biri ku murongo."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Inshuro zo kugerageza"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Ikosa rya Nyuma"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Igikorwa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Ongera ugerageze"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Emeza isibwa burundu ry'ibikorwa byananiranye"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Siba Burundu Ibyananiranye"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Ubuzima bwa Porogaramu Iyobora Ikora"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Porogaramu Iyobora: %s | Imiterere: %s | Igishushanyo cy'Igenamiterere: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Kora Isuzuma ry'Ihuza rya Porogaramu Iyobora"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Igenamiterere rya Porogaramu Iyobora na Politiki (Igenamiterere Gusa)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Bayite Ntarengwa z'Amakuru Yoherezwa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Ububikoshingiro bwa Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Indangabanga ya Redis (env:VAR cyangwa vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Igihe Mbanziriza cyo Gufata ku Murongo (amasegonda)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Umubare Ntarengwa Mbanziriza w'Igerageza ku Murongo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Bika Igenamiterere"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Umugereka w'Ububiko bw'Agateganyo usaba PHP %s cyangwa iyisumbuyeho. Iyi seriveri ikoresha PHP %s, bityo umugereka ntiwashyizweho cyangwa ngo wemezwe."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Ibikoresho"
+
+#: setup.php
+msgid "Cache"
+msgstr "Ububiko bw'Agateganyo"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Umugereka w'Ububiko bw'Agateganyo ntukora."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Umugereka w'Ububiko bw'Agateganyo usaba PHP %s cyangwa iyisumbuyeho."

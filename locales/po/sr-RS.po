@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Serbian <developers@cacti.net>\n"
+"Language: sr-RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Провера CSRF токена није успела. Поново учитајте страницу и покушајте поново."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Провера повезивости активног драјвера кеша је успела."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Провера повезивости активног драјвера кеша није успела."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Конфигурација plugin_cache је сачувана."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Није могуће сачувати конфигурацију plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Неподржана администраторска радња."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Конфигурација објектног кеша и стање драјвера (администратор)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Испражњена је група кеша \"%s\" (ставки: %d)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Означите поље за потврду пре пражњења свих ставки кеша."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Испражњене су све ставке кеша (ставки: %d)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Унесите бар једну ознаку кеша за поништавање."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Поништено ознака кеша: %d."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Уклоњено истеклих ставки: %d; повраћено истеклих закупа реда: %d."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Неуспела ставка #%d је враћена у ред."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Неуспела ставка #%d није пронађена."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Означите поље за потврду пре трајног брисања неуспелих ставки."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Трајно обрисано ставки из реда неуспелих: %d."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Неподржана радња оператера."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Операције објектног кеша и ред неуспелих ставки (оператер)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Метрике објектног кеша и дубина групног реда"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Преглед кеша"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Оператер кеша"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Администратор кеша"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Метрике кеша и редови"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Операције кеша и DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Конфигурација и стање кеша"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Објектни кеш и групни ред"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Драјвер кеша"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Позадински драјвер за објектни кеш и привремено складиште."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (дељена меморија)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (чисти PHP RESP2 сокет)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Меморија процеса (ограничена са S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "Подразумевани TTL (секунде)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Подразумевани рок истицања ставке кеша у секундама када TTL није наведен."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Максимална величина садржаја (бајтови)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Горња граница у бајтовима за JSON кодирани садржај кеша и реда (1024 до 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Префикс кључа"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Префикс именског простора кључева који се примењује у дељеним позадинским системима (APCu и Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL закључавања против навале захтева (секунде)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Трајање закључавања за једноструко извршавање у секундама за CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch бета фактор"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Множилац вероватноће раног истицања (подразумевано 1.0; поставите 0 да онемогућите рано поновно израчунавање)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "S3-FIFO капацитет меморијског драјвера"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Максималан број ставки задржаних у MemoryDriver пре покретања S3-FIFO избацивања."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis транспорт (чисти PHP RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis хост"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Име хоста или IP адреса Redis сервера."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis порт"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "TCP или TLS порт за Redis сервер."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Омогући Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Повежи се са Redis сервером користећи tls:// уз проверу сертификата друге стране."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Индекс Redis базе података"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Логички број Redis базе података (од 0 до 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Временско ограничење за Redis (секунде)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Временско ограничење повезивања и читања/писања сокета у секундама."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Референца на Redis тајну"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Типизирана референца на тајну (env:VAR или vault:plugin:slot); сирове лозинке се никада не чувају."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Наставиви групни ред"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Подразумевани закуп реда (секунде)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Трајање закупа у секундама пре него што непотврђена ставка у реду постане доступна за преузимање."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Подразумевани максималан број покушаја"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Максималан број покушаја испоруке пре премештања ставке у статус неуспелих."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Задржи табеле додатка при деинсталацији"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Сачувај табеле plugin_cache_entries, plugin_cache_tags и plugin_cache_queue при деинсталацији."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Преглед објектног кеша"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Драјвер"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Стање"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Активне ставке"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Истекли редови"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Сачувани бајтови"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Погоци / промашаји (однос)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "XFetch рана поновна израчунавања"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Поништавања ознака"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Исправно"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Неисправно"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Групе кеша"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Нема активних група кеша."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Група"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Наставиви групни редови"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Нема забележених групних редова."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Ред"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "На чекању"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Закупљено"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Завршено"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Неуспеле ставке"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Истекли закупи"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Операције над групама и ознакама кеша"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Испразни групу кеша:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Испразни групу"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Поништи ознаке кеша (одвојене зарезом):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Поништи ознаке"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Уклони истекле ставке и поврати закупе"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Потврди потпуно пражњење кеша"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Испразни све"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Преглед реда неуспелих ставки"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Нема ставки у реду неуспелих."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Покушаји"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Последња грешка"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Радња"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Покушај поново"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Потврди трајно брисање неуспелих ставки"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Трајно обриши неуспеле ставке"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Стање активног драјвера"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Драјвер: %s | Статус: %s | Шема конфигурације: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Покрени проверу повезивости драјвера"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Конфигурација драјвера и политика (само конфигурација)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Максималан број бајтова садржаја"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis база података (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Референца на Redis тајну (env:VAR или vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Подразумевани закуп реда (секунде)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Подразумевани макс. број покушаја реда"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Сачувај конфигурацију"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Додатак за кеш захтева PHP %s или новији. Овај сервер користи PHP %s, па додатак није инсталиран нити омогућен."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Алати"
+
+#: setup.php
+msgid "Cache"
+msgstr "Кеш"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Додатак за кеш није омогућен."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Додатак за кеш захтева PHP %s или новији."

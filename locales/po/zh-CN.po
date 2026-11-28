@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://translate.cacti.net/projects/cacti/core/zh_Hans/>\n"
+"Language: zh-CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "CSRF 验证失败。请重新加载页面后重试。"
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "当前缓存驱动连通性探测成功。"
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "当前缓存驱动连通性探测失败。"
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "已保存 plugin_cache 配置。"
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "无法保存 plugin_cache 配置。"
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "不支持的管理员操作。"
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "对象缓存配置与驱动健康状态（管理员）"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "已清空缓存组“%s”（%d 个条目）。"
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "清空所有缓存条目之前，请勾选确认框。"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "已清空所有缓存条目（%d 个条目）。"
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "请至少提供一个要使其失效的缓存标签。"
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "已使 %d 个缓存标签失效。"
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "已清理 %d 个过期条目并回收 %d 个已过期的队列租约。"
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "已将死信项 #%d 重新入队。"
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "未找到死信项 #%d。"
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "清除死信项之前，请勾选确认框。"
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "已清除 %d 个死信队列项。"
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "不支持的操作员操作。"
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "对象缓存操作与死信队列（操作员）"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "对象缓存指标与批处理队列深度"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "缓存查看"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "缓存操作员"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "缓存管理员"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "缓存指标与队列"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "缓存操作与死信队列"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "缓存配置与健康状态"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "对象缓存与批处理队列"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "缓存驱动"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "用于对象缓存和临时存储的后端驱动。"
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB（plugin_cache_entries）"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu（内存共享）"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis（纯 PHP RESP2 套接字）"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "进程内存（S3-FIFO 有界）"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "默认 TTL（秒）"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "未指定 TTL 时缓存条目的默认过期秒数。"
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "最大载荷大小（字节）"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "JSON 编码的缓存和队列载荷的字节数上限（1024 至 16777216）。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "键前缀"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "在共享后端（APCu 和 Redis）中使用的键命名空间前缀。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "缓存击穿锁 TTL（秒）"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "CacheService::remember() 的单请求合并锁持续时间（秒）。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch Beta 系数"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "概率性提前过期乘数（默认 1.0；设为 0 可禁用提前重算）。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "内存驱动 S3-FIFO 容量"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "触发 S3-FIFO 淘汰前 MemoryDriver 中保留的最大条目数。"
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis 传输（纯 PHP RESP2）"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis 主机"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Redis 服务器的主机名或 IP 地址。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis 端口"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Redis 服务器的 TCP 或 TLS 端口。"
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "启用 Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "使用 tls:// 连接到 Redis 并验证对端证书。"
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Redis 数据库索引"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "逻辑 Redis 数据库编号（0 至 15）。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Redis 超时（秒）"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "套接字连接及读写超时时间（秒）。"
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Redis 密钥引用"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "类型化密钥引用（env:VAR 或 vault:plugin:slot）；绝不存储明文密码。"
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "可恢复批处理队列"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "默认队列租约（秒）"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "未确认的队列项变为可回收状态前的租约持续时间（秒）。"
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "默认最大尝试次数"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "将队列项移至死信状态前的最大投递尝试次数。"
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "卸载时保留插件表"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "卸载时保留 plugin_cache_entries、plugin_cache_tags 和 plugin_cache_queue 表。"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "对象缓存概览"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "驱动"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "健康状态"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "活跃条目"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "过期行"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "已存储字节数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "命中 / 未命中（命中率）"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "XFetch 提前重算次数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "标签失效次数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "健康"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "不健康"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "缓存组"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "无活跃缓存组。"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "分组"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "可恢复批处理队列"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "未记录任何批处理队列。"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "队列"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "待处理"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "已租用"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "完成时间"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "死信"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "已过期租约"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "缓存组与标签操作"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "清空缓存组："
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "清空分组"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "使缓存标签失效（逗号分隔）："
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "使标签失效"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "清理过期条目并回收租约"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "确认清空全部缓存"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "全部清空"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "死信队列检查"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "无死信队列项。"
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "尝试次数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "最近错误"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "操作"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "重试"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "确认清除死信"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "清除死信"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "当前驱动健康状态"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "驱动：%s | 状态：%s | 配置架构：v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "运行驱动连通性探测"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "驱动与策略配置（仅配置）"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "最大载荷字节数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis 数据库（0-15）"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Redis 密钥引用（env:VAR 或 vault:plugin:slot）"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "队列默认租约（秒）"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "队列默认最大尝试次数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "保存配置"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "缓存插件需要 PHP %s 或更高版本。当前服务器运行的是 PHP %s，因此未安装或启用该插件。"
+
+#: setup.php
+msgid "Utilities"
+msgstr "实用工具"
+
+#: setup.php
+msgid "Cache"
+msgstr "缓存"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "缓存插件未启用。"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "缓存插件需要 PHP %s 或更高版本。"

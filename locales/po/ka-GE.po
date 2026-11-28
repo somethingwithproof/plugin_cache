@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Georgian <https://translate.cacti.net/projects/cacti/core/ka/>\n"
+"Language: ka-GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "CSRF შემოწმება ვერ მოხერხდა. გადატვირთეთ გვერდი და სცადეთ ხელახლა."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "აქტიური ქეშის დრაივერის კავშირის შემოწმება წარმატებით დასრულდა."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "აქტიური ქეშის დრაივერის კავშირის შემოწმება ვერ მოხერხდა."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "plugin_cache კონფიგურაცია შენახულია."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "plugin_cache კონფიგურაციის შენახვა ვერ მოხერხდა."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "მხარდაუჭერელი ადმინისტრატორის მოქმედება."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "ობიექტების ქეშის კონფიგურაცია და დრაივერის გამართულობა (ადმინისტრატორი)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "ქეშის ჯგუფი „%s“ გასუფთავებულია (%d ჩანაწერი)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "ყველა ქეშის ჩანაწერის გასუფთავებამდე მონიშნეთ დადასტურების ველი."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "ყველა ქეშის ჩანაწერი გასუფთავებულია (%d ჩანაწერი)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "მიუთითეთ მინიმუმ ერთი ქეშის ტეგი ინვალიდაციისთვის."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "ინვალიდირებულია %d ქეშის ტეგი."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "გაიწმინდა %d ვადაგასული ჩანაწერი და დაბრუნდა %d ვადაგასული რიგის დაჯავშნა."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "შეუსრულებელი ელემენტი #%d დაბრუნებულია რიგში."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "შეუსრულებელი ელემენტი #%d ვერ მოიძებნა."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "შეუსრულებელი ელემენტების წაშლამდე მონიშნეთ დადასტურების ველი."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "წაიშალა შეუსრულებელი ელემენტების რიგის %d ელემენტი."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "მხარდაუჭერელი ოპერატორის მოქმედება."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "ობიექტების ქეშის ოპერაციები და შეუსრულებელი ელემენტების რიგი (ოპერატორი)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "ობიექტების ქეშის მეტრიკები და პაკეტური რიგის სიღრმე"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "ქეშის ნახვა"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "ქეშის ოპერატორი"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "ქეშის ადმინისტრატორი"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "ქეშის მეტრიკები და რიგები"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "ქეშის ოპერაციები და DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "ქეშის კონფიგურაცია და გამართულობა"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "ობიექტების ქეში და პაკეტური რიგი"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "ქეშის დრაივერი"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "სერვერული დრაივერი, რომელიც გამოიყენება ობიექტების ქეშისა და დროებითი მეხსიერებისთვის."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (საზიარო ოპერატიული მეხსიერება)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (სუფთა PHP RESP2 სოკეტი)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "პროცესის მეხსიერება (S3-FIFO შეზღუდული)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "ნაგულისხმევი TTL (წამებში)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "ქეშის ჩანაწერის ნაგულისხმევი მოქმედების ვადა წამებში, როცა TTL არ არის მითითებული."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "მონაცემების მაქსიმალური ზომა (ბაიტებში)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "JSON-ით კოდირებული ქეშისა და რიგის მონაცემების ზედა ზღვარი ბაიტებში (1024-დან 16777216-მდე)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "გასაღების პრეფიქსი"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "გასაღებების სახელთა სივრცის პრეფიქსი საზიარო საცავებში (APCu და Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "ზვავური დატვირთვის ბლოკირების TTL (წამებში)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "ერთჯერადი შესრულების ბლოკირების ხანგრძლივობა წამებში მეთოდისთვის CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch ბეტა კოეფიციენტი"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "ალბათური ნაადრევი ვადის გასვლის მამრავლი (ნაგულისხმევი 1.0; მიუთითეთ 0 ნაადრევი გადათვლის გამოსართავად)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "მეხსიერების დრაივერის S3-FIFO ტევადობა"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "ჩანაწერების მაქსიმალური რაოდენობა MemoryDriver დრაივერში S3-FIFO განდევნის გაშვებამდე."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis ტრანსპორტი (სუფთა PHP RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis ჰოსტი"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Redis სერვერის ჰოსტის სახელი ან IP მისამართი."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis პორტი"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Redis სერვერის TCP ან TLS პორტი."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Redis TLS-ის ჩართვა"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Redis სერვერთან დაკავშირება tls:// პროტოკოლით და სერტიფიკატის შემოწმებით."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Redis მონაცემთა ბაზის ინდექსი"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Redis მონაცემთა ბაზის ლოგიკური ნომერი (0-დან 15-მდე)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Redis მოლოდინის ვადა (წამებში)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "სოკეტთან დაკავშირებისა და წაკითხვა/ჩაწერის მოლოდინის ვადა წამებში."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Redis საიდუმლოს მითითება"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "ტიპიზებული საიდუმლოს მითითება (env:VAR ან vault:plugin:slot); ღია პაროლები არასოდეს ინახება."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "განახლებადი პაკეტური რიგი"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "რიგის ნაგულისხმევი დაჯავშნა (წამებში)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "დაჯავშნის ხანგრძლივობა წამებში, რის შემდეგაც დაუდასტურებელი რიგის ელემენტი ხელახლა დასაკავებელი ხდება."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "ცდების ნაგულისხმევი მაქსიმუმი"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "მიწოდების მცდელობების მაქსიმალური რაოდენობა ელემენტის შეუსრულებელ სტატუსში გადატანამდე."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "პლაგინის ცხრილების შენახვა დეინსტალაციისას"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "plugin_cache_entries, plugin_cache_tags და plugin_cache_queue ცხრილების შენახვა დეინსტალაციისას."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "ობიექტების ქეშის მიმოხილვა"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "დრაივერი"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "გამართულობა"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "აქტიური ჩანაწერები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "ვადაგასული ჩანაწერები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "შენახული ბაიტები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "დამთხვევები / აცდენები (თანაფარდობა)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "XFetch ნაადრევი გადათვლები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "ტეგების ინვალიდაციები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "გამართულია"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "გაუმართავია"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "ქეშის ჯგუფები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "აქტიური ქეშის ჯგუფები არ არის."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "ჯგუფი"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "განახლებადი პაკეტური რიგები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "პაკეტური რიგები არ არის ჩაწერილი."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "რიგი"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "მოლოდინში"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "დაჯავშნილი"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "დასრულდა"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "შეუსრულებელი"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "ვადაგასული დაჯავშნები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "ქეშის ჯგუფებისა და ტეგების ოპერაციები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "ქეშის ჯგუფის გასუფთავება:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "ჯგუფის გასუფთავება"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "ქეშის ტეგების ინვალიდაცია (მძიმით გამოყოფილი):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "ტეგების ინვალიდაცია"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "ვადაგასული ჩანაწერების გაწმენდა და დაჯავშნების დაბრუნება"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "სრული ქეშის გასუფთავების დადასტურება"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "ყველას გასუფთავება"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "შეუსრულებელი ელემენტების რიგის შემოწმება"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "შეუსრულებელი ელემენტების რიგი ცარიელია."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "მცდელობები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "ბოლო შეცდომა"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "მოქმედება"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "ხელახლა ცდა"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "შეუსრულებელი ელემენტების წაშლის დადასტურება"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "შეუსრულებლების წაშლა"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "აქტიური დრაივერის გამართულობა"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "დრაივერი: %s | სტატუსი: %s | კონფიგურაციის სქემა: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "დრაივერის კავშირის შემოწმების გაშვება"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "დრაივერისა და პოლიტიკის კონფიგურაცია (მხოლოდ კონფიგურაცია)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "მონაცემების მაქსიმალური ბაიტები"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis მონაცემთა ბაზა (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Redis საიდუმლოს მითითება (env:VAR ან vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "რიგის ნაგულისხმევი დაჯავშნა (წამებში)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "რიგის ცდების ნაგულისხმევი მაქსიმუმი"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "კონფიგურაციის შენახვა"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "ქეშის პლაგინს სჭირდება PHP %s ან უფრო ახალი ვერსია. ამ სერვერზე გაშვებულია PHP %s, ამიტომ პლაგინი არ დაინსტალირდა და არ ჩაირთო."
+
+#: setup.php
+msgid "Utilities"
+msgstr "უტილიტები"
+
+#: setup.php
+msgid "Cache"
+msgstr "ქეში"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "ქეშის პლაგინი ჩართული არ არის."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "ქეშის პლაგინს სჭირდება PHP %s ან უფრო ახალი ვერსია."

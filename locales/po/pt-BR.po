@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://translate.cacti.net/projects/cacti/core/pt_BR/>\n"
+"Language: pt-BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Falha na verificação CSRF. Recarregue a página e tente novamente."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Teste de conectividade do driver de cache ativo concluído com sucesso."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Falha no teste de conectividade do driver de cache ativo."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Configuração de plugin_cache salva."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Não foi possível salvar a configuração de plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Ação de administrador não suportada."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Configuração do cache de objetos e saúde do driver (Administrador)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Grupo de cache \"%s\" limpo (%d entradas)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Marque a caixa de confirmação antes de limpar todas as entradas do cache."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Todas as entradas do cache foram limpas (%d entradas)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Informe pelo menos uma tag de cache para invalidar."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "%d tag(s) de cache invalidada(s)."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "%d entradas expiradas removidas e %d concessões de fila expiradas recuperadas."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Item de mensagem morta #%d recolocado na fila."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Item de mensagem morta #%d não foi encontrado."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Marque a caixa de confirmação antes de expurgar os itens de mensagens mortas."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "%d item(ns) da fila de mensagens mortas expurgado(s)."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Ação de operador não suportada."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Operações do cache de objetos e fila de mensagens mortas (Operador)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Métricas do cache de objetos e profundidade da fila em lote"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Visualização do cache"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Operador do cache"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Administração do cache"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Métricas e filas do cache"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Operações do cache e DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Configuração e saúde do cache"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Cache de objetos e fila em lote"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Driver de cache"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Driver de backend usado para o cache de objetos e armazenamento temporário."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (compartilhado em memória)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (socket RESP2 em PHP puro)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Memória do processo (limitada por S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "TTL padrão (segundos)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Expiração padrão da entrada de cache em segundos quando nenhum TTL é informado."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Tamanho máximo da carga útil (bytes)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Limite máximo em bytes para cargas úteis de cache e fila codificadas em JSON (1024 a 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Prefixo de chave"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Prefixo de namespace de chave aplicado em backends compartilhados (APCu e Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL do bloqueio anti-sobrecarga (segundos)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Duração em segundos do bloqueio de execução única para CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "Fator beta do XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Multiplicador probabilístico de expiração antecipada (padrão 1.0; defina 0 para desabilitar o recálculo antecipado)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Capacidade S3-FIFO do driver de memória"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Máximo de entradas retidas no MemoryDriver antes da execução do despejo S3-FIFO."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Transporte Redis (RESP2 em PHP puro)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Host do Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Nome do host ou endereço IP do servidor Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Porta do Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Porta TCP ou TLS do servidor Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Habilitar Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Conectar ao Redis usando tls:// com verificação do certificado do par."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Índice do banco de dados Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Número lógico do banco de dados Redis (0 a 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Tempo limite do Redis (segundos)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Tempo limite de conexão e leitura/gravação do socket em segundos."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Referência de segredo do Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Referência de segredo tipada (env:VAR ou vault:plugin:slot); senhas em texto simples nunca são armazenadas."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Fila em lote retomável"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Concessão padrão da fila (segundos)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Duração da concessão em segundos antes que um item não confirmado da fila possa ser recuperado."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Máximo padrão de tentativas"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Máximo de tentativas de entrega antes de mover um item para o status de mensagem morta."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Manter tabelas do plugin ao desinstalar"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Preservar as tabelas plugin_cache_entries, plugin_cache_tags e plugin_cache_queue ao desinstalar."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Visão geral do cache de objetos"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Driver"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Saúde"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Entradas ativas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Linhas expiradas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Bytes armazenados"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Acertos / Falhas (taxa)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Recálculos antecipados do XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Invalidações de tags"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Saudável"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Não saudável"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Grupos de cache"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Nenhum grupo de cache ativo."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Grupo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Filas em lote retomáveis"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Nenhuma fila em lote registrada."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Fila"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Pendentes"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Em concessão"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Concluída em"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Mensagens mortas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Concessões expiradas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Operações de grupos e tags de cache"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Limpar grupo de cache:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Limpar grupo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Invalidar tags de cache (separadas por vírgula):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Invalidar tags"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Remover entradas expiradas e recuperar concessões"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Confirmar limpeza completa do cache"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Limpar tudo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Inspeção da fila de mensagens mortas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Nenhum item na fila de mensagens mortas."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Tentativas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Último erro"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Ação"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Tentar novamente"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Confirmar expurgo de mensagens mortas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Expurgar mensagens mortas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Saúde do driver ativo"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Driver: %s | Status: %s | Esquema de configuração: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Executar teste de conectividade do driver"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Configuração de driver e políticas (somente configuração)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Máximo de bytes da carga útil"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Banco de dados Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Referência de segredo do Redis (env:VAR ou vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Concessão padrão da fila (segundos)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Máximo padrão de tentativas da fila"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Salvar configuração"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "O plugin de Cache requer PHP %s ou superior. Este servidor executa PHP %s, portanto o plugin não foi instalado nem habilitado."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Utilitários"
+
+#: setup.php
+msgid "Cache"
+msgstr "Cache"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "O plugin de Cache não está habilitado."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "O plugin de Cache requer PHP %s ou superior."

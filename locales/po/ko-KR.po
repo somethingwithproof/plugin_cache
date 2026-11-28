@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Korean <https://translate.cacti.net/projects/cacti/core/ko/>\n"
+"Language: ko-KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "CSRF 검증에 실패했습니다. 페이지를 새로 고치고 다시 시도하세요."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "활성 캐시 드라이버 연결 점검에 성공했습니다."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "활성 캐시 드라이버 연결 점검에 실패했습니다."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "plugin_cache 구성을 저장했습니다."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "plugin_cache 구성을 저장할 수 없습니다."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "지원되지 않는 관리자 작업입니다."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "객체 캐시 구성 및 드라이버 상태 (관리자)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "캐시 그룹 \"%s\"을(를) 비웠습니다 (%d개 항목)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "모든 캐시 항목을 비우기 전에 확인 상자를 선택하세요."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "모든 캐시 항목을 비웠습니다 (%d개 항목)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "무효화할 캐시 태그를 하나 이상 입력하세요."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "캐시 태그 %d개를 무효화했습니다."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "만료된 항목 %d개를 정리하고 만료된 큐 임대 %d개를 회수했습니다."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "데드레터 #%d 항목을 큐에 다시 등록했습니다."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "데드레터 #%d 항목을 찾을 수 없습니다."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "데드레터 항목을 영구 삭제하기 전에 확인 상자를 선택하세요."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "데드레터 큐 항목 %d개를 영구 삭제했습니다."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "지원되지 않는 운영자 작업입니다."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "객체 캐시 작업 및 데드레터 큐 (운영자)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "객체 캐시 지표 및 배치 큐 대기량"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "캐시 보기"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "캐시 운영자"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "캐시 관리자"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "캐시 지표 및 큐"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "캐시 작업 및 DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "캐시 구성 및 상태"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "객체 캐시 및 배치 큐"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "캐시 드라이버"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "객체 캐시 및 임시 데이터 저장소에 사용되는 백엔드 드라이버입니다."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (인메모리 공유)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (순수 PHP RESP2 소켓)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "프로세스 메모리 (S3-FIFO 제한)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "기본 TTL (초)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "TTL이 지정되지 않았을 때 적용되는 기본 캐시 항목 만료 시간(초)입니다."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "최대 페이로드 크기 (바이트)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "JSON으로 인코딩된 캐시 및 큐 페이로드의 최대 바이트 크기입니다(1024~16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "키 접두사"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "공유 백엔드(APCu 및 Redis)에 적용되는 키 네임스페이스 접두사입니다."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "스탬피드 잠금 TTL (초)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "CacheService::remember() 호출의 단일 실행 잠금 유지 시간(초)입니다."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch 베타 계수"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "확률적 조기 만료 배수입니다(기본값 1.0, 0으로 설정 시 조기 재계산 비활성화)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "메모리 드라이버 S3-FIFO 용량"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "S3-FIFO 축출이 실행되기 전 MemoryDriver 내에 유지되는 최대 항목 수입니다."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis 전송 계층 (순수 PHP RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis 호스트"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Redis 서버의 호스트 이름 또는 IP 주소입니다."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis 포트"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Redis 서버의 TCP 또는 TLS 포트입니다."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Redis TLS 활성화"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "피어 인증서 검증과 함께 tls:// 프로토콜을 사용하여 Redis에 연결합니다."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Redis 데이터베이스 인덱스"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "논리적 Redis 데이터베이스 번호입니다(0~15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Redis 시간 초과 (초)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "소켓 연결 및 읽기/쓰기 시간 초과(초)입니다."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Redis 비밀 참조"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "형식이 지정된 비밀 참조(env:VAR 또는 vault:plugin:slot)이며, 평문 비밀번호는 저장되지 않습니다."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "재개 가능한 배치 큐"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "기본 큐 임대 시간 (초)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "확인 응답이 없는 큐 항목을 다시 회수할 수 있게 되기까지의 임대 시간(초)입니다."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "기본 최대 시도 횟수"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "항목을 데드레터 상태로 이동하기 전 최대 전달 시도 횟수입니다."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "제거 시 플러그인 테이블 유지"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "플러그인 제거 시 plugin_cache_entries, plugin_cache_tags 및 plugin_cache_queue 테이블을 보존합니다."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "객체 캐시 개요"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "드라이버"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "상태"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "활성 항목"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "만료된 행"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "저장된 바이트"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "적중 / 미스 (비율)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "XFetch 조기 재계산"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "태그 무효화"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "정상"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "비정상"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "캐시 그룹"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "활성 캐시 그룹이 없습니다."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "그룹"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "재개 가능한 배치 큐"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "기록된 배치 큐가 없습니다."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "큐"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "대기 중"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "임대됨"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "완료 일시"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "데드레터"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "만료된 임대"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "캐시 그룹 및 태그 작업"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "캐시 그룹 비우기:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "그룹 비우기"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "캐시 태그 무효화 (쉼표로 구분):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "태그 무효화"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "만료 항목 정리 및 임대 회수"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "전체 캐시 비우기 확인"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "모두 비우기"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "데드레터 큐 검사"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "데드레터 큐 항목이 없습니다."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "시도 횟수"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "마지막 오류"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "작업"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "재시도"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "데드레터 영구 삭제 확인"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "데드레터 영구 삭제"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "활성 드라이버 상태"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "드라이버: %s | 상태: %s | 구성 스키마: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "드라이버 연결 점검 실행"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "드라이버 및 정책 구성 (구성 전용)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "최대 페이로드 바이트"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis 데이터베이스 (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Redis 비밀 참조 (env:VAR 또는 vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "큐 기본 임대 시간 (초)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "큐 기본 최대 시도 횟수"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "구성 저장"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "캐시 플러그인은 PHP %s 이상이 필요합니다. 이 서버는 PHP %s 버전을 실행 중이므로 플러그인이 설치되거나 활성화되지 않았습니다."
+
+#: setup.php
+msgid "Utilities"
+msgstr "유틸리티"
+
+#: setup.php
+msgid "Cache"
+msgstr "캐시"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "캐시 플러그인이 활성화되어 있지 않습니다."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "캐시 플러그인은 PHP %s 이상이 필요합니다."

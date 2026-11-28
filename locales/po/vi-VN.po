@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Vietnamese <https://translate.cacti.net/projects/cacti/core/vi/>\n"
+"Language: vi-VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Xác minh CSRF thất bại. Vui lòng tải lại trang và thử lại."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Kiểm tra kết nối trình điều khiển bộ nhớ đệm đang hoạt động thành công."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Kiểm tra kết nối trình điều khiển bộ nhớ đệm đang hoạt động thất bại."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Đã lưu cấu hình plugin_cache."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Không thể lưu cấu hình plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Thao tác quản trị viên không được hỗ trợ."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Cấu hình bộ nhớ đệm đối tượng & Tình trạng trình điều khiển (Quản trị viên)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Đã xóa sạch nhóm bộ nhớ đệm \"%s\" (%d mục)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Hãy đánh dấu vào ô xác nhận trước khi xóa sạch tất cả mục bộ nhớ đệm."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Đã xóa sạch tất cả mục bộ nhớ đệm (%d mục)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Vui lòng cung cấp ít nhất một thẻ bộ nhớ đệm để vô hiệu hóa."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Đã vô hiệu hóa %d thẻ bộ nhớ đệm."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Đã dọn dẹp %d mục hết hạn và thu hồi %d phiên giữ hàng đợi hết hạn."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Đã đưa lại mục hàng đợi thư chết #%d vào hàng đợi."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Không tìm thấy mục hàng đợi thư chết #%d."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Hãy đánh dấu vào ô xác nhận trước khi xóa sạch các mục hàng đợi thư chết."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Đã xóa sạch %d mục trong hàng đợi thư chết."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Thao tác vận hành viên không được hỗ trợ."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Vận hành bộ nhớ đệm đối tượng & Hàng đợi thư chết (Vận hành viên)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Chỉ số bộ nhớ đệm đối tượng & Độ sâu hàng đợi lô"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Xem bộ nhớ đệm"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Vận hành bộ nhớ đệm"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Quản trị bộ nhớ đệm"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Chỉ số bộ nhớ đệm & Hàng đợi"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Vận hành bộ nhớ đệm & DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Cấu hình & Tình trạng bộ nhớ đệm"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Bộ nhớ đệm đối tượng & Hàng đợi lô"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Trình điều khiển bộ nhớ đệm"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Trình điều khiển phụ trợ dùng cho bộ nhớ đệm đối tượng và lưu trữ tạm thời."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (bộ nhớ dùng chung)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (socket RESP2 thuần PHP)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Bộ nhớ tiến trình (giới hạn S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "TTL mặc định (giây)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Thời gian hết hạn mặc định của mục bộ nhớ đệm tính bằng giây khi không cung cấp TTL."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Kích thước tải trọng tối đa (byte)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Giới hạn trên tính bằng byte cho tải trọng bộ nhớ đệm và hàng đợi mã hóa JSON (1024 đến 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Tiền tố khóa"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Tiền tố không gian tên khóa áp dụng trong các hệ thống phụ trợ dùng chung (APCu và Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL khóa chống dồn tải (giây)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Thời lượng khóa đơn luồng tính bằng giây cho CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "Hệ số beta XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Hệ số nhân hết hạn sớm theo xác suất (mặc định 1.0; đặt 0 để tắt tính toán lại sớm)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Dung lượng S3-FIFO của trình điều khiển bộ nhớ"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Số mục tối đa được giữ lại trong MemoryDriver trước khi cơ chế loại bỏ S3-FIFO chạy."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Giao vận Redis (RESP2 thuần PHP)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Máy chủ Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Tên máy chủ hoặc địa chỉ IP của máy chủ Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Cổng Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Cổng TCP hoặc TLS của máy chủ Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Bật Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Kết nối đến Redis bằng tls:// kèm xác minh chứng chỉ ngang hàng."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Chỉ mục cơ sở dữ liệu Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Số cơ sở dữ liệu Redis logic (từ 0 đến 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Thời gian chờ Redis (giây)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Thời gian chờ kết nối và đọc/ghi socket tính bằng giây."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Tham chiếu bí mật Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Tham chiếu bí mật có định kiểu (env:VAR hoặc vault:plugin:slot); mật khẩu thô không bao giờ được lưu trữ."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Hàng đợi lô có thể tiếp tục"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Thời hạn giữ hàng đợi mặc định (giây)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Thời lượng giữ tính bằng giây trước khi một mục hàng đợi chưa được xác nhận có thể được thu hồi."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Số lần thử tối đa mặc định"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Số lần thử chuyển phát tối đa trước khi chuyển mục sang trạng thái thư chết."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Giữ lại bảng của plugin khi gỡ cài đặt"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Giữ nguyên các bảng plugin_cache_entries, plugin_cache_tags và plugin_cache_queue khi gỡ cài đặt."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Tổng quan bộ nhớ đệm đối tượng"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Trình điều khiển"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Tình trạng"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Mục đang hoạt động"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Hàng đã hết hạn"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Số byte đã lưu"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Trúng / Trượt (Tỷ lệ)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Lần tính toán lại sớm XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Lần vô hiệu hóa thẻ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Ổn định"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Không ổn định"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Nhóm bộ nhớ đệm"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Không có nhóm bộ nhớ đệm nào đang hoạt động."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Nhóm"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Hàng đợi lô có thể tiếp tục"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Chưa có hàng đợi lô nào được ghi nhận."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Hàng đợi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Đang chờ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Đang giữ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Đã hoàn thành"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Thư chết"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Phiên giữ hết hạn"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Thao tác nhóm & thẻ bộ nhớ đệm"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Xóa sạch nhóm bộ nhớ đệm:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Xóa sạch nhóm"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Vô hiệu hóa thẻ bộ nhớ đệm (phân tách bằng dấu phẩy):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Vô hiệu hóa thẻ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Dọn dẹp mục hết hạn & Thu hồi phiên giữ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Xác nhận xóa sạch toàn bộ bộ nhớ đệm"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Xóa sạch tất cả"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Kiểm tra hàng đợi thư chết"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Không có mục nào trong hàng đợi thư chết."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Số lần thử"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Lỗi gần nhất"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Thao tác"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Thử lại"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Xác nhận xóa sạch hàng đợi thư chết"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Xóa sạch thư chết"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Tình trạng trình điều khiển đang hoạt động"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Trình điều khiển: %s | Trạng thái: %s | Lược đồ cấu hình: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Chạy kiểm tra kết nối trình điều khiển"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Cấu hình trình điều khiển & chính sách (Chỉ cấu hình)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Số byte tải trọng tối đa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Cơ sở dữ liệu Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Tham chiếu bí mật Redis (env:VAR hoặc vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Thời hạn giữ mặc định của hàng đợi (giây)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Số lần thử tối đa mặc định của hàng đợi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Lưu cấu hình"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Plugin Bộ nhớ đệm yêu cầu PHP %s trở lên. Máy chủ này đang chạy PHP %s nên plugin chưa được cài đặt hoặc bật."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Tiện ích"
+
+#: setup.php
+msgid "Cache"
+msgstr "Bộ nhớ đệm"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Plugin Bộ nhớ đệm chưa được bật."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Plugin Bộ nhớ đệm yêu cầu PHP %s trở lên."

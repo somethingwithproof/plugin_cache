@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Zulu <developers@cacti.net>\n"
+"Language: zu_ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Ukuqinisekiswa kwe-CSRF kuhlulekile. Layisha kabusha ikhasi bese uzama futhi."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Ukuhlolwa kokuxhumeka komshayeli wenqolobane yesikhashana osebenzayo kuphumelele."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Ukuhlolwa kokuxhumeka komshayeli wenqolobane yesikhashana osebenzayo kuhlulekile."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Ukumiswa kwe-plugin_cache kulondoloziwe."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Ayikwazi ukulondoloza ukumiswa kwe-plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Isenzo somlawuli esingasekelwe."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Ukumiswa Kwenqolobane Yesikhashana Yezinto Nempilo Yomshayeli (Umlawuli)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Iqembu lenqolobane yesikhashana elithi \"%s\" lisuliwe (okufakiwe okungu-%d)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Maka ibhokisi lokuqinisekisa ngaphambi kokusula konke okufakiwe enqolobaneni yesikhashana."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Konke okufakiwe enqolobaneni yesikhashana kusuliwe (okufakiwe okungu-%d)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Nikeza okungenani ithegi eyodwa yenqolobane yesikhashana ukuze kuqedwe ukusebenza kwayo."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Kuqedwe ukusebenza kwamathegi enqolobane yesikhashana angu-%d."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Kususiwe okufakiwe okuphelelwe yisikhathi okungu-%d futhi kwabuyiswa izikhathi zokuqasha zolayini eziphelelwe yisikhathi ezingu-%d."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Into yemilayezo ehlulekile #%d ibuyiselwe kulayini."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Into yemilayezo ehlulekile #%d ayitholakalanga."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Maka ibhokisi lokuqinisekisa ngaphambi kokusula unomphela izinto zemilayezo ehlulekile."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Kusuliwe unomphela izinto zolayini wemilayezo ehlulekile ezingu-%d."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Isenzo somqhubi esingasekelwe."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Imisebenzi Yenqolobane Yesikhashana Yezinto Nolayini Wemilayezo Ehlulekile (Umqhubi)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Izilinganiso Zenqolobane Yesikhashana Yezinto Nokujula Kolayini Weqoqo"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Ukubuka Inqolobane Yesikhashana"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Umqhubi Wenqolobane Yesikhashana"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Umlawuli Wenqolobane Yesikhashana"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Izilinganiso Zenqolobane Yesikhashana Nolayini"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Imisebenzi Yenqolobane Yesikhashana ne-DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Ukumiswa Nempilo Yenqolobane Yesikhashana"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Inqolobane Yesikhashana Yezinto Nolayini Weqoqo"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Umshayeli Wenqolobane Yesikhashana"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Umshayeli wangemuva osetshenziselwa inqolobane yesikhashana yezinto nokugcinwa kwesikhashana."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (okwabiwe kumemori)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (isokhethi ye-RESP2 ye-PHP emsulwa)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Imemori Yenqubo (enomkhawulo we-S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "I-TTL Ezenzakalelayo (imizuzwana)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Isikhathi esizenzakalelayo sokuphelelwa yisikhathi sokufakiwe enqolobaneni yesikhashana ngemizuzwana lapho kungafakwanga i-TTL."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Usayizi Ophezulu Womthwalo Wedatha (amabhayithi)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Umkhawulo ophezulu ngamabhayithi emithwalweni yedatha yenqolobane yesikhashana nolayini efakwe ikhodi ye-JSON (1024 kuya ku-16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Isiqalo Sokhiye"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Isiqalo sendawo yamagama sokhiye esisetshenziswa ezinhlelweni zangemuva ezabiwe (APCu ne-Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "I-TTL Yokukhiya Ukugijimelana (imizuzwana)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Ubude besikhathi sokukhiya okukodwa ngemizuzwana komsebenzi othi CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "Isici se-Beta se-XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Isiphindaphindi sokuphelelwa yisikhathi kusenesikhathi esisekelwe kumathuba (okuzenzakalelayo ngu-1.0; setha u-0 ukukhubaza ukubala kabusha kusenesikhathi)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Umthamo we-S3-FIFO Womshayeli Wememori"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Inani eliphezulu lokufakiwe okugcinwa ku-MemoryDriver ngaphambi kokuthi ukukhishwa kwe-S3-FIFO kusebenze."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Ukuthuthwa kwe-Redis (RESP2 ye-PHP Emsulwa)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Umsingathi we-Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Igama lomsingathi noma ikheli le-IP leseva ye-Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Imbobo ye-Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Imbobo ye-TCP noma ye-TLS yeseva ye-Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Nika Amandla i-Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Xhuma ku-Redis usebenzisa okuthi tls:// nokuqinisekiswa kwesitifiketi somlingani."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Inkomba Yedathabheyisi ye-Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Inombolo yedathabheyisi ye-Redis enengqondo (0 kuya ku-15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Isikhathi Sokuphela kwe-Redis (imizuzwana)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Isikhathi sokuphela sokuxhuma isokhethi nokufunda/ukubhala ngemizuzwana."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Inkomba Yemfihlo ye-Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Inkomba yemfihlo enohlobo (env:VAR noma vault:plugin:slot); amaphasiwedi angenasivikelo awalokothi agcinwe."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Ulayini Weqoqo Oqhubekekayo"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Isikhathi Sokuqasha Solayini Esizenzakalelayo (imizuzwana)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Ubude besikhathi sokuqasha ngemizuzwana ngaphambi kokuthi into yolayini engavunywanga ikwazi ukubuyiswa."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Inani Eliphezulu Lemizamo Elizenzakalelayo"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Inani eliphezulu lemizamo yokuletha ngaphambi kokuyisa into esimweni semilayezo ehlulekile."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Gcina Amathebula Esengezo Lapho Ukhipha"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Gcina amathebula athi plugin_cache_entries, plugin_cache_tags, kanye nelithi plugin_cache_queue lapho ukhipha isengezo."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Ukubuka Konke Kwenqolobane Yesikhashana Yezinto"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Umshayeli"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Impilo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Okufakiwe Okusebenzayo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Imigqa Ephelelwe Yisikhathi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Amabhayithi Agciniwe"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Okutholakele / Okuphuthelwe (Isilinganiso)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Ukubala Kabusha Kusenesikhathi kwe-XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Ukuqedwa Kokusebenza Kwamathegi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Inempilo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Ayinampilo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Amaqembu Enqolobane Yesikhashana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Awekho amaqembu enqolobane yesikhashana asebenzayo."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Iqembu"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Olayini Bamaqoqo Abaqhubekekayo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Abekho olayini bamaqoqo abarekhodiwe."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Ulayini"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Kulindile"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Kuqashiwe"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Kuphothuliwe"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Imilayezo Ehlulekile"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Izikhathi Zokuqasha Eziphelelwe Yisikhathi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Imisebenzi Yamaqembu Namathegi Enqolobane Yesikhashana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Sula Iqembu Lenqolobane Yesikhashana:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Sula Iqembu"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Qeda Ukusebenza Kwamathegi Enqolobane Yesikhashana (ahlukaniswe ngokhefana):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Qeda Ukusebenza Kwamathegi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Susa Okufakiwe Okuphelelwe Yisikhathi Ubuyise Izikhathi Zokuqasha"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Qinisekisa ukusulwa okuphelele kwenqolobane yesikhashana"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Sula Konke"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Ukuhlolwa Kolayini Wemilayezo Ehlulekile"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Azikho izinto zolayini wemilayezo ehlulekile."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Imizamo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Iphutha Lokugcina"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Isenzo"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Zama Futhi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Qinisekisa ukusulwa unomphela kwemilayezo ehlulekile"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Sula Unomphela Imilayezo Ehlulekile"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Impilo Yomshayeli Osebenzayo"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Umshayeli: %s | Isimo: %s | Isikimu Sokumiswa: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Qalisa Ukuhlolwa Kokuxhumeka Komshayeli"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Ukumiswa Komshayeli Nenqubomgomo (Ukumiswa Kuphela)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Amabhayithi Aphezulu Omthwalo Wedatha"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Idathabheyisi ye-Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Inkomba Yemfihlo ye-Redis (env:VAR noma vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Isikhathi Sokuqasha Esizenzakalelayo Solayini (imizuzwana)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Inani Eliphezulu Lemizamo Elizenzakalelayo Lolayini"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Londoloza Ukumiswa"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Isengezo senqolobane yesikhashana sidinga i-PHP %s noma eyakamuva. Le seva isebenzisa i-PHP %s, ngakho-ke isengezo asifakwanga futhi asinikwanga amandla."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Izinsiza"
+
+#: setup.php
+msgid "Cache"
+msgstr "Inqolobane Yesikhashana"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Isengezo senqolobane yesikhashana asinikwanga amandla."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Isengezo senqolobane yesikhashana sidinga i-PHP %s noma eyakamuva."
