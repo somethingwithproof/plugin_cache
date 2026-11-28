@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Hindi <https://translate.cacti.net/projects/cacti/core/hi/>\n"
+"Language: hi-IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "CSRF सत्यापन विफल रहा। पृष्ठ को पुनः लोड करें और फिर से प्रयास करें।"
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "सक्रिय कैश ड्राइवर कनेक्टिविटी जाँच सफल रही।"
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "सक्रिय कैश ड्राइवर कनेक्टिविटी जाँच विफल रही।"
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "plugin_cache कॉन्फ़िगरेशन सहेजा गया।"
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "plugin_cache कॉन्फ़िगरेशन सहेजने में असमर्थ।"
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "असमर्थित प्रशासक कार्रवाई।"
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "ऑब्जेक्ट कैश कॉन्फ़िगरेशन और ड्राइवर स्वास्थ्य (प्रशासक)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "कैश समूह \"%s\" फ़्लश किया गया (%d प्रविष्टियाँ)।"
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "सभी कैश प्रविष्टियों को फ़्लश करने से पहले पुष्टिकरण बॉक्स पर निशान लगाएँ।"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "सभी कैश प्रविष्टियाँ फ़्लश की गईं (%d प्रविष्टियाँ)।"
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "अमान्य करने के लिए कम से कम एक कैश टैग प्रदान करें।"
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "%d कैश टैग अमान्य किए गए।"
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "%d समय-समाप्त प्रविष्टियाँ हटाई गईं और %d समय-समाप्त कतार लीज़ पुनः प्राप्त की गईं।"
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "डेड-लेटर आइटम #%d को पुनः कतार में जोड़ा गया।"
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "डेड-लेटर आइटम #%d नहीं मिला।"
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "डेड-लेटर आइटम स्थायी रूप से हटाने से पहले पुष्टिकरण बॉक्स पर निशान लगाएँ।"
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "%d डेड-लेटर कतार आइटम स्थायी रूप से हटाए गए।"
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "असमर्थित ऑपरेटर कार्रवाई।"
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "ऑब्जेक्ट कैश संचालन और डेड-लेटर कतार (ऑपरेटर)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "ऑब्जेक्ट कैश मेट्रिक्स और बैच कतार गहराई"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "कैश दृश्य"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "कैश ऑपरेटर"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "कैश प्रशासक"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "कैश मेट्रिक्स और कतारें"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "कैश संचालन और DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "कैश कॉन्फ़िगरेशन और स्वास्थ्य"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "ऑब्जेक्ट कैश और बैच कतार"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "कैश ड्राइवर"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "ऑब्जेक्ट कैश और अस्थायी संग्रहण के लिए प्रयुक्त बैकएंड ड्राइवर।"
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (इन-मेमोरी साझा)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (शुद्ध-PHP RESP2 सॉकेट)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "प्रोसेस मेमोरी (S3-FIFO सीमित)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "डिफ़ॉल्ट TTL (सेकंड)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "कोई TTL प्रदान न किए जाने पर सेकंड में डिफ़ॉल्ट कैश प्रविष्टि समाप्ति अवधि।"
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "अधिकतम पेलोड आकार (बाइट्स)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "JSON-एन्कोडेड कैश और कतार पेलोड के लिए बाइट्स में ऊपरी सीमा (1024 से 16777216)।"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "कुंजी उपसर्ग"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "साझा बैकएंड (APCu और Redis) में लागू कुंजी नेमस्पेस उपसर्ग।"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "स्टैम्पीड लॉक TTL (सेकंड)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "CacheService::remember() के लिए सेकंड में सिंगल-फ़्लाइट लॉक अवधि।"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch बीटा गुणक"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "संभाव्य शीघ्र-समाप्ति गुणक (डिफ़ॉल्ट 1.0; शीघ्र पुनः गणना अक्षम करने के लिए 0 सेट करें)।"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "मेमोरी ड्राइवर S3-FIFO क्षमता"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "S3-FIFO निष्कासन चलने से पहले MemoryDriver में रखी जाने वाली अधिकतम प्रविष्टियाँ।"
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis ट्रांसपोर्ट (शुद्ध-PHP RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis होस्ट"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Redis सर्वर का होस्टनाम या IP पता।"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis पोर्ट"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Redis सर्वर के लिए TCP या TLS पोर्ट।"
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Redis TLS सक्षम करें"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "पीयर प्रमाणपत्र सत्यापन के साथ tls:// का उपयोग करके Redis से कनेक्ट करें।"
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Redis डेटाबेस अनुक्रमणिका"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "तार्किक Redis डेटाबेस संख्या (0 से 15 तक)।"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Redis टाइमआउट (सेकंड)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "सेकंड में सॉकेट कनेक्ट और पठन/लेखन टाइमआउट।"
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Redis गोपनीय संदर्भ"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "टाइप किया गया गोपनीय संदर्भ (env:VAR या vault:plugin:slot); कच्चे पासवर्ड कभी संग्रहीत नहीं किए जाते।"
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "पुनरारंभ योग्य बैच कतार"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "डिफ़ॉल्ट कतार लीज़ (सेकंड)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "किसी पावती-रहित कतार आइटम के पुनः प्राप्त करने योग्य होने से पहले सेकंड में लीज़ अवधि।"
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "डिफ़ॉल्ट अधिकतम प्रयास"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "किसी आइटम को डेड-लेटर स्थिति में स्थानांतरित करने से पहले अधिकतम वितरण प्रयास।"
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "अनइंस्टॉल पर प्लगइन तालिकाएँ सुरक्षित रखें"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "अनइंस्टॉल करने पर plugin_cache_entries, plugin_cache_tags, और plugin_cache_queue तालिकाओं को सुरक्षित रखें।"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "ऑब्जेक्ट कैश अवलोकन"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "ड्राइवर"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "स्वास्थ्य"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "सक्रिय प्रविष्टियाँ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "समय-समाप्त पंक्तियाँ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "संग्रहीत बाइट्स"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "हिट्स / मिस (अनुपात)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "XFetch शीघ्र पुनः गणनाएँ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "टैग अमान्यकरण"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "स्वस्थ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "अस्वस्थ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "कैश समूह"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "कोई सक्रिय कैश समूह नहीं है।"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "समूह"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "पुनरारंभ योग्य बैच कतारें"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "कोई बैच कतार दर्ज नहीं है।"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "कतार"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "लंबित"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "लीज़ पर"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "संपन्न"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "डेड-लेटर"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "समय-समाप्त लीज़"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "कैश समूह और टैग संचालन"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "कैश समूह फ़्लश करें:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "समूह फ़्लश करें"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "कैश टैग अमान्य करें (अल्पविराम से पृथक):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "टैग अमान्य करें"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "समय-समाप्त प्रविष्टियाँ हटाएँ और लीज़ पुनः प्राप्त करें"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "पूर्ण कैश फ़्लश की पुष्टि करें"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "सभी फ़्लश करें"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "डेड-लेटर कतार निरीक्षण"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "कोई डेड-लेटर कतार आइटम नहीं है।"
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "प्रयास"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "अंतिम त्रुटि"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "कार्रवाई"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "पुनः प्रयास करें"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "डेड-लेटर स्थायी रूप से हटाने की पुष्टि करें"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "डेड-लेटर स्थायी रूप से हटाएँ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "सक्रिय ड्राइवर स्वास्थ्य"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "ड्राइवर: %s | स्थिति: %s | कॉन्फ़िग स्कीमा: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "ड्राइवर कनेक्टिविटी जाँच चलाएँ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "ड्राइवर और नीति कॉन्फ़िगरेशन (केवल कॉन्फ़िग)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "अधिकतम पेलोड बाइट्स"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis डेटाबेस (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Redis गोपनीय संदर्भ (env:VAR या vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "कतार डिफ़ॉल्ट लीज़ (सेकंड)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "कतार डिफ़ॉल्ट अधिकतम प्रयास"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "कॉन्फ़िगरेशन सहेजें"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "कैश प्लगइन के लिए PHP %s या उसके बाद का संस्करण आवश्यक है। यह सर्वर PHP %s चला रहा है, इसलिए प्लगइन को इंस्टॉल या सक्षम नहीं किया गया।"
+
+#: setup.php
+msgid "Utilities"
+msgstr "उपयोगिताएँ"
+
+#: setup.php
+msgid "Cache"
+msgstr "कैश"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "कैश प्लगइन सक्षम नहीं है।"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "कैश प्लगइन के लिए PHP %s या उसके बाद का संस्करण आवश्यक है।"

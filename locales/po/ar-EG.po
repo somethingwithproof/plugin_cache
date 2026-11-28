@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Arabic (Egypt) <developers@cacti.net>\n"
+"Language: ar_EG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "فشل التحقق من رمز CSRF. أعد تحميل الصفحة وحاول مرة أخرى."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "نجح فحص الاتصال بمحرّك ذاكرة التخزين المؤقت النشط."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "فشل فحص الاتصال بمحرّك ذاكرة التخزين المؤقت النشط."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "تم حفظ تكوين plugin_cache."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "تعذّر حفظ تكوين plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "إجراء مسؤول غير مدعوم."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "تكوين ذاكرة التخزين المؤقت للكائنات وسلامة المحرّك (المسؤول)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "تم تفريغ مجموعة التخزين المؤقت \"%s\" (%d مدخل)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "حدد مربع التأكيد قبل تفريغ جميع مدخلات ذاكرة التخزين المؤقت."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "تم تفريغ جميع مدخلات ذاكرة التخزين المؤقت (%d مدخل)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "يرجى إدخال وسم تخزين مؤقت واحد على الأقل لإبطال صلاحيته."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "تم إبطال صلاحية %d وسم تخزين مؤقت."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "تم تنظيف %d مدخل منتهي الصلاحية واسترداد %d فترة حجز منتهية في قائمة الانتظار."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "تمت إعادة إدراج العنصر المتعثر #%d في قائمة الانتظار."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "لم يتم العثور على العنصر المتعثر #%d."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "حدد مربع التأكيد قبل مسح العناصر المتعثرة."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "تم مسح %d عنصر من قائمة الرسائل المتعثرة."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "إجراء مشغّل غير مدعوم."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "عمليات ذاكرة التخزين المؤقت للكائنات وقائمة الرسائل المتعثرة (المشغّل)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "مقاييس ذاكرة التخزين المؤقت للكائنات وعمق قائمة انتظار الدُفعات"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "عرض التخزين المؤقت"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "مشغّل التخزين المؤقت"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "مسؤول التخزين المؤقت"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "مقاييس التخزين المؤقت وقوائم الانتظار"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "عمليات التخزين المؤقت وقائمة الرسائل المتعثرة (DLQ)"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "تكوين التخزين المؤقت وسلامته"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "ذاكرة التخزين المؤقت للكائنات وقائمة انتظار الدُفعات"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "محرّك التخزين المؤقت"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "المحرّك الخلفي المستخدم لذاكرة التخزين المؤقت للكائنات والتخزين المؤقت العابر."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (ذاكرة مشتركة)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (مقبس RESP2 بلغة PHP خالصة)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "ذاكرة العملية (محدودة بخوارزمية S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "مدة الصلاحية الافتراضية TTL (بالثواني)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "مدة انتهاء الصلاحية الافتراضية لمدخل التخزين المؤقت بالثواني عند عدم تحديد TTL."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "الحد الأقصى لحجم الحمولة (بالبايت)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "الحد الأعلى بالبايت لحمولات التخزين المؤقت وقائمة الانتظار المرمّزة بصيغة JSON (من 1024 إلى 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "بادئة المفاتيح"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "بادئة مساحة أسماء المفاتيح المطبّقة في الواجهات الخلفية المشتركة (APCu وRedis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "مدة صلاحية TTL لقفل منع التدافع (بالثواني)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "مدة القفل أحادي التنفيذ بالثواني للدالة CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "معامل بيتا لخوارزمية XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "مضاعف الانتهاء المبكر الاحتمالي (الافتراضي 1.0؛ اضبطه على 0 لتعطيل إعادة الحساب المبكر)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "سعة S3-FIFO لمحرّك الذاكرة"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "الحد الأقصى للمدخلات المحتفظ بها في MemoryDriver قبل تشغيل إخلاء S3-FIFO."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "نقل Redis (بروتوكول RESP2 بلغة PHP خالصة)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "مضيف Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "اسم المضيف أو عنوان IP لخادم Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "منفذ Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "منفذ TCP أو TLS لخادم Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "تفعيل Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "الاتصال بخادم Redis باستخدام tls:// مع التحقق من شهادة النظير."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "فهرس قاعدة بيانات Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "رقم قاعدة بيانات Redis المنطقية (من 0 إلى 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "مهلة Redis (بالثواني)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "مهلة اتصال المقبس والقراءة/الكتابة بالثواني."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "مرجع سر Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "مرجع سر مُحدّد النوع (env:VAR أو vault:plugin:slot)؛ لا يتم تخزين كلمات المرور الخام أبدًا."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "قائمة انتظار الدُفعات القابلة للاستئناف"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "مدة الحجز الافتراضية لقائمة الانتظار (بالثواني)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "مدة الحجز بالثواني قبل أن يصبح عنصر قائمة الانتظار غير المؤكّد قابلاً للاسترداد."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "الحد الأقصى الافتراضي للمحاولات"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "الحد الأقصى لمحاولات التسليم قبل نقل العنصر إلى حالة الرسائل المتعثرة."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "الاحتفاظ بجداول الإضافة عند إلغاء التثبيت"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "الاحتفاظ بجداول plugin_cache_entries وplugin_cache_tags وplugin_cache_queue عند إلغاء التثبيت."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "نظرة عامة على ذاكرة التخزين المؤقت للكائنات"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "المحرّك"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "السلامة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "المدخلات النشطة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "الصفوف منتهية الصلاحية"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "البايتات المخزّنة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "الإصابات / الإخفاقات (النسبة)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "إعادات الحساب المبكر XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "إبطالات الوسوم"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "سليم"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "غير سليم"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "مجموعات التخزين المؤقت"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "لا توجد مجموعات تخزين مؤقت نشطة."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "المجموعة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "قوائم انتظار الدُفعات القابلة للاستئناف"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "لا توجد قوائم انتظار دُفعات مسجّلة."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "قائمة الانتظار"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "محجوزة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "تاريخ الاكتمال"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "متعثرة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "فترات حجز منتهية"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "عمليات مجموعات ووسوم التخزين المؤقت"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "تفريغ مجموعة التخزين المؤقت:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "تفريغ المجموعة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "إبطال صلاحية وسوم التخزين المؤقت (مفصولة بفواصل):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "إبطال الوسوم"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "تنظيف المدخلات المنتهية واسترداد فترات الحجز"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "تأكيد تفريغ ذاكرة التخزين المؤقت بالكامل"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "تفريغ الكل"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "فحص قائمة الرسائل المتعثرة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "لا توجد عناصر في قائمة الرسائل المتعثرة."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "المعرّف"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "المحاولات"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "آخر خطأ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "الإجراء"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "إعادة المحاولة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "تأكيد مسح الرسائل المتعثرة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "مسح الرسائل المتعثرة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "سلامة المحرّك النشط"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "المحرّك: %s | الحالة: %s | مخطط التكوين: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "تشغيل فحص الاتصال بالمحرّك"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "تكوين المحرّك والسياسات (التكوين فقط)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "الحد الأقصى لبايتات الحمولة"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "قاعدة بيانات Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "مرجع سر Redis (env:VAR أو vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "مدة الحجز الافتراضية لقائمة الانتظار (بالثواني)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "الحد الأقصى الافتراضي لمحاولات قائمة الانتظار"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "حفظ التكوين"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "تتطلب إضافة التخزين المؤقت إصدار PHP %s أو أحدث. يعمل هذا الخادم بإصدار PHP %s، لذلك لم يتم تثبيت الإضافة أو تفعيلها."
+
+#: setup.php
+msgid "Utilities"
+msgstr "الأدوات المساعدة"
+
+#: setup.php
+msgid "Cache"
+msgstr "التخزين المؤقت"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "إضافة التخزين المؤقت غير مفعّلة."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "تتطلب إضافة التخزين المؤقت إصدار PHP %s أو أحدث."

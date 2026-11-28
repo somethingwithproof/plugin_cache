@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Turkish <https://translate.cacti.net/projects/cacti/core/tr/>\n"
+"Language: tr-TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "CSRF doğrulaması başarısız oldu. Sayfayı yeniden yükleyip tekrar deneyin."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Etkin önbellek sürücüsü bağlantı yoklaması başarılı oldu."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Etkin önbellek sürücüsü bağlantı yoklaması başarısız oldu."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "plugin_cache yapılandırması kaydedildi."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "plugin_cache yapılandırması kaydedilemedi."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Desteklenmeyen yönetici işlemi."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Nesne Önbelleği Yapılandırması ve Sürücü Sağlığı (Yönetici)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "\"%s\" önbellek grubu temizlendi (%d girdi)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Tüm önbellek girdilerini temizlemeden önce onay kutusunu işaretleyin."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Tüm önbellek girdileri temizlendi (%d girdi)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Geçersiz kılmak için en az bir önbellek etiketi girin."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "%d önbellek etiketi geçersiz kılındı."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Süresi dolmuş %d girdi ayıklandı ve süresi dolmuş %d kuyruk kiralaması geri alındı."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "#%d numaralı ölü ileti öğesi yeniden kuyruğa alındı."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "#%d numaralı ölü ileti öğesi bulunamadı."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Ölü ileti öğelerini kalıcı olarak silmeden önce onay kutusunu işaretleyin."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "%d ölü ileti kuyruğu öğesi kalıcı olarak silindi."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Desteklenmeyen operatör işlemi."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Nesne Önbelleği İşlemleri ve Ölü İleti Kuyruğu (Operatör)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Nesne Önbelleği Metrikleri ve Toplu Kuyruk Derinliği"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Önbellek Görüntüleme"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Önbellek Operatörü"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Önbellek Yöneticisi"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Önbellek Metrikleri ve Kuyruklar"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Önbellek İşlemleri ve Ölü İleti Kuyruğu"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Önbellek Yapılandırması ve Sağlık"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Nesne Önbelleği ve Toplu Kuyruk"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Önbellek Sürücüsü"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Nesne önbelleği ve geçici depolama için kullanılan arka uç sürücüsü."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (bellek içi paylaşımlı)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (saf PHP RESP2 soketi)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "İşlem Belleği (S3-FIFO sınırlı)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "Varsayılan TTL (saniye)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "TTL belirtilmediğinde saniye cinsinden varsayılan önbellek girdisi geçerlilik süresi."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "En Fazla Yük Boyutu (bayt)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "JSON kodlu önbellek ve kuyruk yükleri için bayt cinsinden üst sınır (1024 ile 16777216 arası)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Anahtar Ön Eki"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Paylaşımlı arka uçlarda (APCu ve Redis) uygulanan anahtar ad alanı ön eki."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "Yığılma Kilidi TTL (saniye)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "CacheService::remember() için saniye cinsinden tekil yürütme kilidi süresi."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch Beta Katsayısı"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Olasılıksal erken süre sonu çarpanı (varsayılan 1.0; erken yeniden hesaplamayı devre dışı bırakmak için 0 girin)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Bellek Sürücüsü S3-FIFO Kapasitesi"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "S3-FIFO tahliyesi çalışmadan önce MemoryDriver içinde tutulan en fazla girdi sayısı."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis Aktarımı (Saf PHP RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis Ana Bilgisayarı"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Redis sunucusu için ana bilgisayar adı veya IP adresi."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis Bağlantı Noktası"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Redis sunucusu için TCP veya TLS bağlantı noktası."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Redis TLS'yi Etkinleştir"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Eş sertifika doğrulaması ile tls:// kullanarak Redis'e bağlan."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Redis Veritabanı Dizini"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Mantıksal Redis veritabanı numarası (0 ile 15 arası)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Redis Zaman Aşımı (saniye)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Saniye cinsinden soket bağlantısı ve okuma/yazma zaman aşımı."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Redis Gizli Bilgi Başvurusu"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Türlü gizli bilgi başvurusu (env:VAR veya vault:plugin:slot); ham parolalar asla saklanmaz."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Sürdürülebilir Toplu Kuyruk"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Varsayılan Kuyruk Kiralaması (saniye)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Onaylanmamış bir kuyruk öğesinin geri alınabilir hale gelmesinden önce saniye cinsinden kiralama süresi."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Varsayılan En Fazla Deneme"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Bir öğe ölü ileti durumuna taşınmadan önceki en fazla teslimat denemesi sayısı."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Kaldırırken Eklenti Tablolarını Koru"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Kaldırma sırasında plugin_cache_entries, plugin_cache_tags ve plugin_cache_queue tablolarını koru."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Nesne Önbelleğine Genel Bakış"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Sürücü"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Sağlık"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Etkin Girdiler"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Süresi Dolmuş Satırlar"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Depolanan Bayt"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "İsabet / Iskalama (Oran)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "XFetch Erken Yeniden Hesaplamaları"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Etiket Geçersiz Kılmaları"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Sağlıklı"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Sağlıksız"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Önbellek Grupları"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Etkin önbellek grubu yok."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Grup"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Sürdürülebilir Toplu Kuyruklar"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Kayıtlı toplu kuyruk yok."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Kuyruk"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Beklemede"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Kiralanmış"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Tamamlanma"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Ölü İleti"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Süresi Dolmuş Kiralamalar"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Önbellek Grubu ve Etiket İşlemleri"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Önbellek Grubunu Temizle:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Grubu Temizle"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Önbellek Etiketlerini Geçersiz Kıl (virgülle ayrılmış):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Etiketleri Geçersiz Kıl"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Süresi Dolmuş Girdileri Ayıkla ve Kiralamaları Geri Al"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Tam önbellek temizliğini onayla"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Tümünü Temizle"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Ölü İleti Kuyruğu İncelemesi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Ölü ileti kuyruğu öğesi yok."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Denemeler"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Son Hata"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "İşlem"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Yeniden Dene"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Ölü ileti kalıcı silmesini onayla"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Ölü İletileri Kalıcı Sil"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Etkin Sürücü Sağlığı"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Sürücü: %s | Durum: %s | Yapılandırma Şeması: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Sürücü Bağlantı Yoklamasını Çalıştır"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Sürücü ve İlke Yapılandırması (Yalnızca Yapılandırma)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "En Fazla Yük Baytı"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis Veritabanı (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Redis Gizli Bilgi Başvurusu (env:VAR veya vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Kuyruk Varsayılan Kiralaması (saniye)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Kuyruk Varsayılan En Fazla Deneme"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Yapılandırmayı Kaydet"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Önbellek eklentisi PHP %s veya sonraki bir sürümü gerektirir. Bu sunucuda PHP %s çalıştığı için eklenti kurulmadı veya etkinleştirilmedi."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Araçlar"
+
+#: setup.php
+msgid "Cache"
+msgstr "Önbellek"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Önbellek eklentisi etkin değil."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Önbellek eklentisi PHP %s veya sonraki bir sürümü gerektirir."

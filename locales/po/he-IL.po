@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Hebrew (Israel) <https://translate.cacti.net/projects/cacti/core/he_IL/>\n"
+"Language: he-IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && n % 10 == 0) ? 2 : 3));\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "אימות CSRF נכשל. טען מחדש את הדף ונסה שוב."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "בדיקת הקישוריות של מנהל התקן המטמון הפעיל הצליחה."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "בדיקת הקישוריות של מנהל התקן המטמון הפעיל נכשלה."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "תצורת plugin_cache נשמרה."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "לא ניתן לשמור את תצורת plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "פעולת מנהל מערכת אינה נתמכת."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "תצורת מטמון אובייקטים ותקינות מנהל התקן (מנהל מערכת)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "קבוצת המטמון \"%s\" רוקנה (%d רשומות)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "סמן את תיבת האישור לפני ריקון כל רשומות המטמון."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "כל רשומות המטמון רוקנו (%d רשומות)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "ספק לפחות תגית מטמון אחת לביטול תוקף."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "בוטל תוקפן של %d תגיות מטמון."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "נוקו %d רשומות שפג תוקפן והוחזרו %d חכירות תור שפג תוקפן."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "פריט תור הודעות כושלות מס' %d הוחזר לתור."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "פריט תור הודעות כושלות מס' %d לא נמצא."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "סמן את תיבת האישור לפני מחיקת פריטים מתור הודעות כושלות."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "נמחקו %d פריטים מתור הודעות כושלות."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "פעולת מפעיל אינה נתמכת."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "פעולות מטמון אובייקטים ותור הודעות כושלות (מפעיל)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "מדדי מטמון אובייקטים ועומק תור אצווה"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "צפייה במטמון"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "מפעיל מטמון"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "מנהל מטמון"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "מדדי מטמון ותורים"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "פעולות מטמון ותור כושלים (DLQ)"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "תצורת מטמון ותקינות"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "מטמון אובייקטים ותור אצווה"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "מנהל התקן מטמון"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "מנהל ההתקן העורפי המשמש למטמון אובייקטים ולאחסון זמני."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (משותף בזיכרון)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (שקע RESP2 ב-PHP טהור)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "זיכרון תהליך (מוגבל S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "TTL ברירת מחדל (שניות)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "תפוגת ברירת מחדל לרשומת מטמון בשניות כאשר לא מסופק TTL."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "גודל מטען מרבי (בתים)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "גבול עליון בבתים למטעני מטמון ותור מקודדים ב-JSON (1024 עד 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "קידומת מפתח"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "קידומת מרחב שמות למפתחות המוחלת בשירותים עורפיים משותפים (APCu ו-Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL לנעילת מניעת הסתערות (שניות)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "משך נעילת ביצוע יחיד בשניות עבור CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "מקדם בטא של XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "מכפיל תפוגה מוקדמת הסתברותית (ברירת מחדל 1.0; הגדר 0 כדי להשבית חישוב מחדש מוקדם)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "קיבולת S3-FIFO של מנהל התקן הזיכרון"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "מספר הרשומות המרבי הנשמר ב-MemoryDriver לפני הפעלת פינוי S3-FIFO."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "תעבורת Redis (RESP2 ב-PHP טהור)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "מארח Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "שם מארח או כתובת IP עבור שרת ה-Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "פורט Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "פורט TCP או TLS עבור שרת ה-Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "הפעל Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "התחבר אל Redis באמצעות tls:// עם אימות תעודת עמית."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "אינדקס מסד נתונים של Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "מספר מסד נתונים לוגי של Redis (0 עד 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "זמן קצוב של Redis (שניות)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "זמן קצוב לחיבור שקע ולקריאה/כתיבה בשניות."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "הפניית סוד של Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "הפניית סוד מסווגת (env:VAR או vault:plugin:slot); סיסמאות גולמיות אינן נשמרות לעולם."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "תור אצווה בר-המשך"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "חכירת תור כברירת מחדל (שניות)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "משך החכירה בשניות לפני שפריט תור שלא אושר הופך זמין להחזרה."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "מספר ניסיונות מרבי כברירת מחדל"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "מספר ניסיונות המסירה המרבי לפני העברת פריט למצב תור הודעות כושלות."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "שמור טבלאות תוסף בעת הסרת ההתקנה"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "שמור את הטבלאות plugin_cache_entries, plugin_cache_tags ו-plugin_cache_queue בעת הסרת ההתקנה."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "סקירת מטמון אובייקטים"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "מנהל התקן"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "תקינות"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "רשומות פעילות"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "שורות שפג תוקפן"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "בתים מאוחסנים"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "פגיעות / החטאות (יחס)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "חישובים מחדש מוקדמים של XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "ביטולי תוקף של תגיות"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "תקין"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "לא תקין"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "קבוצות מטמון"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "אין קבוצות מטמון פעילות."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "קבוצה"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "תורי אצווה ברי-המשך"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "לא נרשמו תורי אצווה."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "תור"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "ממתין"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "מוחכר"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "הושלם"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "הודעות כושלות"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "חכירות שפג תוקפן"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "פעולות קבוצות ותגיות מטמון"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "ריקון קבוצת מטמון:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "רוקן קבוצה"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "ביטול תוקף תגיות מטמון (מופרדות בפסיקים):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "בטל תוקף תגיות"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "נקה רשומות שפג תוקפן והחזר חכירות"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "אשר ריקון מלא של המטמון"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "רוקן הכל"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "בדיקת תור הודעות כושלות"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "אין פריטים בתור ההודעות הכושלות."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "מזהה"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "ניסיונות"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "שגיאה אחרונה"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "פעולה"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "נסה שוב"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "אשר מחיקת פריטים מתור הודעות כושלות"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "מחק פריטים כושלים"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "תקינות מנהל התקן פעיל"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "מנהל התקן: %s | סטטוס: %s | סכימת תצורה: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "הפעל בדיקת קישוריות למנהל ההתקן"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "תצורת מנהל התקן ומדיניות (תצורה בלבד)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "מספר בתים מרבי למטען"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "מסד נתונים Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "הפניית סוד של Redis (env:VAR או vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "חכירת ברירת מחדל לתור (שניות)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "מספר ניסיונות מרבי כברירת מחדל לתור"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "שמור תצורה"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "תוסף המטמון דורש PHP %s ומעלה. שרת זה מריץ PHP %s, ולכן התוסף לא הותקן ולא הופעל."
+
+#: setup.php
+msgid "Utilities"
+msgstr "כלי עזר"
+
+#: setup.php
+msgid "Cache"
+msgstr "מטמון"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "תוסף המטמון אינו מופעל."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "תוסף המטמון דורש PHP %s ומעלה."

@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Greek <https://translate.cacti.net/projects/cacti/core/el/>\n"
+"Language: el-GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Η επαλήθευση CSRF απέτυχε. Επαναφορτώστε τη σελίδα και προσπαθήστε ξανά."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Ο έλεγχος συνδεσιμότητας του ενεργού προγράμματος οδήγησης κρυφής μνήμης πέτυχε."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Ο έλεγχος συνδεσιμότητας του ενεργού προγράμματος οδήγησης κρυφής μνήμης απέτυχε."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Η διαμόρφωση του plugin_cache αποθηκεύτηκε."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Αδυναμία αποθήκευσης της διαμόρφωσης του plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Μη υποστηριζόμενη ενέργεια διαχειριστή."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Διαμόρφωση κρυφής μνήμης αντικειμένων και υγεία προγράμματος οδήγησης (Διαχειριστής)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Εκκαθαρίστηκε η ομάδα κρυφής μνήμης «%s» (%d καταχωρίσεις)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Επιλέξτε το πλαίσιο επιβεβαίωσης πριν εκκαθαρίσετε όλες τις καταχωρίσεις της κρυφής μνήμης."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Εκκαθαρίστηκαν όλες οι καταχωρίσεις της κρυφής μνήμης (%d καταχωρίσεις)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Καταχωρίστε τουλάχιστον μία ετικέτα κρυφής μνήμης προς ακύρωση."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Ακυρώθηκαν %d ετικέτες κρυφής μνήμης."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Απομακρύνθηκαν %d ληγμένες καταχωρίσεις και ανακτήθηκαν %d ληγμένες μισθώσεις ουράς."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Το μη παραδοτέο στοιχείο #%d επανεισήχθη στην ουρά."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Το μη παραδοτέο στοιχείο #%d δεν βρέθηκε."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Επιλέξτε το πλαίσιο επιβεβαίωσης πριν από την οριστική διαγραφή μη παραδοτέων στοιχείων."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Διαγράφηκαν οριστικά %d στοιχεία από την ουρά μη παραδοτέων."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Μη υποστηριζόμενη ενέργεια χειριστή."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Λειτουργίες κρυφής μνήμης αντικειμένων και ουρά μη παραδοτέων (Χειριστής)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Μετρικές κρυφής μνήμης αντικειμένων και βάθος ουράς μαζικής επεξεργασίας"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Προβολή κρυφής μνήμης"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Χειριστής κρυφής μνήμης"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Διαχειριστής κρυφής μνήμης"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Μετρικές κρυφής μνήμης και ουρές"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Λειτουργίες κρυφής μνήμης και ουρά μη παραδοτέων"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Διαμόρφωση και υγεία κρυφής μνήμης"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Κρυφή μνήμη αντικειμένων και ουρά μαζικής επεξεργασίας"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Πρόγραμμα οδήγησης κρυφής μνήμης"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Πρόγραμμα οδήγησης υποστήριξης που χρησιμοποιείται για κρυφή μνήμη αντικειμένων και προσωρινή αποθήκευση."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (κοινόχρηστη στη μνήμη)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (υποδοχή RESP2 αμιγούς PHP)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Μνήμη διεργασίας (με όριο S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "Προεπιλεγμένο TTL (δευτερόλεπτα)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Προεπιλεγμένος χρόνος λήξης καταχώρισης κρυφής μνήμης σε δευτερόλεπτα όταν δεν παρέχεται TTL."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Μέγιστο μέγεθος φορτίου (byte)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Ανώτατο όριο σε byte για κωδικοποιημένα σε JSON φορτία κρυφής μνήμης και ουράς (1024 έως 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Πρόθεμα κλειδιών"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Πρόθεμα χώρου ονομάτων κλειδιών που εφαρμόζεται σε κοινόχρηστα συστήματα υποστήριξης (APCu και Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL κλειδώματος αποτροπής υπερφόρτωσης (δευτερόλεπτα)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Διάρκεια κλειδώματος μοναδικής εκτέλεσης σε δευτερόλεπτα για τη μέθοδο CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "Συντελεστής βήτα XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Πιθανοτικός πολλαπλασιαστής πρόωρης λήξης (προεπιλογή 1.0· ορίστε 0 για απενεργοποίηση πρόωρου επανυπολογισμού)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Χωρητικότητα S3-FIFO προγράμματος οδήγησης μνήμης"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Μέγιστος αριθμός καταχωρίσεων που διατηρούνται στο MemoryDriver πριν εκτελεστεί εκδίωξη S3-FIFO."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Μεταφορά Redis (RESP2 αμιγούς PHP)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Κεντρικός υπολογιστής Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Όνομα κεντρικού υπολογιστή ή διεύθυνση IP του διακομιστή Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Θύρα Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Θύρα TCP ή TLS για τον διακομιστή Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Ενεργοποίηση Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Σύνδεση στο Redis με χρήση tls:// και επαλήθευση πιστοποιητικού ομότιμου κόμβου."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Δείκτης βάσης δεδομένων Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Λογικός αριθμός βάσης δεδομένων Redis (0 έως 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Χρονικό όριο Redis (δευτερόλεπτα)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Χρονικό όριο σύνδεσης και ανάγνωσης/εγγραφής υποδοχής σε δευτερόλεπτα."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Αναφορά μυστικού Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Τυποποιημένη αναφορά μυστικού (env:VAR ή vault:plugin:slot)· οι απλοί κωδικοί πρόσβασης δεν αποθηκεύονται ποτέ."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Συνεχιζόμενη ουρά μαζικής επεξεργασίας"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Προεπιλεγμένη μίσθωση ουράς (δευτερόλεπτα)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Διάρκεια μίσθωσης σε δευτερόλεπτα πριν ένα μη επιβεβαιωμένο στοιχείο ουράς καταστεί ανακτήσιμο."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Προεπιλεγμένος μέγιστος αριθμός προσπαθειών"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Μέγιστος αριθμός προσπαθειών παράδοσης πριν από τη μετακίνηση ενός στοιχείου σε κατάσταση μη παραδοτέου."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Διατήρηση πινάκων πρόσθετου κατά την απεγκατάσταση"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Διατήρηση των πινάκων plugin_cache_entries, plugin_cache_tags και plugin_cache_queue κατά την απεγκατάσταση."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Επισκόπηση κρυφής μνήμης αντικειμένων"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Πρόγραμμα οδήγησης"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Υγεία"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Ενεργές καταχωρίσεις"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Ληγμένες γραμμές"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Αποθηκευμένα byte"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Επιτυχίες / Αστοχίες (Αναλογία)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Πρόωροι επανυπολογισμοί XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Ακυρώσεις ετικετών"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Υγιές"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Μη υγιές"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Ομάδες κρυφής μνήμης"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Δεν υπάρχουν ενεργές ομάδες κρυφής μνήμης."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Ομάδα"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Συνεχιζόμενες ουρές μαζικής επεξεργασίας"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Δεν έχουν καταγραφεί ουρές μαζικής επεξεργασίας."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Ουρά"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Σε εκκρεμότητα"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Σε μίσθωση"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Ολοκληρώθηκε"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Μη παραδοτέα"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Ληγμένες μισθώσεις"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Λειτουργίες ομάδων και ετικετών κρυφής μνήμης"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Εκκαθάριση ομάδας κρυφής μνήμης:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Εκκαθάριση ομάδας"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Ακύρωση ετικετών κρυφής μνήμης (διαχωρισμένες με κόμμα):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Ακύρωση ετικετών"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Απομάκρυνση ληγμένων καταχωρίσεων και ανάκτηση μισθώσεων"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Επιβεβαίωση πλήρους εκκαθάρισης κρυφής μνήμης"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Εκκαθάριση όλων"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Επιθεώρηση ουράς μη παραδοτέων"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Δεν υπάρχουν στοιχεία στην ουρά μη παραδοτέων."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Προσπάθειες"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Τελευταίο σφάλμα"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Ενέργεια"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Επανάληψη"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Επιβεβαίωση οριστικής διαγραφής μη παραδοτέων"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Οριστική διαγραφή μη παραδοτέων"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Υγεία ενεργού προγράμματος οδήγησης"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Πρόγραμμα οδήγησης: %s | Κατάσταση: %s | Σχήμα διαμόρφωσης: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Εκτέλεση ελέγχου συνδεσιμότητας προγράμματος οδήγησης"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Διαμόρφωση προγράμματος οδήγησης και πολιτικής (Μόνο διαμόρφωση)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Μέγιστα byte φορτίου"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Βάση δεδομένων Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Αναφορά μυστικού Redis (env:VAR ή vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Προεπιλεγμένη μίσθωση ουράς (δευτερόλεπτα)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Προεπιλεγμένος μέγιστος αριθμός προσπαθειών ουράς"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Αποθήκευση διαμόρφωσης"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Το πρόσθετο Κρυφής μνήμης απαιτεί PHP %s ή νεότερη έκδοση. Αυτός ο διακομιστής εκτελεί PHP %s, επομένως το πρόσθετο δεν εγκαταστάθηκε ούτε ενεργοποιήθηκε."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Βοηθητικά εργαλεία"
+
+#: setup.php
+msgid "Cache"
+msgstr "Κρυφή μνήμη"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Το πρόσθετο Κρυφής μνήμης δεν είναι ενεργοποιημένο."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Το πρόσθετο Κρυφής μνήμης απαιτεί PHP %s ή νεότερη έκδοση."

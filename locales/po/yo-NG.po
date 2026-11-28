@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Yoruba <developers@cacti.net>\n"
+"Language: yo_NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Ìfìdí CSRF múlẹ̀ kùnà. Tún ojú-ewé náà gbé wá kí o sì tún gbìyànjú."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Àyẹ̀wò ìsopọ̀ olùdarí káàṣì tí ń ṣiṣẹ́ ṣàṣeyọrí."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Àyẹ̀wò ìsopọ̀ olùdarí káàṣì tí ń ṣiṣẹ́ kùnà."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "A ti fi ìṣètò plugin_cache pamọ́."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Kò ṣeé ṣe láti fi ìṣètò plugin_cache pamọ́."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Ìgbésẹ̀ alámòójútó tí a kò ṣe àtìlẹ́yìn fún."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Ìṣètò Káàṣì Ohun àti Ìlera Olùdarí (Alámòójútó)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "A ti fọ ẹgbẹ́ káàṣì \"%s\" mọ́ (àkọsílẹ̀ %d)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Sàmì sí àpótí ìjẹ́rìísí ṣáájú fífọ gbogbo àwọn àkọsílẹ̀ káàṣì mọ́."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "A ti fọ gbogbo àwọn àkọsílẹ̀ káàṣì mọ́ (àkọsílẹ̀ %d)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Pèsè ó kéré tán àmì ìdámọ̀ káàṣì kan láti sọ di aláìwúlò."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "A ti sọ àmì ìdámọ̀ káàṣì %d di aláìwúlò."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "A ti yọ àkọsílẹ̀ %d tí àkókò rẹ̀ parí kúrò, a sì gba àyálò ìlà iṣẹ́ %d tí àkókò rẹ̀ parí padà."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "A ti tún fi ohun ìlà iṣẹ́ tí ó kùnà #%d sí ìlà iṣẹ́."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "A kò rí ohun ìlà iṣẹ́ tí ó kùnà #%d."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Sàmì sí àpótí ìjẹ́rìísí ṣáájú pípa àwọn ohun ìlà iṣẹ́ tí ó kùnà rẹ́ pátápátá."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "A ti pa ohun ìlà iṣẹ́ tí ó kùnà %d rẹ́ pátápátá."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Ìgbésẹ̀ olùṣiṣẹ́ tí a kò ṣe àtìlẹ́yìn fún."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Àwọn Ìṣiṣẹ́ Káàṣì Ohun àti Ìlà Iṣẹ́ Tí Ó Kùnà (Olùṣiṣẹ́)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Àwọn Ìwọ̀n Ìṣiṣẹ́ Káàṣì Ohun àti Ìjìnlẹ̀ Ìlà Iṣẹ́ Alákójọpọ̀"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Ìwòran Káàṣì"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Olùṣiṣẹ́ Káàṣì"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Alámòójútó Káàṣì"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Àwọn Ìwọ̀n Ìṣiṣẹ́ Káàṣì àti Ìlà Iṣẹ́"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Àwọn Ìṣiṣẹ́ Káàṣì àti DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Ìṣètò Káàṣì àti Ìlera"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Káàṣì Ohun àti Ìlà Iṣẹ́ Alákójọpọ̀"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Olùdarí Káàṣì"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Olùdarí ẹ̀yìn ètò tí a ń lò fún káàṣì ohun àti ìpamọ́ àkókò kúkúrú."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (àjọpín inú ìrántí)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (sọ́kẹ́ẹ̀tì RESP2 ti PHP nìkan)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Ìrántí Ìlànà (oní-ààlà S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "TTL Àtìpìlẹ̀ (ìṣẹ́jú-àáyá)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Ìparí àkókò àtìpìlẹ̀ fún àkọsílẹ̀ káàṣì ní ìṣẹ́jú-àáyá nígbà tí a kò bá pèsè TTL."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Ìwọ̀n Àkóónú Dátà Tí Ó Pọ̀ Jù (báìtì)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Ààlà òkè ní báìtì lórí àkóónú dátà káàṣì àti ìlà iṣẹ́ tí a ṣe àkọ́mọ́lẹ̀ rẹ̀ ní JSON (1024 sí 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Àmì-ìbẹ̀rẹ̀ Kọ́kọ́rọ́"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Àmì-ìbẹ̀rẹ̀ ààyè orúkọ kọ́kọ́rọ́ tí a ń lò ní àwọn ẹ̀yìn ètò àjọpín (APCu àti Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL Tìtìpa Ìsáréjọ (ìṣẹ́jú-àáyá)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Àkókò tìtìpa ìṣiṣẹ́-kan-ṣoṣo ní ìṣẹ́jú-àáyá fún CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "Ìwọ̀n Bẹ́tà XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Olùsọdipúpọ̀ ìparí àkókò ìṣáájú oníṣeéṣe (àtìpìlẹ̀ 1.0; ṣètò 0 láti pa àtúnṣirò ìṣáájú tì)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Agbára S3-FIFO Olùdarí Ìrántí"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Iye àkọsílẹ̀ tí ó pọ̀ jù lọ tí a ń pa mọ́ nínú MemoryDriver ṣáájú kí ìyọkúrò S3-FIFO tó ṣiṣẹ́."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Ìgbékalẹ̀ Ìsopọ̀ Redis (RESP2 ti PHP Nìkan)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Olùgbàlejò Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Orúkọ olùgbàlejò tàbí àdírẹ́ẹ̀sì IP fún sáfà Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Pọ́ọ̀tì Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Pọ́ọ̀tì TCP tàbí TLS fún sáfà Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Mú Redis TLS Ṣiṣẹ́"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Sopọ̀ mọ́ Redis nípa lílo tls:// pẹ̀lú ìfìdí ìwé-ẹ̀rí ẹlẹgbẹ́ múlẹ̀."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Àtọ́ka Ibùdó Dátà Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Nọ́ńbà ibùdó dátà Redis oní-ìpínsí (0 sí 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Ààlà Àkókò Redis (ìṣẹ́jú-àáyá)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Ààlà àkókò ìsopọ̀ àti kíkà/kíkọ sọ́kẹ́ẹ̀tì ní ìṣẹ́jú-àáyá."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Ìtọ́kasí Àṣírí Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Ìtọ́kasí àṣírí oní-irú (env:VAR tàbí vault:plugin:slot); a kì í fi àwọn ọ̀rọ̀ aṣínà tààrà pamọ́ láéláé."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Ìlà Iṣẹ́ Alákójọpọ̀ Tí Ó Ṣeé Tẹ̀síwájú"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Àyálò Ìlà Iṣẹ́ Àtìpìlẹ̀ (ìṣẹ́jú-àáyá)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Àkókò àyálò ní ìṣẹ́jú-àáyá ṣáájú kí ohun ìlà iṣẹ́ tí a kò tíì fọwọ́sí tó ṣeé gbà padà."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Àwọn Ìgbìyànjú Tí Ó Pọ̀ Jù Àtìpìlẹ̀"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Iye ìgbìyànjú ìfìránṣẹ́ tí ó pọ̀ jù lọ ṣáájú gbígbé ohun kan sí ipò ìlà iṣẹ́ tí ó kùnà."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Pa Àwọn Tábìlì Àfikún Mọ́ Nígbà Ìyọkúrò"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Pa àwọn tábìlì plugin_cache_entries, plugin_cache_tags, àti plugin_cache_queue mọ́ nígbà tí a bá yọ àfikún kúrò."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Àkótán Káàṣì Ohun"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Olùdarí"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Ìlera"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Àwọn Àkọsílẹ̀ Tí Ń Ṣiṣẹ́"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Àwọn Ìlà Tí Àkókò Wọn Parí"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Àwọn Báìtì Tí A Fi Pamọ́"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Àwọn Ìrí / Àwọn Àìrí (Ìpíndọ́gba)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Àwọn Àtúnṣirò Ìṣáájú XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Àwọn Ìsọdi-Aláìwúlò Àmì Ìdámọ̀"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Ní ìlera"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Kò ní ìlera"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Àwọn Ẹgbẹ́ Káàṣì"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Kò sí ẹgbẹ́ káàṣì tí ń ṣiṣẹ́ kankan."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Ẹgbẹ́"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Àwọn Ìlà Iṣẹ́ Alákójọpọ̀ Tí Ó Ṣeé Tẹ̀síwájú"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Kò sí ìlà iṣẹ́ alákójọpọ̀ kankan tí a kọ sílẹ̀."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Ìlà Iṣẹ́"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Ń dúró"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Tí a yá"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Tí ó parí"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Tí ó kùnà"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Àwọn Àyálò Tí Àkókò Wọn Parí"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Àwọn Ìṣiṣẹ́ Ẹgbẹ́ Káàṣì àti Àmì Ìdámọ̀"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Fọ Ẹgbẹ́ Káàṣì Mọ́:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Fọ Ẹgbẹ́ Mọ́"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Sọ Àwọn Àmì Ìdámọ̀ Káàṣì Di Aláìwúlò (tí a fi kọ́mà pín):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Sọ Àwọn Àmì Ìdámọ̀ Di Aláìwúlò"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Yọ Àwọn Àkọsílẹ̀ Tí Àkókò Wọn Parí Kúrò kí O sì Gba Àwọn Àyálò Padà"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Fìdí fífọ gbogbo káàṣì mọ́ múlẹ̀"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Fọ Gbogbo Rẹ̀ Mọ́"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Àyẹ̀wò Ìlà Iṣẹ́ Tí Ó Kùnà"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Kò sí ohun ìlà iṣẹ́ tí ó kùnà kankan."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Àwọn Ìgbìyànjú"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Àṣìṣe Tí Ó Kẹ́yìn"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Ìgbésẹ̀"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Tún Gbìyànjú"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Fìdí pípa ìlà iṣẹ́ tí ó kùnà rẹ́ pátápátá múlẹ̀"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Pa Àwọn Iṣẹ́ Tí Ó Kùnà Rẹ́ Pátápátá"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Ìlera Olùdarí Tí Ń Ṣiṣẹ́"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Olùdarí: %s | Ipò: %s | Ètò Ìṣètò: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Ṣe Àyẹ̀wò Ìsopọ̀ Olùdarí"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Ìṣètò Olùdarí àti Ìlànà (Ìṣètò Nìkan)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Iye Báìtì Àkóónú Dátà Tí Ó Pọ̀ Jù"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Ibùdó Dátà Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Ìtọ́kasí Àṣírí Redis (env:VAR tàbí vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Àyálò Àtìpìlẹ̀ Ìlà Iṣẹ́ (ìṣẹ́jú-àáyá)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Àwọn Ìgbìyànjú Tí Ó Pọ̀ Jù Àtìpìlẹ̀ Ìlà Iṣẹ́"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Fi Ìṣètò Pamọ́"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Àfikún Káàṣì nílò PHP %s tàbí tuntun jù bẹ́ẹ̀ lọ. Sáfà yìí ń lo PHP %s, nítorí náà a kò fi àfikún náà sí orí ẹ̀rọ tàbí mú un ṣiṣẹ́."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Àwọn Ohun Èlò Ìrànwọ́"
+
+#: setup.php
+msgid "Cache"
+msgstr "Káàṣì"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "A kò mú àfikún Káàṣì ṣiṣẹ́."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Àfikún Káàṣì nílò PHP %s tàbí tuntun jù bẹ́ẹ̀ lọ."

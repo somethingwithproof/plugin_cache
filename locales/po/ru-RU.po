@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Russian <https://translate.cacti.net/projects/cacti/core/ru/>\n"
+"Language: ru-RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "Ошибка проверки CSRF. Перезагрузите страницу и повторите попытку."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Проверка подключения активного драйвера кэша прошла успешно."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Проверка подключения активного драйвера кэша завершилась с ошибкой."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Конфигурация plugin_cache сохранена."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Не удалось сохранить конфигурацию plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Неподдерживаемое действие администратора."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Конфигурация кэша объектов и состояние драйвера (администратор)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Группа кэша «%s» очищена (записей: %d)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Установите флажок подтверждения перед очисткой всех записей кэша."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Все записи кэша очищены (записей: %d)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Укажите хотя бы один тег кэша для аннулирования."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Аннулировано тегов кэша: %d."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Удалено просроченных записей: %d; возвращено просроченных аренд очереди: %d."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Элемент очереди недоставленных сообщений #%d возвращен в очередь."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Элемент очереди недоставленных сообщений #%d не найден."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Установите флажок подтверждения перед очисткой элементов очереди недоставленных сообщений."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Удалено элементов очереди недоставленных сообщений: %d."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Неподдерживаемое действие оператора."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Операции кэша объектов и очередь недоставленных сообщений (оператор)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Метрики кэша объектов и глубина пакетной очереди"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Просмотр кэша"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Оператор кэша"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Администратор кэша"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Метрики кэша и очереди"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Операции кэша и DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Конфигурация и состояние кэша"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Кэш объектов и пакетная очередь"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Драйвер кэша"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Серверный драйвер, используемый для кэша объектов и временного хранилища."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (общая память)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (сокет RESP2 на чистом PHP)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Память процесса (ограничено S3-FIFO)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "TTL по умолчанию (секунды)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Срок действия записи кэша по умолчанию в секундах, если TTL не указан."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Максимальный размер полезной нагрузки (байты)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Верхний предел в байтах для полезной нагрузки кэша и очереди в формате JSON (от 1024 до 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Префикс ключей"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Префикс пространства имен ключей, применяемый в общих хранилищах (APCu и Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL блокировки от лавинообразных запросов (секунды)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Длительность однопоточной блокировки в секундах для CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "Бета-коэффициент XFetch"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Множитель вероятностного досрочного истечения срока действия (по умолчанию 1.0; укажите 0 для отключения досрочного пересчета)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Емкость S3-FIFO драйвера памяти"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Максимальное число записей, хранимых в MemoryDriver до запуска вытеснения S3-FIFO."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Транспорт Redis (RESP2 на чистом PHP)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Хост Redis"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Имя хоста или IP-адрес сервера Redis."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Порт Redis"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Порт TCP или TLS для сервера Redis."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Включить Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Подключаться к Redis через tls:// с проверкой сертификата узла."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Индекс базы данных Redis"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Логический номер базы данных Redis (от 0 до 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Тайм-аут Redis (секунды)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Тайм-аут подключения и чтения/записи сокета в секундах."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Ссылка на секрет Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Типизированная ссылка на секрет (env:VAR или vault:plugin:slot); пароли в открытом виде никогда не сохраняются."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Возобновляемая пакетная очередь"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Аренда элемента очереди по умолчанию (секунды)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Длительность аренды в секундах, по истечении которой неподтвержденный элемент очереди может быть возвращен в обработку."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Максимум попыток по умолчанию"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Максимальное число попыток доставки перед переводом элемента в очередь недоставленных сообщений."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Сохранять таблицы плагина при удалении"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Сохранять таблицы plugin_cache_entries, plugin_cache_tags и plugin_cache_queue при удалении плагина."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Обзор кэша объектов"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Драйвер"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Состояние"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Активные записи"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Просроченные строки"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Сохраненные байты"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Попадания / промахи (доля)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Досрочные пересчеты XFetch"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Аннулирования по тегам"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Исправен"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Неисправен"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Группы кэша"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Нет активных групп кэша."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Группа"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Возобновляемые пакетные очереди"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Пакетные очереди не зарегистрированы."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Очередь"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "В ожидании"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "В аренде"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Завершено"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Недоставленные"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Просроченные аренды"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Операции с группами и тегами кэша"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Очистить группу кэша:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Очистить группу"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Аннулировать теги кэша (через запятую):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Аннулировать теги"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Удалить просроченные записи и вернуть аренды"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Подтвердить полную очистку кэша"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Очистить все"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Просмотр очереди недоставленных сообщений"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "В очереди недоставленных сообщений нет элементов."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Попытки"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Последняя ошибка"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Действие"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Повторить"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Подтвердить очистку очереди недоставленных сообщений"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Очистить недоставленные"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Состояние активного драйвера"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Драйвер: %s | Статус: %s | Схема конфигурации: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Проверить подключение драйвера"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Конфигурация драйвера и политик (только настройки)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Максимум байтов полезной нагрузки"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "База данных Redis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Ссылка на секрет Redis (env:VAR или vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Аренда очереди по умолчанию (секунды)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Максимум попыток очереди по умолчанию"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Сохранить конфигурацию"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Для плагина кэша требуется PHP %s или новее. На этом сервере работает PHP %s, поэтому плагин не был установлен или включен."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Утилиты"
+
+#: setup.php
+msgid "Cache"
+msgstr "Кэш"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Плагин кэша не включен."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Для плагина кэша требуется PHP %s или новее."

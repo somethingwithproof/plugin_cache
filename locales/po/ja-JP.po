@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Japanese <https://translate.cacti.net/projects/cacti/core/ja/>\n"
+"Language: ja-JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "CSRF 検証に失敗しました。ページを再読み込みして再試行してください。"
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "アクティブなキャッシュドライバーの接続プローブに成功しました。"
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "アクティブなキャッシュドライバーの接続プローブに失敗しました。"
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "plugin_cache の設定を保存しました。"
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "plugin_cache の設定を保存できませんでした。"
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "サポートされていない管理者操作です。"
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "オブジェクトキャッシュ設定とドライバー正常性 (管理者)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "キャッシュグループ「%s」をフラッシュしました (%d エントリ)。"
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "すべてのキャッシュエントリをフラッシュする前に確認チェックボックスを選択してください。"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "すべてのキャッシュエントリをフラッシュしました (%d エントリ)。"
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "無効化するキャッシュタグを 1 つ以上指定してください。"
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "%d 件のキャッシュタグを無効化しました。"
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "期限切れエントリ %d 件を削除し、期限切れキューリース %d 件を回収しました。"
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "デッドレター項目 #%d を再キュー登録しました。"
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "デッドレター項目 #%d が見つかりませんでした。"
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "デッドレター項目を完全削除する前に確認チェックボックスを選択してください。"
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "%d 件のデッドレターキュー項目を完全削除しました。"
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "サポートされていないオペレーター操作です。"
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "オブジェクトキャッシュ操作とデッドレターキュー (オペレーター)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "オブジェクトキャッシュメトリクスとバッチキュー滞留数"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "キャッシュ閲覧"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "キャッシュオペレーター"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "キャッシュ管理者"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "キャッシュメトリクスとキュー"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "キャッシュ操作と DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "キャッシュ設定と正常性"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "オブジェクトキャッシュとバッチキュー"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "キャッシュドライバー"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "オブジェクトキャッシュおよび一時ストレージに使用するバックエンドドライバーです。"
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (インメモリ共有)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (ピュア PHP RESP2 ソケット)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "プロセスメモリ (S3-FIFO 上限付き)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "デフォルト TTL (秒)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "TTL が指定されない場合のキャッシュエントリのデフォルト有効期限 (秒) です。"
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "最大ペイロードサイズ (バイト)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "JSON エンコードされたキャッシュおよびキューペイロードの上限バイト数です (1024〜16777216)。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "キープレフィックス"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "共有バックエンド (APCu および Redis) で適用されるキー名前空間プレフィックスです。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "スタンピードロック TTL (秒)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "CacheService::remember() のシングルフライトロック保持時間 (秒) です。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch ベータ係数"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "確率的早期失効の乗数です (デフォルト: 1.0、0 を設定すると早期再計算を無効化)。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "メモリドライバー S3-FIFO 容量"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "S3-FIFO による退避が実行される前に MemoryDriver に保持される最大エントリ数です。"
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis トランスポート (ピュア PHP RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis ホスト"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Redis サーバーのホスト名または IP アドレスです。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis ポート"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Redis サーバーの TCP または TLS ポート番号です。"
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Redis TLS を有効にする"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "ピア証明書検証付きで tls:// を使用して Redis に接続します。"
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Redis データベースインデックス"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Redis の論理データベース番号です (0〜15)。"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Redis タイムアウト (秒)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "ソケット接続および読み書きのタイムアウト時間 (秒) です。"
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Redis シークレット参照"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "型付きシークレット参照 (env:VAR または vault:plugin:slot) です。生のパスワードは保存されません。"
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "再開可能バッチキュー"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "デフォルトのキューリース時間 (秒)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "未確認のキュー項目が再回収可能になるまでのリース期間 (秒) です。"
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "デフォルトの最大試行回数"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "項目をデッドレター状態へ移行するまでの最大配信試行回数です。"
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "アンインストール時にプラグインテーブルを保持する"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "アンインストール時に plugin_cache_entries、plugin_cache_tags、および plugin_cache_queue テーブルを保持します。"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "オブジェクトキャッシュ概要"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "ドライバー"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "正常性"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "有効エントリ数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "期限切れ行数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "保存バイト数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "ヒット / ミス (比率)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "XFetch 早期再計算回数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "タグ無効化回数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "正常"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "異常"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "キャッシュグループ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "有効なキャッシュグループはありません。"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "グループ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "再開可能バッチキュー"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "記録されたバッチキューはありません。"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "キュー"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "待機中"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "リース中"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "完了日時"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "デッドレター"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "期限切れリース"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "キャッシュグループおよびタグ操作"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "キャッシュグループをフラッシュ:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "グループをフラッシュ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "無効化するキャッシュタグ (カンマ区切り):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "タグを無効化"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "期限切れエントリの削除とリースの回収"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "全キャッシュのフラッシュを確認"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "すべてフラッシュ"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "デッドレターキュー検査"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "デッドレターキュー項目はありません。"
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "試行回数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "最後のエラー"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "操作"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "再試行"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "デッドレターの完全削除を確認"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "デッドレターを完全削除"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "アクティブドライバーの正常性"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "ドライバー: %s | ステータス: %s | 設定スキーマ: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "ドライバー接続プローブを実行"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "ドライバーおよびポリシー設定 (設定のみ)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "最大ペイロードバイト数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis データベース (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Redis シークレット参照 (env:VAR または vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "キューのデフォルトリース時間 (秒)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "キューのデフォルト最大試行回数"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "設定を保存"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "キャッシュプラグインには PHP %s 以降が必要です。このサーバーでは PHP %s が動作しているため、プラグインはインストールまたは有効化されませんでした。"
+
+#: setup.php
+msgid "Utilities"
+msgstr "ユーティリティ"
+
+#: setup.php
+msgid "Cache"
+msgstr "キャッシュ"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "キャッシュプラグインは有効になっていません。"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "キャッシュプラグインには PHP %s 以降が必要です。"

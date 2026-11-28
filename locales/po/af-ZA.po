@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Afrikaans <developers@cacti.net>\n"
+"Language: af_ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "CSRF-verifikasie het misluk. Herlaai die bladsy en probeer weer."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Verbindingstoets vir aktiewe kasdrywer het geslaag."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Verbindingstoets vir aktiewe kasdrywer het misluk."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Konfigurasie vir plugin_cache gestoor."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Kon nie konfigurasie vir plugin_cache stoor nie."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Onondersteunde administrateuraksie."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Objekkas-konfigurasie en drywergesondheid (Administrateur)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Kasgroep \"%s\" is leeggemaak (%d inskrywings)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Merk die bevestigingsblokkie voordat alle kasinskrywings leeggemaak word."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Alle kasinskrywings is leeggemaak (%d inskrywings)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Verskaf ten minste een kasmerker om ongeldig te maak."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "%d kasmerker(s) is ongeldig gemaak."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "%d vervalde inskrywings is gesnoei en %d vervalde tou-huurtye is herwin."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Doodloop-item #%d is weer in die tou geplaas."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Doodloop-item #%d is nie gevind nie."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Merk die bevestigingsblokkie voordat doodloop-items uitgevee word."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "%d doodlooptou-item(s) is uitgevee."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Onondersteunde operateuraksie."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Objekkasbewerkings en doodlooptou (Operateur)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Objekkas-metrieke en bondeltoudiepte"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Kasaansig"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Kasoperateur"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Kasadministrateur"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Kasmetrieke en toue"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Kasbewerkings en doodlooptou"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Kaskonfigurasie en gesondheid"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Objekkas en bondeltou"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Kasdrywer"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Agterkant-drywer wat vir objekkas en tydelike berging gebruik word."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (gedeel in geheue)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (suiwer-PHP RESP2-sok)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Prosesgeheue (S3-FIFO-begrens)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "Verstek TTL (sekondes)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Verstek vervaltyd van kasinskrywings in sekondes wanneer geen TTL verskaf word nie."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Maksimum dataladinggrootte (grepe)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Boonste perk in grepe op JSON-gekodeerde kas- en toudataladings (1024 tot 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Sleutelvoorvoegsel"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Sleutelnaamruimte-voorvoegsel wat in gedeelde agterkante (APCu en Redis) toegepas word."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "Stormloopslot-TTL (sekondes)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Enkelvlug-slotduur in sekondes vir CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch Beta-faktor"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Waarskynlikheidsvermenigvuldiger vir vroeë verval (verstek 1.0; stel op 0 om vroeë herberekening te deaktiveer)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "S3-FIFO-kapasiteit van geheuedrywer"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Maksimum inskrywings wat in MemoryDriver behou word voordat S3-FIFO-uitsetting loop."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis-vervoer (Suiwer-PHP RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis-gasheer"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Gasheernaam of IP-adres vir die Redis-bediener."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis-poort"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "TCP- of TLS-poort vir die Redis-bediener."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Aktiveer Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Koppel aan Redis met tls:// en eweknie-sertifikaatverifikasie."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Redis-databasisindeks"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Logiese Redis-databasisnommer (0 tot 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Redis-tydverstryking (sekondes)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Sok-verbindings- en lees-/skryftydverstryking in sekondes."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Redis-geheimverwysing"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Getipeerde geheimverwysing (env:VAR of vault:plugin:slot); rou wagwoorde word nooit gestoor nie."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Hervatbare bondeltou"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Verstek tou-huurtyd (sekondes)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Huurtydduur in sekondes voordat 'n onbevestigde tou-item herwinbaar word."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Verstek maksimum pogings"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Maksimum afleweringspogings voordat 'n item na doodloopstatus geskuif word."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Behou inpropmodule-tabelle by deïnstallasie"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Behou plugin_cache_entries, plugin_cache_tags en plugin_cache_queue tabelle by deïnstallasie."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Objekkas-oorsig"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Drywer"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Gesondheid"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Aktiewe inskrywings"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Vervalde rye"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Gestoorde grepe"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Treffers / Misse (Verhouding)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "XFetch vroeë herberekenings"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Merker-ongeldigmakings"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Gesond"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Ongesond"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Kasgroepe"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Geen aktiewe kasgroepe nie."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Groep"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Hervatbare bondeltoue"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Geen bondeltoue aangeteken nie."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Tou"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Hangend"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Verhuur"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Voltooi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Doodloop"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Vervalde huurtye"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Kasgroep- en merkerbewerkings"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Maak kasgroep leeg:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Maak groep leeg"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Maak kasmerkers ongeldig (kommageskei):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Maak merkers ongeldig"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Snoei vervalde inskrywings en herwin huurtye"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Bevestig volledige kas-leegmaking"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Maak alles leeg"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Inspeksie van doodlooptou"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Geen doodlooptou-items nie."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Pogings"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Laaste fout"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Aksie"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Probeer weer"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Bevestig uitvee van doodloop-items"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Vee doodloop-items uit"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Gesondheid van aktiewe drywer"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Drywer: %s | Status: %s | Konfigurasieskema: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Voer drywer-verbindingstoets uit"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Drywer- en beleidskonfigurasie (Slegs konfigurasie)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Maksimum datalading-grepe"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis-databasis (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Redis-geheimverwysing (env:VAR of vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Verstek tou-huurtyd (sekondes)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Verstek maksimum tou-pogings"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Stoor konfigurasie"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Die Kas-inpropmodule vereis PHP %s of nuwer. Hierdie bediener gebruik PHP %s, dus is die inpropmodule nie geïnstalleer of geaktiveer nie."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Hulpmiddels"
+
+#: setup.php
+msgid "Cache"
+msgstr "Kas"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Die Kas-inpropmodule is nie geaktiveer nie."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Die Kas-inpropmodule vereis PHP %s of nuwer."

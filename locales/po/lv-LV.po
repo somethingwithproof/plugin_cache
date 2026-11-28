@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Latvian <https://translate.cacti.net/projects/cacti/core/lv/>\n"
+"Language: lv-LV\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "CSRF pārbaude neizdevās. Pārlādējiet lapu un mēģiniet vēlreiz."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Aktīvā kešatmiņas draivera savienojamības pārbaude bija veiksmīga."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Aktīvā kešatmiņas draivera savienojamības pārbaude neizdevās."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Spraudņa plugin_cache konfigurācija saglabāta."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Neizdevās saglabāt plugin_cache konfigurāciju."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Neatbalstīta administratora darbība."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Objektu kešatmiņas konfigurācija un draivera darbspēja (administrators)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Kešatmiņas grupa „%s” iztīrīta (ierakstu skaits: %d)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Pirms visu kešatmiņas ierakstu iztīrīšanas atzīmējiet apstiprinājuma rūtiņu."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Visi kešatmiņas ieraksti iztīrīti (ierakstu skaits: %d)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Norādiet vismaz vienu kešatmiņas birku, ko anulēt."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Anulētas kešatmiņas birkas: %d."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Notīrīti novecojušie ieraksti (%d) un atgūtas beigušās rindas rezervācijas (%d)."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Nepiegādāto ziņojumu vienums #%d atkārtoti ievietots rindā."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Nepiegādāto ziņojumu vienums #%d netika atrasts."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Pirms nepiegādāto ziņojumu vienumu neatgriezeniskas dzēšanas atzīmējiet apstiprinājuma rūtiņu."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Neatgriezeniski dzēsti nepiegādāto ziņojumu rindas vienumi: %d."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Neatbalstīta operatora darbība."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Objektu kešatmiņas darbības un nepiegādāto ziņojumu rinda (operators)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Objektu kešatmiņas metrika un pakešu rindas dziļums"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Kešatmiņas skatīšana"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Kešatmiņas operators"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Kešatmiņas administrators"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Kešatmiņas metrika un rindas"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Kešatmiņas darbības un DLQ"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Kešatmiņas konfigurācija un darbspēja"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Objektu kešatmiņa un pakešu rinda"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Kešatmiņas draiveris"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Aizmugursistēmas draiveris, ko izmanto objektu kešatmiņai un pagaidu glabāšanai."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (koplietojamā operatīvajā atmiņā)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (tīrs PHP RESP2 ligzdas savienojums)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Procesa atmiņa (S3-FIFO ierobežota)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "Noklusējuma TTL (sekundēs)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Noklusējuma kešatmiņas ieraksta derīguma termiņš sekundēs, ja TTL nav norādīts."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Maksimālais datu apjoms (baitos)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Augšējā robeža baitos JSON kodētiem kešatmiņas un rindas datiem (no 1024 līdz 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Atslēgas prefikss"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Atslēgu nosaukumvietas prefikss, ko izmanto koplietojamās aizmugursistēmās (APCu un Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "Pārslodzes bloķēšanas TTL (sekundēs)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Vienlaicīgas izpildes bloķēšanas ilgums sekundēs metodei CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch beta koeficients"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Varbūtiskais agrīnās derīguma beigšanās reizinātājs (noklusējums 1.0; iestatiet 0, lai atspējotu agrīnu pārrēķinu)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "Atmiņas draivera S3-FIFO ietilpība"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Maksimālais ierakstu skaits, kas tiek glabāts MemoryDriver pirms S3-FIFO izstumšanas."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis transports (tīrs PHP RESP2)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis resursdators"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Redis servera resursdatora nosaukums vai IP adrese."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis ports"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "Redis servera TCP vai TLS ports."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Iespējot Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Izveidot savienojumu ar Redis, izmantojot tls:// ar partnera sertifikāta verifikāciju."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Redis datubāzes indekss"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Loģiskās Redis datubāzes numurs (no 0 līdz 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Redis noildze (sekundēs)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Ligzdas savienojuma un lasīšanas/rakstīšanas noildze sekundēs."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Redis noslēpuma atsauce"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Tipizēta noslēpuma atsauce (env:VAR vai vault:plugin:slot); nešifrētas paroles nekad netiek glabātas."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Atsākama pakešu rinda"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Noklusējuma rindas rezervācijas ilgums (sekundēs)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Rezervācijas ilgums sekundēs, pēc kura neapstiprinātu rindas vienumu var atkārtoti piešķirt."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Noklusējuma maks. mēģinājumu skaits"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Maksimālais piegādes mēģinājumu skaits, pirms vienums tiek pārvietots uz nepiegādāto ziņojumu statusu."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Saglabāt spraudņa tabulas atinstalēšanas laikā"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Atinstalējot saglabāt tabulas plugin_cache_entries, plugin_cache_tags un plugin_cache_queue."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Objektu kešatmiņas pārskats"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Draiveris"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Darbspēja"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Aktīvie ieraksti"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Novecojušās rindas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Saglabātie baiti"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Trāpījumi / netrāpījumi (attiecība)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "XFetch agrīnie pārrēķini"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Birku anulēšanas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Darbspējīgs"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Nedarbspējīgs"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Kešatmiņas grupas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Nav aktīvu kešatmiņas grupu."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Grupa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Atsākamās pakešu rindas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Nav reģistrēta neviena pakešu rinda."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Rinda"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Gaida"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Rezervēti"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Pabeigšanas laiks"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Nepiegādātie"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Beigušās rezervācijas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Kešatmiņas grupu un birku darbības"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Iztīrīt kešatmiņas grupu:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Iztīrīt grupu"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Anulēt kešatmiņas birkas (atdalītas ar komatu):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Anulēt birkas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Notīrīt novecojušos ierakstus un atgūt rezervācijas"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Apstiprināt pilnīgu kešatmiņas iztīrīšanu"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Iztīrīt visu"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Nepiegādāto ziņojumu rindas pārbaude"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Nav nepiegādāto ziņojumu rindas vienumu."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Mēģinājumi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Pēdējā kļūda"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Darbība"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Mēģināt vēlreiz"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Apstiprināt nepiegādāto ziņojumu neatgriezenisku dzēšanu"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Dzēst nepiegādātos ziņojumus"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Aktīvā draivera darbspēja"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Draiveris: %s | Statuss: %s | Konfigurācijas shēma: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Palaist draivera savienojamības pārbaudi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Draivera un politikas konfigurācija (tikai konfigurācija)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Maks. datu apjoms baitos"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis datubāze (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Redis noslēpuma atsauce (env:VAR vai vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Rindas noklusējuma rezervācija (sekundēs)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Rindas noklusējuma maks. mēģinājumi"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Saglabāt konfigurāciju"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Kešatmiņas spraudnim nepieciešama PHP %s vai jaunāka versija. Šajā serverī darbojas PHP %s, tāpēc spraudnis netika instalēts vai iespējots."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Utilītas"
+
+#: setup.php
+msgid "Cache"
+msgstr "Kešatmiņa"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Kešatmiņas spraudnis nav iespējots."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Kešatmiņas spraudnim nepieciešama PHP %s vai jaunāka versija."

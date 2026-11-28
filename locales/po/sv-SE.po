@@ -1,0 +1,505 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 Thomas Vincent <thomasvincent@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cache 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/somethingwithproof/plugin_cache/issues\n"
+"PO-Revision-Date: 2026-11-28 00:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Swedish <https://translate.cacti.net/projects/cacti/core/sv/>\n"
+"Language: sv-SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: cache_admin.php cache_operator.php
+msgid "CSRF verification failed. Reload the page and retry."
+msgstr "CSRF-verifieringen misslyckades. Ladda om sidan och försök igen."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe succeeded."
+msgstr "Anslutningstestet för aktiv cachedrivrutin lyckades."
+
+#: cache_admin.php
+msgid "Active cache driver connectivity probe failed."
+msgstr "Anslutningstestet för aktiv cachedrivrutin misslyckades."
+
+#: cache_admin.php
+msgid "Saved plugin_cache configuration."
+msgstr "Sparade konfigurationen för plugin_cache."
+
+#: cache_admin.php
+msgid "Unable to save plugin_cache configuration."
+msgstr "Det gick inte att spara konfigurationen för plugin_cache."
+
+#: cache_admin.php
+msgid "Unsupported administrator action."
+msgstr "Administratörsåtgärden stöds inte."
+
+#: cache_admin.php
+msgid "Object Cache Configuration & Driver Health (Administrator)"
+msgstr "Konfiguration av objektcache och drivrutinshälsa (administratör)"
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed cache group \"%s\" (%d entries)."
+msgstr "Tömde cachegruppen \"%s\" (%d poster)."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before flushing all cache entries."
+msgstr "Markera bekräftelserutan innan du tömmer alla cacheposter."
+
+#: cache_operator.php
+#, php-format
+msgid "Flushed all cache entries (%d entries)."
+msgstr "Tömde alla cacheposter (%d poster)."
+
+#: cache_operator.php
+msgid "Provide at least one cache tag to invalidate."
+msgstr "Ange minst en cachetagg att ogiltigförklara."
+
+#: cache_operator.php
+#, php-format
+msgid "Invalidated %d cache tag(s)."
+msgstr "Ogiltigförklarade %d cachetagg(ar)."
+
+#: cache_operator.php
+#, php-format
+msgid "Pruned %d expired entries and reclaimed %d expired queue leases."
+msgstr "Rensade %d utgångna poster och återtog %d utgångna kölån."
+
+#: cache_operator.php
+#, php-format
+msgid "Requeued dead-letter item #%d."
+msgstr "Lade tillbaka felköobjekt #%d i kön."
+
+#: cache_operator.php
+#, php-format
+msgid "Dead-letter item #%d was not found."
+msgstr "Felköobjekt #%d hittades inte."
+
+#: cache_operator.php
+msgid "Tick the confirmation box before purging dead-letter items."
+msgstr "Markera bekräftelserutan innan du rensar felköobjekt."
+
+#: cache_operator.php
+#, php-format
+msgid "Purged %d dead-letter queue item(s)."
+msgstr "Rensade %d objekt från felkön."
+
+#: cache_operator.php
+msgid "Unsupported operator action."
+msgstr "Operatörsåtgärden stöds inte."
+
+#: cache_operator.php
+msgid "Object Cache Operations & Dead-Letter Queue (Operator)"
+msgstr "Objektcacheåtgärder och felkö (operatör)"
+
+#: cache_view.php
+msgid "Object Cache Metrics & Batch Queue Depth"
+msgstr "Objektcachemått och batchködjup"
+
+#: lib/Pages.php
+msgid "Cache View"
+msgstr "Cachevisning"
+
+#: lib/Pages.php
+msgid "Cache Operator"
+msgstr "Cacheoperatör"
+
+#: lib/Pages.php
+msgid "Cache Admin"
+msgstr "Cacheadministratör"
+
+#: lib/Pages.php
+msgid "Cache Metrics & Queues"
+msgstr "Cachemått och köer"
+
+#: lib/Pages.php
+msgid "Cache Operations & DLQ"
+msgstr "Cacheåtgärder och felkö (DLQ)"
+
+#: lib/Pages.php
+msgid "Cache Configuration & Health"
+msgstr "Cachekonfiguration och hälsa"
+
+#: lib/Settings.php setup.php
+msgid "Object Cache & Batch Queue"
+msgstr "Objektcache och batchkö"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Cache Driver"
+msgstr "Cachedrivrutin"
+
+#: lib/Settings.php
+msgid "Backend driver used for object cache and transient storage."
+msgstr "Bakgrundsdrivrutin som används för objektcache och tillfällig lagring."
+
+#: lib/Settings.php
+msgid "MariaDB (plugin_cache_entries)"
+msgstr "MariaDB (plugin_cache_entries)"
+
+#: lib/Settings.php
+msgid "APCu (in-memory shared)"
+msgstr "APCu (delat i minnet)"
+
+#: lib/Settings.php
+msgid "Redis (pure-PHP RESP2 socket)"
+msgstr "Redis (RESP2-socket i ren PHP)"
+
+#: lib/Settings.php
+msgid "Process Memory (S3-FIFO bounded)"
+msgstr "Processminne (S3-FIFO-begränsat)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Default TTL (seconds)"
+msgstr "Standard-TTL (sekunder)"
+
+#: lib/Settings.php
+msgid "Default cache entry expiration in seconds when no TTL is supplied."
+msgstr "Standardutgångstid i sekunder för cacheposter när ingen TTL anges."
+
+#: lib/Settings.php
+msgid "Maximum Payload Size (bytes)"
+msgstr "Maximal nyttolaststorlek (byte)"
+
+#: lib/Settings.php
+msgid "Upper bound in bytes on JSON-encoded cache and queue payloads (1024 to 16777216)."
+msgstr "Övre gräns i byte för JSON-kodade cache- och könyttolaster (1024 till 16777216)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Key Prefix"
+msgstr "Nyckelprefix"
+
+#: lib/Settings.php
+msgid "Key namespace prefix applied in shared backends (APCu and Redis)."
+msgstr "Namnrymdsprefix för nycklar som används i delade lagringsmotorer (APCu och Redis)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Stampede Lock TTL (seconds)"
+msgstr "TTL för stampede-lås (sekunder)"
+
+#: lib/Settings.php
+msgid "Single-flight lock duration in seconds for CacheService::remember()."
+msgstr "Låstid i sekunder för enskild körning (single-flight) i CacheService::remember()."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "XFetch Beta Factor"
+msgstr "XFetch-betafaktor"
+
+#: lib/Settings.php
+msgid "Probabilistic early-expiration multiplier (default 1.0; set 0 to disable early recompute)."
+msgstr "Sannolikhetsbaserad multiplikator för tidig utgång (standard 1.0; ange 0 för att inaktivera tidig omberäkning)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Memory Driver S3-FIFO Capacity"
+msgstr "S3-FIFO-kapacitet för minnesdrivrutin"
+
+#: lib/Settings.php
+msgid "Maximum entries retained in MemoryDriver before S3-FIFO eviction runs."
+msgstr "Högsta antal poster som behålls i MemoryDriver innan S3-FIFO-utrensning körs."
+
+#: lib/Settings.php
+msgid "Redis Transport (Pure-PHP RESP2)"
+msgstr "Redis-transport (RESP2 i ren PHP)"
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Host"
+msgstr "Redis-värd"
+
+#: lib/Settings.php
+msgid "Hostname or IP address for the Redis server."
+msgstr "Värdnamn eller IP-adress för Redis-servern."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Port"
+msgstr "Redis-port"
+
+#: lib/Settings.php
+msgid "TCP or TLS port for the Redis server."
+msgstr "TCP- eller TLS-port för Redis-servern."
+
+#: lib/Settings.php
+msgid "Enable Redis TLS"
+msgstr "Aktivera Redis TLS"
+
+#: lib/Settings.php
+msgid "Connect to Redis using tls:// with peer certificate verification."
+msgstr "Anslut till Redis via tls:// med verifiering av motpartscertifikat."
+
+#: lib/Settings.php
+msgid "Redis Database Index"
+msgstr "Redis-databasindex"
+
+#: lib/Settings.php
+msgid "Logical Redis database number (0 through 15)."
+msgstr "Logiskt databasnummer i Redis (0 till 15)."
+
+#: lib/Settings.php lib/Ui/PagesRenderer.php
+msgid "Redis Timeout (seconds)"
+msgstr "Tidsgräns för Redis (sekunder)"
+
+#: lib/Settings.php
+msgid "Socket connect and read/write timeout in seconds."
+msgstr "Tidsgräns i sekunder för socketanslutning och läsning/skrivning."
+
+#: lib/Settings.php
+msgid "Redis Secret Reference"
+msgstr "Hemlighetsreferens för Redis"
+
+#: lib/Settings.php
+msgid "Typed secret reference (env:VAR or vault:plugin:slot); raw passwords are never stored."
+msgstr "Typad hemlighetsreferens (env:VAR eller vault:plugin:slot); lösenord i klartext lagras aldrig."
+
+#: lib/Settings.php
+msgid "Resumable Batch Queue"
+msgstr "Återupptagningsbar batchkö"
+
+#: lib/Settings.php
+msgid "Default Queue Lease (seconds)"
+msgstr "Standardlånetid för kö (sekunder)"
+
+#: lib/Settings.php
+msgid "Lease duration in seconds before an unacknowledged queue item becomes reclaimable."
+msgstr "Lånetid i sekunder innan ett obekräftat köobjekt kan återtas."
+
+#: lib/Settings.php
+msgid "Default Max Attempts"
+msgstr "Standardvärde för max antal försök"
+
+#: lib/Settings.php
+msgid "Maximum delivery attempts before moving an item to dead-letter status."
+msgstr "Högsta antal leveransförsök innan ett objekt flyttas till felköstatus."
+
+#: lib/Settings.php
+msgid "Keep Plugin Tables on Uninstall"
+msgstr "Behåll tilläggstabeller vid avinstallation"
+
+#: lib/Settings.php
+msgid "Preserve plugin_cache_entries, plugin_cache_tags, and plugin_cache_queue tables on uninstall."
+msgstr "Behåll tabellerna plugin_cache_entries, plugin_cache_tags och plugin_cache_queue vid avinstallation."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Object Cache Overview"
+msgstr "Översikt över objektcache"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver"
+msgstr "Drivrutin"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Health"
+msgstr "Hälsa"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Entries"
+msgstr "Aktiva poster"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Rows"
+msgstr "Utgångna rader"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Stored Bytes"
+msgstr "Lagrade byte"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Hits / Misses (Ratio)"
+msgstr "Träffar / missar (kvot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "XFetch Early Recomputes"
+msgstr "Tidiga XFetch-omberäkningar"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Tag Invalidations"
+msgstr "Taggogiltigförklaringar"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Healthy"
+msgstr "Frisk"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Unhealthy"
+msgstr "Ohälsosam"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Groups"
+msgstr "Cachegrupper"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No active cache groups."
+msgstr "Inga aktiva cachegrupper."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Group"
+msgstr "Grupp"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Resumable Batch Queues"
+msgstr "Återupptagningsbara batchköer"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No batch queues recorded."
+msgstr "Inga batchköer har registrerats."
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue"
+msgstr "Kö"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Pending"
+msgstr "Väntande"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Leased"
+msgstr "Utlånade"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Completed"
+msgstr "Slutförd"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter"
+msgstr "Felkö"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Expired Leases"
+msgstr "Utgångna lån"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Cache Group & Tag Operations"
+msgstr "Åtgärder för cachegrupper och taggar"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Cache Group:"
+msgstr "Töm cachegrupp:"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush Group"
+msgstr "Töm grupp"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Cache Tags (comma-separated):"
+msgstr "Ogiltigförklara cachetaggar (kommaseparerade):"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Invalidate Tags"
+msgstr "Ogiltigförklara taggar"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Prune Expired Entries & Reclaim Leases"
+msgstr "Rensa utgångna poster och återta lån"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm full cache flush"
+msgstr "Bekräfta fullständig cachetömning"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Flush All"
+msgstr "Töm allt"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Dead-Letter Queue Inspection"
+msgstr "Inspektion av felkö"
+
+#: lib/Ui/PagesRenderer.php
+msgid "No dead-letter queue items."
+msgstr "Inga objekt i felkön."
+
+#: lib/Ui/PagesRenderer.php
+msgid "ID"
+msgstr "ID"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Attempts"
+msgstr "Försök"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Last Error"
+msgstr "Senaste fel"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Action"
+msgstr "Åtgärd"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Retry"
+msgstr "Försök igen"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Confirm dead-letter purge"
+msgstr "Bekräfta rensning av felkö"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Purge Dead Letters"
+msgstr "Rensa felkön"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Active Driver Health"
+msgstr "Hälsa för aktiv drivrutin"
+
+#: lib/Ui/PagesRenderer.php
+#, php-format
+msgid "Driver: %s | Status: %s | Config Schema: v%s"
+msgstr "Drivrutin: %s | Status: %s | Konfigurationsschema: v%s"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Run Driver Connectivity Probe"
+msgstr "Kör anslutningstest för drivrutin"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Driver & Policy Configuration (Config Only)"
+msgstr "Konfiguration av drivrutin och policy (endast konfiguration)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Max Payload Bytes"
+msgstr "Maximal nyttolast (byte)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis TLS"
+msgstr "Redis TLS"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Database (0-15)"
+msgstr "Redis-databas (0-15)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Redis Secret Reference (env:VAR or vault:plugin:slot)"
+msgstr "Hemlighetsreferens för Redis (env:VAR eller vault:plugin:slot)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Lease (seconds)"
+msgstr "Standardlånetid för kö (sekunder)"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Queue Default Max Attempts"
+msgstr "Standardvärde för max antal köförsök"
+
+#: lib/Ui/PagesRenderer.php
+msgid "Save Configuration"
+msgstr "Spara konfiguration"
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later. This server runs PHP %s, so the plugin was not installed or enabled."
+msgstr "Tillägget Cache kräver PHP %s eller senare. Denna server kör PHP %s, så tillägget installerades eller aktiverades inte."
+
+#: setup.php
+msgid "Utilities"
+msgstr "Verktyg"
+
+#: setup.php
+msgid "Cache"
+msgstr "Cache"
+
+#: setup.php
+msgid "The Cache plugin is not enabled."
+msgstr "Tillägget Cache är inte aktiverat."
+
+#: setup.php
+#, php-format
+msgid "The Cache plugin requires PHP %s or later."
+msgstr "Tillägget Cache kräver PHP %s eller senare."
